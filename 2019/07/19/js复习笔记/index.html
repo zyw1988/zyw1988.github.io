@@ -14,7 +14,7 @@
 <meta name="keywords" content="vue,笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我的js 复习笔记">
-<meta property="og:url" content="http://yoursite.com/2019/07/19/js复习笔记/index.html">
+<meta property="og:url" content="http://zyw1988.github.io/2019/07/19/js复习笔记/index.html">
 <meta property="og:site_name" content="❤冰糖葫芦五加皮">
 <meta property="og:description" content="一、JS数据格式分类 （一）JS中有5（6）种基本数据格式和1中引用类型，分别是 null，undefined，number，string，boolean，（ES6新增symbal），引用类型：Object、Array、Function、Date等">
 <meta property="og:locale" content="default">
@@ -686,17 +686,17 @@
 </ul>
 <h2 id="六、对象的几种创建方法"><a href="#六、对象的几种创建方法" class="headerlink" title="六、对象的几种创建方法"></a>六、对象的几种创建方法</h2><ul>
 <li><p>1.字面量创建：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name:<span class="string">'范冰冰'</span>,</span><br><span class="line">    age:<span class="number">18</span>,</span><br><span class="line">    hello:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"I am is "</span>+<span class="keyword">this</span>.name)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name:<span class="string">'范冰冰'</span>,</span><br><span class="line">    age:<span class="number">18</span>,</span><br><span class="line">    hello:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"I am is "</span>+<span class="keyword">this</span>.name)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 </li>
 <li><p>2.构造函数：</p>
 <ul>
 <li>①.系统自带的构造函数 Object()  var obj = new Object() 和1方法是一样的。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj  =<span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">obj.name = <span class="string">"张予曦"</span>;</span><br><span class="line">obj.age = <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj  =<span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">obj.name = <span class="string">"张予曦"</span>;</span><br><span class="line">obj.age = <span class="number">20</span>;</span><br></pre></td></tr></table></figure></div>
 
 <ul>
 <li><p>自定义构造函数：也是一样通过<code>new</code> 创建实例，为了区分其他，采用驼峰命名法</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">fucntion Person(name)&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.health = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">this</span>.color = <span class="string">'yellow'</span>;</span><br><span class="line">    <span class="keyword">this</span>.live = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.health--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> per1 = <span class="keyword">new</span> Person();</span><br><span class="line"><span class="keyword">var</span> per2 = <span class="keyword">new</span> Person();</span><br></pre></td></tr></table></figure>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">fucntion Person(name)&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.health = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">this</span>.color = <span class="string">'yellow'</span>;</span><br><span class="line">    <span class="keyword">this</span>.live = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.health--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> per1 = <span class="keyword">new</span> Person();</span><br><span class="line"><span class="keyword">var</span> per2 = <span class="keyword">new</span> Person();</span><br></pre></td></tr></table></figure></div>
 
 </li>
 </ul>
@@ -726,7 +726,7 @@
 <li><p>原型继承</p>
 <ul>
 <li><p>通过更改 <code>prototype</code> 和 <code>constructor</code> 的指向</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Student.prototype = <span class="keyword">new</span> Person();</span><br><span class="line">Student.prototype.constructor = Student;</span><br></pre></td></tr></table></figure>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Student.prototype = <span class="keyword">new</span> Person();</span><br><span class="line">Student.prototype.constructor = Student;</span><br></pre></td></tr></table></figure></div>
 
 <p>Student需要继承Person。Student的prototype == Person，Student原型链上的构造器指向自己。</p>
 <p>优缺点：1.公共属性上的值可读不可写；2.所有经由Student new出来的实例对于Person 上的属性是共享的。</p>
@@ -736,13 +736,13 @@
 <li><p>借用构造函数</p>
 </li>
 <li><p>借用构造函数（通过call）</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.name = <span class="string">'zss'</span>;</span><br><span class="line">	<span class="keyword">this</span>.age = <span class="number">18</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name,age,score</span>)</span>&#123;</span><br><span class="line">	Person.call(<span class="keyword">this</span>,name,age);</span><br><span class="line">	<span class="keyword">this</span>.score = <span class="number">99</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.name = <span class="string">'zss'</span>;</span><br><span class="line">	<span class="keyword">this</span>.age = <span class="number">18</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name,age,score</span>)</span>&#123;</span><br><span class="line">	Person.call(<span class="keyword">this</span>,name,age);</span><br><span class="line">	<span class="keyword">this</span>.score = <span class="number">99</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 <p>优缺点：继承过来的属性都是在自己身上的，可读可写的。同时构造器也是正确的。</p>
 <p>​                方法没有继承，仅仅继承了属性</p>
 </li>
 <li><p>组合继承方式</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Student.prototype =Person.prototype;</span><br><span class="line">Student.prototype.constructor = Student;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name,age,score</span>)</span>&#123;</span><br><span class="line">	Person.call(<span class="keyword">this</span>,name,age);</span><br><span class="line">	<span class="keyword">this</span>.score = <span class="number">99</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Student.prototype =Person.prototype;</span><br><span class="line">Student.prototype.constructor = Student;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name,age,score</span>)</span>&#123;</span><br><span class="line">	Person.call(<span class="keyword">this</span>,name,age);</span><br><span class="line">	<span class="keyword">this</span>.score = <span class="number">99</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 </li>
 </ul>
@@ -832,7 +832,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github个人主页搭建/">github个人主页搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github个人主页搭建/">github个人主页搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/初级/">初级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
     </div>
   </div>
 
@@ -842,7 +842,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a>
+      <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a>
     </div>
   </div>
 
@@ -861,6 +861,10 @@ gitment.render('gitmentContainer')
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/07/22/我的VUE初识/">我的VUE初识</a>
+          </li>
         
           <li>
             <a href="/2019/07/22/如何使用hexo美化自己的个人博客/">如何使用hexo美化自己的个人博客</a>

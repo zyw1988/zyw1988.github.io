@@ -14,11 +14,11 @@
 <meta name="keywords" content="github个人主页搭建,hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何使用hexo美化自己的个人博客">
-<meta property="og:url" content="http://yoursite.com/2019/07/22/如何使用hexo美化自己的个人博客/index.html">
+<meta property="og:url" content="http://zyw1988.github.io/2019/07/22/如何使用hexo美化自己的个人博客/index.html">
 <meta property="og:site_name" content="❤冰糖葫芦五加皮">
 <meta property="og:description" content="1.介绍及用途 基于 node.js 制作的一个博客工具 不需要部署到服务器，在服务器上保存的其实是 基于在hexo上编写的md文章。hexo帮我们生成静态的html页面，再将html上传到我们的服务器 会用到 git命令语句">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-22T08:33:21.985Z">
+<meta property="og:updated_time" content="2019-07-22T08:58:30.217Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何使用hexo美化自己的个人博客">
 <meta name="twitter:description" content="1.介绍及用途 基于 node.js 制作的一个博客工具 不需要部署到服务器，在服务器上保存的其实是 基于在hexo上编写的md文章。hexo帮我们生成静态的html页面，再将html上传到我们的服务器 会用到 git命令语句">
@@ -113,20 +113,28 @@
 </li>
 <li><p>生成文件夹预览以及含义：</p>
 <ul>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">`.├── _config.yml  ：网站的 配置 信息，您可以在此配置大部分的参数</span><br><span class="line">  ├── package.json</span><br><span class="line">  ├── scaffolds  ：模版 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。</span><br><span class="line">  ├── source ：资源文件夹是存放用户资源的地方。</span><br><span class="line">  |  ├── _drafts</span><br><span class="line">  |  └── _posts ：编写的md文件存放地址</span><br><span class="line">  └── themes：主题 文件夹。Hexo 会根据主题来生成静态页面。</span><br><span class="line">  `</span><br></pre></td></tr></table></figure>
+<li><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">`.├── _config.yml  ：网站的 配置 信息，您可以在此配置大部分的参数</span><br><span class="line">  ├── package.json</span><br><span class="line">  ├── scaffolds  ：模版 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。</span><br><span class="line">  ├── source ：资源文件夹是存放用户资源的地方。</span><br><span class="line">  |  ├── _drafts</span><br><span class="line">  |  └── _posts ：编写的md文件存放地址</span><br><span class="line">  └── themes：主题 文件夹。Hexo 会根据主题来生成静态页面。</span><br><span class="line">  `</span><br></pre></td></tr></table></figure></div>
 </li>
 </ul>
 </li>
 <li><p>与自己的github个人主页绑定（默认已经有自己的github主页）</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:liuxianan/liuxianan.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:xxx/xxx.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></div>
 
 
 </li>
 </ul>
-<p>  注意：键值对中间要有空格，不然会报错。</p>
+<p>  注意：键值对中间要有空格，不然会报错。与此同时也要修改url处为自己的github个人主页地址</p>
+<ul>
+<li><p>初始化github绑定</p>
+<ul>
+<li>1.安装  hexo-deployer-git <code>$ npm install hexo-deployer-git --save</code> </li>
+<li>2.<code>hexo d</code>部署到github 上</li>
+</ul>
+</li>
+</ul>
 <h1 id="3-常用语句"><a href="#3-常用语句" class="headerlink" title="3.常用语句"></a>3.常用语句</h1><ul>
 <li><p>下载主题</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone 主题地址</span><br></pre></td></tr></table></figure>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone 主题地址</span><br></pre></td></tr></table></figure></div>
 </li>
 <li><p><code>$ hexo init [folder]</code> :新建一个网站。如果没有设置 <code>folder</code> ，Hexo 默认在目前的文件夹建立网站。</p>
 </li>
@@ -164,6 +172,15 @@
     
 <nav id="article-nav">
   <div class="article-nav-block">
+    
+      <a href="/2019/07/22/我的VUE初识/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            我的VUE初识
+          
+        </div>
+      </a>
     
   </div>
   <div class="article-nav-block">
@@ -221,7 +238,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github个人主页搭建/">github个人主页搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github个人主页搭建/">github个人主页搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/初级/">初级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
     </div>
   </div>
 
@@ -231,7 +248,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a>
+      <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a>
     </div>
   </div>
 
@@ -250,6 +267,10 @@ gitment.render('gitmentContainer')
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/07/22/我的VUE初识/">我的VUE初识</a>
+          </li>
         
           <li>
             <a href="/2019/07/22/如何使用hexo美化自己的个人博客/">如何使用hexo美化自己的个人博客</a>
