@@ -102,163 +102,11 @@
 </ul>
 </li>
 </ul>
-</li>
-<li><p>MongoDB</p>
-<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564028350625.png" alt="1564028350625"></p>
-<ul>
-<li>数据模型面向文档，是一种类似于JSOn的结构。</li>
-<li>三个概念<ul>
-<li>数据库：数据库是一个仓库，在仓库中存放集合</li>
-<li>集合：集合类似于数组，在集合中可以存放文档。</li>
-<li>文档：文档数据中的最小单位，我们操作和存储的都是最小文档。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>启动数据库</p>
-<ul>
-<li><p>安装</p>
-</li>
-<li><p>配置环境变量</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\MongoDB\Server\<span class="number">3.4</span>\bin</span><br></pre></td></tr></table></figure></div>
-
-<p>将这条地址增加到 path变量下</p>
-</li>
-<li><p>c盘新建 数据文件 data/db</p>
-</li>
-<li><p>命令行输入 <code>mongod</code> 启动（启动服务器）：用来保存数据</p>
-</li>
-</ul>
-<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564024593929.png" alt="1564024593929"></p>
-<ul>
-<li><p>显示 启动成功</p>
-</li>
-<li><p>再重新打开cmd 输入<code>mongo</code> （启动客户端）：用来操作数据</p>
-<p>显示connecting：xxx，连接MongoDB成功。</p>
-</li>
-</ul>
-<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564025630211.png" alt="1564025630211"></p>
-</li>
-<li><p>指令学习</p>
-<ul>
-<li><p>前提知识：MongoDB 不需要提前创建数据库和集合，在创建文档的时候回一并创建。</p>
-</li>
-<li><p><code>db</code> 显示当前位置所在的数据库，类似于 this</p>
-</li>
-<li><p><code>use 数据库名</code> 进入到执行的数据库中（因为不需要提前创建数据库，所以即使进入一个新的数据库也不会报错，而是会显示<code>switch to db newdb</code> ，但是因为是新建的为空，所以在 <code>show dbs</code>的时候并不会显示该新建的）</p>
-</li>
-<li><p><code>show dbs</code> 即<code>show databases</code> 显示所有的数据库</p>
-</li>
-<li><p><code>show collections</code> 显示所有集合</p>
-</li>
-<li><p>数据库CRUD的操作</p>
-<ul>
-<li><p>1.向数据库中插入文档：<code>db.集合名.insert(doc)</code>  其中 doc可以为一个对象；</p>
-<p>​    <strong>拓展：</strong></p>
-<ul>
-<li>1.<code>db.collection.insertOne()</code> 插入一个文档</li>
-<li>2.<code>db.collection.insertMany()</code> 插入<strong>多个</strong>文档</li>
-</ul>
-</li>
-<li><p>2.查询: </p>
-<ul>
-<li>1.查询集合中所有的文档：<code>db.集合名.find()</code>  或者 <code>db.集合名.find({})</code>  </li>
-<li>2.查询集合中符合条件的文档：<code>db.集合名.find({属性：值})</code>  找到属性和值都对应的文档 </li>
-<li>3.获取该集合中所有文档的数量：<code>db.集合名.find({}).count()</code> </li>
-</ul>
-</li>
-<li><p>3.修改</p>
-<ul>
-<li><p>完全修改<code>db.collection.update(&quot;查询条件&quot;：{xxx})</code>  <strong>注意：这里的新对象是完全替换 查询条件查询出的 旧对象。</strong></p>
-<p><code>db.collection.update(&quot;查询条件&quot;：{xxx})</code> 是 更新1/更新多的 综合语句。默认情况下是更新1，当 将默认属性<code>multi</code> 改为<code>true</code>的时候，就会修改多个</p>
-<p> <code>db.collection.update(&quot;查询条件&quot;：{xxx},{multi:true})</code></p>
-</li>
-<li><p>部分修改，仅仅修改指定的属性：<code>db.collection.update(&quot;查询条件&quot;：{ $set:{ }})</code>  。在<code>$set:{}</code> 也可以通过增加新的属性来<strong>新增该文档的新属性</strong>;</p>
-</li>
-<li><p><strong>同时修改多个</strong>符合条件的文档：<code>db.collection.updateManay()</code> </p>
-</li>
-<li><p>修改一个符合条件的文档：<code>db.collection.updateOne()</code></p>
-</li>
-<li><p>替换：<code>db.collection.replaceOne()</code></p>
-</li>
-</ul>
-</li>
-<li><p>4.删除</p>
-<ul>
-<li>1.删除某个文档的指定属性：<code>db.collection.update(&quot;查询条件&quot;：{ $unset:{xxx }})</code></li>
-<li>2.删除文档<ul>
-<li><code>db.collection.remove(条件)</code> 默认删除一个；<code>db.collection.remove(条件，true)</code> 删除多个；<code>db.collection.remove({})</code> 传递一个空对象，会删除所有的文档（删除某集合：<code>db.集合名.drop()</code>）</li>
-<li><code>db.collection.deleteOne()</code></li>
-<li><code>db.collection.deleteMany()</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>使用可视化工具：mongodbmanagefree</p>
-<ul>
-<li><p>安装选择默认配置进入。如果数据库连接成功，会直接连接到localhost:27017接口</p>
-<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564033826651.png" alt="1564033826651"></p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>在项目中使用MongoDB</p>
-<ul>
-<li><p>原始的MongoDB 缺乏约束。</p>
-</li>
-<li><p>Mongoose：</p>
-<ul>
-<li>优点：<ul>
-<li>为文档创建一个模式结构</li>
-<li>对模型中的对象/文档进行验证</li>
-<li>可以使用中间件来与业务逻辑挂钩</li>
-<li>比原生MongoDB更容易驱动</li>
-</ul>
-</li>
-<li>新的对象<ul>
-<li><strong>Schema</strong>（模式对象）：定义约束了数据库中的文档结构</li>
-<li><strong>Model</strong>：作为集合中所有文档的表示，相当于MongoDB中的集合collection</li>
-<li><strong>Document</strong>：表示集合中的具体文档，相当于集合中一个具体的文档。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>使用</p>
-<ul>
-<li><p>1.安装mongoose、nodemon（至于为啥在nodejs课程里面有讲到）</p>
-</li>
-<li><p>2.配置<code>scripts</code></p>
-<p><code>&quot;start&quot;: &quot;nodemon ./bin/www&quot;</code></p>
-</li>
-<li><p>3.执行：</p>
-<p><code>npm start</code></p>
-<p><strong>js代码部分</strong></p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line">mongoose.connect(<span class="string">'mongodb://localhost/stus'</span>);</span><br><span class="line">mongoose.connection.once(<span class="string">"open"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'1111111'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
-
-<p>控制台输出结果：</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; @ start C:\Users\ASUS\Desktop\testmongoose</span><br><span class="line">&gt; nodemon ./bin/www</span><br><span class="line"></span><br><span class="line">[nodemon] <span class="number">1.19</span><span class="number">.1</span></span><br><span class="line">[nodemon] to restart at any time, enter <span class="string">`rs`</span></span><br><span class="line">[nodemon] watching: *.*</span><br><span class="line">[nodemon] starting <span class="string">`node ./bin/www index.js`</span></span><br><span class="line">(node:<span class="number">1248</span>) DeprecationWarning: current URL string parser is deprecated, and will be removed <span class="keyword">in</span> a future version. To use the <span class="keyword">new</span> parser, pass option &#123; <span class="attr">useNewUrlParser</span>: <span class="literal">true</span> &#125; to MongoClient.connect.</span><br><span class="line"><span class="number">1111111</span></span><br></pre></td></tr></table></figure></div>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>生成文档</p>
-<p>js代码</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.将 mongoose.Schema 赋值给一个变量 </span></span><br><span class="line"><span class="keyword">var</span> Schema = mongoose.Schema;</span><br><span class="line"><span class="comment">// 2.创建Schema（模式）的对象</span></span><br><span class="line"><span class="keyword">var</span> stuSchema = <span class="keyword">new</span> Schema((&#123;</span><br><span class="line">    <span class="comment">// 定义文档中数据的类型</span></span><br><span class="line">    name:<span class="built_in">String</span>,</span><br><span class="line">    age:<span class="built_in">Number</span>,</span><br><span class="line">    address:<span class="built_in">String</span>,</span><br><span class="line">    gender:&#123;</span><br><span class="line">        <span class="comment">// 设置默认值</span></span><br><span class="line">        type:<span class="built_in">String</span>,</span><br><span class="line">        <span class="keyword">default</span>:<span class="string">"female"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;));</span><br><span class="line"><span class="comment">// 3.创建Model ，Model代表着数据库中的集合，通过Model才能对数据库进行操作</span></span><br><span class="line"><span class="comment">// mongoose.model(modelName,schema)</span></span><br><span class="line"><span class="comment">// modelName 指的是映射的集合名</span></span><br><span class="line"><span class="comment">// StuModel 差不多是构造函数</span></span><br><span class="line"><span class="keyword">var</span> StuModel = mongoose.model(<span class="string">"students"</span>,stuSchema);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4.创建文档,向数据库中插入</span></span><br><span class="line"><span class="comment">// StuModel.create(doc,function(err)&#123;&#125;);</span></span><br><span class="line">StuModel.create(&#123;</span><br><span class="line">    name:<span class="string">"孙悟空"</span>,</span><br><span class="line">    age:<span class="number">90</span>,</span><br><span class="line">    gender:<span class="string">"male"</span>,</span><br><span class="line">    address:<span class="string">"花果山"</span></span><br><span class="line">&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!err)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"插入成功"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
-
-<p>控制台输出：</p>
-<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564045639556.png" alt="1564045639556"></p>
-<p>manager工具打开可以显示所有的文档查看一下</p>
-<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564045606722.png" alt="1564045606722"></p>
-</li>
-</ul>
-<p>​    说明 文档是 新建并且新增进数据库成功的</p>
-
+        
+          <p class="article-more-link">
+            <a href="/2019/07/25/初识MongoDB/#more">阅读全文</a>
+          </p>
+        
       
     </div>
     
@@ -296,20 +144,19 @@
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
         <p>安装</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save swiper</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save swiper</span><br></pre></td></tr></table></figure>
 
 <p>使用</p>
 <p>​    1.</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import &quot;swiper/dist/css/swiper.min.css&quot;</span><br><span class="line">import &quot;swiper/dist/js/swiper.min.js&quot;</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import &quot;swiper/dist/css/swiper.min.css&quot;</span><br><span class="line">import &quot;swiper/dist/js/swiper.min.js&quot;</span><br></pre></td></tr></table></figure>
 
 <p>2.标签引入</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"swiper-container"</span>&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"swiper-wrapper"</span>&gt;</span><br><span class="line">         &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"swiper-slide"</span>&gt;&lt;/div&gt;</span><br><span class="line">     	  &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"swiper-slide"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;!-- 分页器 --&gt;</span></span><br><span class="line"><span class="regexp">	 &lt;div class="swiper-pagination"&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br></pre></td></tr></table></figure></div>
-
-<p>3.new swiper实例，绑定需要滑动的容器class名</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mySwiper = <span class="keyword">new</span> Swiper(<span class="string">".swiper-container"</span>,&#123;</span><br><span class="line">             loop: <span class="literal">true</span>,</span><br><span class="line">             pagination:&#123;</span><br><span class="line">                 el: <span class="string">'.swiper-pagination'</span></span><br><span class="line">             &#125;</span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure></div>
-
-<p>用在vue组件中的话，swiper实例需要在 mounted函数中声明。</p>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"swiper-container"</span>&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"swiper-wrapper"</span>&gt;</span><br><span class="line">         &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"swiper-slide"</span>&gt;&lt;/div&gt;</span><br><span class="line">     	  &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"swiper-slide"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;!-- 分页器 --&gt;</span></span><br><span class="line"><span class="regexp">	 &lt;div class="swiper-pagination"&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2019/07/24/Swiper-移动端触摸滑动组件/#more">阅读全文</a>
+          </p>
+        
       
     </div>
     
@@ -349,56 +196,11 @@
         <p>今天学习做外卖的时候学到一个新的知识点：插槽slot</p>
 <p>vue模板页面中的一个小知识点，但是看了觉得好神奇！</p>
 <p>情景：四个底部栏作为一级路由都会跳转到对于的页面，四个页面都具有顶部Top栏，但是Top栏中的组成和文字各不相同，仅仅样式一致。</p>
-<p><img src="https://i.loli.net/2019/07/24/5d37fc3652e8a92447.png" alt="个人主页"></p>
-<p><img src="https://i.loli.net/2019/07/24/5d37fc5ca4d6131513.png" alt="订单列表"></p>
-<p><img src="https://i.loli.net/2019/07/24/5d37fc76bde7687937.png" alt="home主页"></p>
-<p><img src="https://i.loli.net/2019/07/24/5d37fc8d4457140363.png" alt></p>
-<p>1.常见HeadTop 顶部栏组件。在四个一级路由中只有Home主页的顶部栏左、右各有一个<code>span</code>放置着一个icon 和button，其他一级路由的顶部栏只有中间的title部分，且title文字不同。</p>
-<p>2.在 只有 Home主页具有的左右模块上 插槽 slot，因为有两个 ，使用name属性加以区分。</p>
-<p>3.在使用组件的时候 ，中间文字利用父子组件传值 props 过去。</p>
-<p>4.而在Home主页中，因为一左一右，在使用组件的时候，直接将左边的icon 和右边的button 代码写入 在home组件中引用的HeadTop 组件中，如：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> &lt;head-top :title=<span class="string">"address"</span>&gt;</span><br><span class="line">   &lt;!-- 左边的搜索 --&gt;</span><br><span class="line">   &lt;span slot="left"&gt; icon &lt;/span&gt;</span><br><span class="line"></span><br><span class="line">   &lt;!-- 右边的登录注册 --&gt;</span><br><span class="line">   &lt;span slot="right"&gt; button &lt;/span&gt;</span><br><span class="line">&lt;/head-top&gt;</span><br></pre></td></tr></table></figure>
-
-<p>并且 使用 <code>slot=&quot;name</code>值”加以区分 不同的插槽。</p>
-<p>props传递数据，slot传递标签</p>
-<p>目前为止，有待更新。</p>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-仿造百度贴吧" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/23/仿造百度贴吧/">仿造百度贴吧</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/07/23/仿造百度贴吧/" class="article-date">
-  <time datetime="2019-07-23T02:53:16.000Z" itemprop="datePublished">2019-07-23</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <p>新的： </p>
-
+        
+          <p class="article-more-link">
+            <a href="/2019/07/24/vue中的slot插槽/#more">阅读全文</a>
+          </p>
+        
       
     </div>
     
@@ -443,35 +245,11 @@
 <li><p>git log 查看每次提交的信息和修改内容，即版本信息</p>
 </li>
 </ol>
-<p>​    <u>版本回退：</u></p>
-<p>​    1.HEAD 表示当前版本。上一个版本是 HEAD^  上上一个版本是 HEAD^^ ,简化写成HEAD~2；</p>
-<ol start="2">
-<li><code>$ git reset --hard HEAD^</code>  表示回退到上一个版本，本地文件就会被回退成上一次修改之前的版本。</li>
-</ol>
-<p>​    当回退到旧版本时，重新 git status 的时候，就不会再显示回退之前的新的版本。</p>
-<p>​    可以强制：</p>
-<p>​    3.<code>$ git reset --hard &#39;需要回退的版本号&#39;</code>【每次commit都会产生一个commit id，为十六进制的数】</p>
-<p>​    版本号不需要写全，4-5位即可，譬如：1094a</p>
-<p>​    <code>$ git reflog</code> 显示每一次的命令语句</p>
-<p>​    <u>大佬的总结：</u></p>
-<ul>
-<li>HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset --hard commit_id。</code></li>
-<li>穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。</li>
-<li>要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本</li>
-</ul>
-<p>​    <strong>git add 和 git commit</strong></p>
-<p>​    git add：文件修改添加到暂存区</p>
-<p>​    git commit：暂存区的所有内容提交到当前分支</p>
-<p>​    $ git checkout – filename（注意空格）撤销工作区修改</p>
-<p>​    $ git reset HEAD filename 可以把暂存区的修改撤销掉（unstage），重新放回工作区：</p>
-<p>​    大佬小结</p>
-<ul>
-<li>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file。</code></li>
-<li>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD filename</code>，就回到了场景1，第二步按场景1操作。</li>
-<li>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。</li>
-</ul>
-<p>​    2.误删了工作区的且已经commit的文件需要恢复（仅有commit 的文件误删才能被恢复）：$ git checkout – filename</p>
-
+        
+          <p class="article-more-link">
+            <a href="/2019/07/23/阮雪峰git-学习笔记/#more">阅读全文</a>
+          </p>
+        
       
     </div>
     
@@ -716,11 +494,11 @@
           </li>
         
           <li>
-            <a href="/2019/07/23/仿造百度贴吧/">仿造百度贴吧</a>
+            <a href="/2019/07/23/阮雪峰git-学习笔记/">阮雪峰git-学习笔记</a>
           </li>
         
           <li>
-            <a href="/2019/07/23/阮雪峰git-学习笔记/">阮雪峰git-学习笔记</a>
+            <a href="/2019/07/23/图片md示例/">图片md示例</a>
           </li>
         
       </ul>
