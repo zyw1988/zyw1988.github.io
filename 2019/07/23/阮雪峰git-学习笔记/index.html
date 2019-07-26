@@ -5,18 +5,23 @@
   
 
   
-  <title>Tag: 笔记 | ❤冰糖葫芦五加皮</title>
+  <title>阮雪峰git-学习笔记 | ❤冰糖葫芦五加皮</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="❤冰糖葫芦五加皮">
-<meta property="og:url" content="http://zyw1988.github.io/tags/笔记/index.html">
+  <meta name="description" content="本地文件夹/工作区域 ——暂存区域——git仓库-    1.git add 新增和修改都是使用add添加至暂存区域；  git diff 查看修改内容  git log 查看每次提交的信息和修改内容，即版本信息   ​    版本回退： ​    1.HEAD 表示当前版本。上一个版本是 HEAD^  上上一个版本是 HEAD^^ ,简化写成HEAD~2；  $ git reset --hard">
+<meta name="keywords" content="git,笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阮雪峰git-学习笔记">
+<meta property="og:url" content="http://zyw1988.github.io/2019/07/23/阮雪峰git-学习笔记/index.html">
 <meta property="og:site_name" content="❤冰糖葫芦五加皮">
+<meta property="og:description" content="本地文件夹/工作区域 ——暂存区域——git仓库-    1.git add 新增和修改都是使用add添加至暂存区域；  git diff 查看修改内容  git log 查看每次提交的信息和修改内容，即版本信息   ​    版本回退： ​    1.HEAD 表示当前版本。上一个版本是 HEAD^  上上一个版本是 HEAD^^ ,简化写成HEAD~2；  $ git reset --hard">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-23T02:46:53.803Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="❤冰糖葫芦五加皮">
+<meta name="twitter:title" content="阮雪峰git-学习笔记">
+<meta name="twitter:description" content="本地文件夹/工作区域 ——暂存区域——git仓库-    1.git add 新增和修改都是使用add添加至暂存区域；  git diff 查看修改内容  git log 查看每次提交的信息和修改内容，即版本信息   ​    版本回退： ​    1.HEAD 表示当前版本。上一个版本是 HEAD^  上上一个版本是 HEAD^^ ,简化写成HEAD~2；  $ git reset --hard">
   
     <link rel="alternate" href="/atom.xml" title="❤冰糖葫芦五加皮" type="application/atom+xml">
   
@@ -59,72 +64,126 @@
   </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main">
+        <section id="main"><article id="post-阮雪峰git-学习笔记" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="global-container archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
+    <header class="article-header">
       
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/23/阮雪峰git-学习笔记/">阮雪峰git-学习笔记</a>
+    <h1 class="article-title" itemprop="name">
+      阮雪峰git-学习笔记
     </h1>
   
-      
+
     </header>
-    <div class="article-meta archive-article-meta">
-      <a href="/2019/07/23/阮雪峰git-学习笔记/" class="article-date">
+  
+  <div class="article-meta">
+    <a href="/2019/07/23/阮雪峰git-学习笔记/" class="article-date">
   <time datetime="2019-07-23T02:40:55.000Z" itemprop="datePublished">2019-07-23</time>
 </a>
-      
-      
+    
+    
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
 
-    </div>
   </div>
-</article>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p><strong>本地文件夹/工作区域 ——暂存区域——git仓库-</strong></p>
+<p>   1.git add 新增和修改都是使用add添加至暂存区域；</p>
+<ol start="2">
+<li><p>git diff 查看修改内容</p>
+</li>
+<li><p>git log 查看每次提交的信息和修改内容，即版本信息</p>
+</li>
+</ol>
+<p>​    <u>版本回退：</u></p>
+<p>​    1.HEAD 表示当前版本。上一个版本是 HEAD^  上上一个版本是 HEAD^^ ,简化写成HEAD~2；</p>
+<ol start="2">
+<li><code>$ git reset --hard HEAD^</code>  表示回退到上一个版本，本地文件就会被回退成上一次修改之前的版本。</li>
+</ol>
+<p>​    当回退到旧版本时，重新 git status 的时候，就不会再显示回退之前的新的版本。</p>
+<p>​    可以强制：</p>
+<p>​    3.<code>$ git reset --hard &#39;需要回退的版本号&#39;</code>【每次commit都会产生一个commit id，为十六进制的数】</p>
+<p>​    版本号不需要写全，4-5位即可，譬如：1094a</p>
+<p>​    <code>$ git reflog</code> 显示每一次的命令语句</p>
+<p>​    <u>大佬的总结：</u></p>
+<ul>
+<li>HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset --hard commit_id。</code></li>
+<li>穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。</li>
+<li>要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本</li>
+</ul>
+<p>​    <strong>git add 和 git commit</strong></p>
+<p>​    git add：文件修改添加到暂存区</p>
+<p>​    git commit：暂存区的所有内容提交到当前分支</p>
+<p>​    $ git checkout – filename（注意空格）撤销工作区修改</p>
+<p>​    $ git reset HEAD filename 可以把暂存区的修改撤销掉（unstage），重新放回工作区：</p>
+<p>​    大佬小结</p>
+<ul>
+<li>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file。</code></li>
+<li>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD filename</code>，就回到了场景1，第二步按场景1操作。</li>
+<li>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。</li>
+</ul>
+<p>​    2.误删了工作区的且已经commit的文件需要恢复（仅有commit 的文件误删才能被恢复）：$ git checkout – filename</p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
   
     
+<nav id="article-nav">
+  <div class="article-nav-block">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/19/js复习笔记/">我的js 复习笔记</a>
-    </h1>
-  
-      
-    </header>
-    <div class="article-meta archive-article-meta">
-      <a href="/2019/07/19/js复习笔记/" class="article-date">
-  <time datetime="2019-07-19T06:20:42.000Z" itemprop="datePublished">2019-07-19</time>
-</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-
-    </div>
+      <a href="/2019/07/23/仿造百度贴吧/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            仿造百度贴吧
+          
+        </div>
+      </a>
+    
   </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/07/23/图片md示例/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">图片md示例</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
 </article>
-  
-  
-    </div></section>
-  
-
-
 </section>
         <aside id="sidebar">
   
