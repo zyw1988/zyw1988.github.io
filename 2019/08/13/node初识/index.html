@@ -5,18 +5,25 @@
   
 
   
-  <title>❤冰糖葫芦五加皮</title>
+  <title>node初识 | ❤冰糖葫芦五加皮</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="❤冰糖葫芦五加皮">
-<meta property="og:url" content="http://zyw1988.github.io/index.html">
+  <meta name="description" content="开启一个简单的服务器1.使用模块http 12345678910111213141516171819var http = require(&apos;http&apos;)// 1.创建Servervar server = http.createServer()// 2.监听request请求事件，请求设置处理函数server.on(&apos;request&apos;,function(req,res)&amp;#123;    conso">
+<meta property="og:type" content="article">
+<meta property="og:title" content="node初识">
+<meta property="og:url" content="http://zyw1988.github.io/2019/08/13/node初识/index.html">
 <meta property="og:site_name" content="❤冰糖葫芦五加皮">
+<meta property="og:description" content="开启一个简单的服务器1.使用模块http 12345678910111213141516171819var http = require(&apos;http&apos;)// 1.创建Servervar server = http.createServer()// 2.监听request请求事件，请求设置处理函数server.on(&apos;request&apos;,function(req,res)&amp;#123;    conso">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1565675474226.png">
+<meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1565681200385.png">
+<meta property="og:updated_time" content="2019-08-13T08:56:29.649Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="❤冰糖葫芦五加皮">
+<meta name="twitter:title" content="node初识">
+<meta name="twitter:description" content="开启一个简单的服务器1.使用模块http 12345678910111213141516171819var http = require(&apos;http&apos;)// 1.创建Servervar server = http.createServer()// 2.监听request请求事件，请求设置处理函数server.on(&apos;request&apos;,function(req,res)&amp;#123;    conso">
+<meta name="twitter:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1565675474226.png">
   
     <link rel="alternate" href="/atom.xml" title="❤冰糖葫芦五加皮" type="application/atom+xml">
   
@@ -59,15 +66,13 @@
   </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main">
-  
-    <article id="post-node初识" class="article global-container article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-node初识" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
       
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/13/node初识/">node初识</a>
+    <h1 class="article-title" itemprop="name">
+      node初识
     </h1>
   
 
@@ -80,6 +85,10 @@
     
     
   </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
   
 
   <div class="article-inner">
@@ -117,384 +126,46 @@
       
     </div>
     
+      <footer class="article-footer">
+        完
+      </footer>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/07/25/初识MongoDB/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">初识MongoDB</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
   
   
 </article>
-
-  
-    <article id="post-初识MongoDB" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/25/初识MongoDB/">初识MongoDB</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/07/25/初识MongoDB/" class="article-date">
-  <time datetime="2019-07-25T02:44:18.000Z" itemprop="datePublished">2019-07-25</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <p>数据库的必要：浏览器都是在内存中运行断电数据会丢失。</p>
-<ul>
-<li><p>一数据库的分类</p>
-<ul>
-<li>关系型数据库<ul>
-<li>MySQL、Oracle、DB2</li>
-<li>数据库中都是表</li>
-</ul>
-</li>
-<li>非关系型数据库<ul>
-<li>MongoDB、Redis</li>
-<li>键值对数据库</li>
-<li><strong>文档数据库</strong>MongoDB</li>
-</ul>
-</li>
-</ul>
-        
-          <p class="article-more-link">
-            <a href="/2019/07/25/初识MongoDB/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-Swiper-移动端触摸滑动组件" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/24/Swiper-移动端触摸滑动组件/">Swiper-移动端触摸滑动组件</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/07/24/Swiper-移动端触摸滑动组件/" class="article-date">
-  <time datetime="2019-07-24T07:36:03.000Z" itemprop="datePublished">2019-07-24</time>
-</a>
-    
-    
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/移动端组件/">移动端组件</a></li></ul>
-
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <p>安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save swiper</span><br></pre></td></tr></table></figure>
-
-<p>使用</p>
-<p>​    1.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import &quot;swiper/dist/css/swiper.min.css&quot;</span><br><span class="line">import &quot;swiper/dist/js/swiper.min.js&quot;</span><br></pre></td></tr></table></figure>
-
-<p>2.标签引入</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"swiper-container"</span>&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"swiper-wrapper"</span>&gt;</span><br><span class="line">         &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"swiper-slide"</span>&gt;&lt;/div&gt;</span><br><span class="line">     	  &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"swiper-slide"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;!-- 分页器 --&gt;</span></span><br><span class="line"><span class="regexp">	 &lt;div class="swiper-pagination"&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br></pre></td></tr></table></figure>
-        
-          <p class="article-more-link">
-            <a href="/2019/07/24/Swiper-移动端触摸滑动组件/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-vue中的slot插槽" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/24/vue中的slot插槽/">vue中的slot插槽</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/07/24/vue中的slot插槽/" class="article-date">
-  <time datetime="2019-07-24T06:24:19.000Z" itemprop="datePublished">2019-07-24</time>
-</a>
-    
-    
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/slot/">slot</a></li></ul>
-
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <p>今天学习做外卖的时候学到一个新的知识点：插槽slot</p>
-<p>vue模板页面中的一个小知识点，但是看了觉得好神奇！</p>
-<p>情景：四个底部栏作为一级路由都会跳转到对于的页面，四个页面都具有顶部Top栏，但是Top栏中的组成和文字各不相同，仅仅样式一致。（组件大致相同，又有不同）</p>
-        
-          <p class="article-more-link">
-            <a href="/2019/07/24/vue中的slot插槽/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-阮雪峰git-学习笔记" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/23/阮雪峰git-学习笔记/">阮雪峰git-学习笔记</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/07/23/阮雪峰git-学习笔记/" class="article-date">
-  <time datetime="2019-07-23T02:40:55.000Z" itemprop="datePublished">2019-07-23</time>
-</a>
-    
-    
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <p><strong>本地文件夹/工作区域 ——暂存区域——git仓库-</strong></p>
-<p>   1.git add 新增和修改都是使用add添加至暂存区域；</p>
-<ol start="2">
-<li><p>git diff 查看修改内容</p>
-</li>
-<li><p>git log 查看每次提交的信息和修改内容，即版本信息</p>
-</li>
-</ol>
-        
-          <p class="article-more-link">
-            <a href="/2019/07/23/阮雪峰git-学习笔记/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-图片md示例" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/23/图片md示例/">图片md示例</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/07/23/图片md示例/" class="article-date">
-  <time datetime="2019-07-23T02:15:34.000Z" itemprop="datePublished">2019-07-23</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <p><img src="https://i.loli.net/2019/07/23/5d366da8ea8fc53681.png" alt="运动函数"></p>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-我的VUE初识" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/22/我的VUE初识/">我的VUE初识</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/07/22/我的VUE初识/" class="article-date">
-  <time datetime="2019-07-22T09:01:29.000Z" itemprop="datePublished">2019-07-22</time>
-</a>
-    
-    
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VUE/">VUE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/初级/">初级</a></li></ul>
-
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <p>如果说 jq是简化了对DOM 的操作，那么vue就是完全解放了双手（也不，底层DOM vue中也是可以获取到并操作的）</p>
-<h1 id="Vue实例"><a href="#Vue实例" class="headerlink" title="Vue实例"></a>Vue实例</h1><p>当需要把一个页面使用Vue框架搭建的时候，需要创建VUE实例</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el:<span class="string">"#app"</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>其中，el 是指代需要VUE搭建的区域id</p>
-        
-          <p class="article-more-link">
-            <a href="/2019/07/22/我的VUE初识/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="&#39;[post]&#39;-如何使用hexo美化自己的个人博客" class="article global-container article-type-&#39;[post]&#39;" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/22/如何使用hexo美化自己的个人博客/">如何使用hexo美化自己的个人博客</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/07/22/如何使用hexo美化自己的个人博客/" class="article-date">
-  <time datetime="2019-07-22T03:58:40.000Z" itemprop="datePublished">2019-07-22</time>
-</a>
-    
-    
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github个人主页搭建/">github个人主页搭建</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="1-介绍及用途"><a href="#1-介绍及用途" class="headerlink" title="1.介绍及用途"></a>1.介绍及用途</h1><ul>
-<li>基于 node.js 制作的一个博客工具</li>
-<li>不需要部署到服务器，在服务器上保存的其实是 基于在hexo上编写的md文章。hexo帮我们生成静态的html页面，再将html上传到我们的服务器</li>
-<li>会用到 git命令语句</li>
-</ul>
-        
-          <p class="article-more-link">
-            <a href="/2019/07/22/如何使用hexo美化自己的个人博客/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-js复习笔记" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/19/js复习笔记/">我的js 复习笔记</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/07/19/js复习笔记/" class="article-date">
-  <time datetime="2019-07-19T06:20:42.000Z" itemprop="datePublished">2019-07-19</time>
-</a>
-    
-    
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h2 id="一、JS数据格式分类"><a href="#一、JS数据格式分类" class="headerlink" title="一、JS数据格式分类"></a>一、JS数据格式分类</h2><ul>
-<li><p>（一）JS中有5（6）种基本数据格式和1中引用类型，分别是 null，undefined，number，string，boolean，（ES6新增symbal），引用类型：Object、Array、Function、Date等</p>
-        
-          <p class="article-more-link">
-            <a href="/2019/07/19/js复习笔记/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-
-
-
 </section>
         <aside id="sidebar">
   

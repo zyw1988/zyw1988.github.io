@@ -10,22 +10,22 @@
   
   
   
-  <meta name="description" content="今天学习做外卖的时候学到一个新的知识点：插槽slot vue模板页面中的一个小知识点，但是看了觉得好神奇！ 情景：四个底部栏作为一级路由都会跳转到对于的页面，四个页面都具有顶部Top栏，但是Top栏中的组成和文字各不相同，仅仅样式一致。">
+  <meta name="description" content="今天学习做外卖的时候学到一个新的知识点：插槽slot vue模板页面中的一个小知识点，但是看了觉得好神奇！ 情景：四个底部栏作为一级路由都会跳转到对于的页面，四个页面都具有顶部Top栏，但是Top栏中的组成和文字各不相同，仅仅样式一致。（组件大致相同，又有不同）">
 <meta name="keywords" content="slot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue中的slot插槽">
 <meta property="og:url" content="http://zyw1988.github.io/2019/07/24/vue中的slot插槽/index.html">
 <meta property="og:site_name" content="❤冰糖葫芦五加皮">
-<meta property="og:description" content="今天学习做外卖的时候学到一个新的知识点：插槽slot vue模板页面中的一个小知识点，但是看了觉得好神奇！ 情景：四个底部栏作为一级路由都会跳转到对于的页面，四个页面都具有顶部Top栏，但是Top栏中的组成和文字各不相同，仅仅样式一致。">
+<meta property="og:description" content="今天学习做外卖的时候学到一个新的知识点：插槽slot vue模板页面中的一个小知识点，但是看了觉得好神奇！ 情景：四个底部栏作为一级路由都会跳转到对于的页面，四个页面都具有顶部Top栏，但是Top栏中的组成和文字各不相同，仅仅样式一致。（组件大致相同，又有不同）">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.loli.net/2019/07/24/5d37fc3652e8a92447.png">
 <meta property="og:image" content="https://i.loli.net/2019/07/24/5d37fc5ca4d6131513.png">
 <meta property="og:image" content="https://i.loli.net/2019/07/24/5d37fc76bde7687937.png">
 <meta property="og:image" content="https://i.loli.net/2019/07/24/5d37fc8d4457140363.png">
-<meta property="og:updated_time" content="2019-07-26T01:37:48.481Z">
+<meta property="og:updated_time" content="2019-07-27T03:55:32.122Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue中的slot插槽">
-<meta name="twitter:description" content="今天学习做外卖的时候学到一个新的知识点：插槽slot vue模板页面中的一个小知识点，但是看了觉得好神奇！ 情景：四个底部栏作为一级路由都会跳转到对于的页面，四个页面都具有顶部Top栏，但是Top栏中的组成和文字各不相同，仅仅样式一致。">
+<meta name="twitter:description" content="今天学习做外卖的时候学到一个新的知识点：插槽slot vue模板页面中的一个小知识点，但是看了觉得好神奇！ 情景：四个底部栏作为一级路由都会跳转到对于的页面，四个页面都具有顶部Top栏，但是Top栏中的组成和文字各不相同，仅仅样式一致。（组件大致相同，又有不同）">
 <meta name="twitter:image" content="https://i.loli.net/2019/07/24/5d37fc3652e8a92447.png">
   
     <link rel="alternate" href="/atom.xml" title="❤冰糖葫芦五加皮" type="application/atom+xml">
@@ -102,7 +102,7 @@
       
         <p>今天学习做外卖的时候学到一个新的知识点：插槽slot</p>
 <p>vue模板页面中的一个小知识点，但是看了觉得好神奇！</p>
-<p>情景：四个底部栏作为一级路由都会跳转到对于的页面，四个页面都具有顶部Top栏，但是Top栏中的组成和文字各不相同，仅仅样式一致。</p>
+<p>情景：四个底部栏作为一级路由都会跳转到对于的页面，四个页面都具有顶部Top栏，但是Top栏中的组成和文字各不相同，仅仅样式一致。（组件大致相同，又有不同）</p>
 <a id="more"></a>
 
 <p><img src="https://i.loli.net/2019/07/24/5d37fc3652e8a92447.png" alt="个人主页"></p>
@@ -111,13 +111,22 @@
 <p><img src="https://i.loli.net/2019/07/24/5d37fc8d4457140363.png" alt></p>
 <p>1.常见HeadTop 顶部栏组件。在四个一级路由中只有Home主页的顶部栏左、右各有一个<code>span</code>放置着一个icon 和button，其他一级路由的顶部栏只有中间的title部分，且title文字不同。</p>
 <p>2.在 只有 Home主页具有的左右模块上 插槽 slot，因为有两个 ，使用name属性加以区分。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;!-- 左边的插槽空位--&gt;</span><br><span class="line">	&lt;slot name=<span class="string">"left"</span>&gt;&lt;/slot&gt;</span><br><span class="line">    &lt;span&gt; &#123;&#123; title &#125;&#125;&lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">   &lt;!-- 右边的插槽空位--&gt;</span></span><br><span class="line"><span class="regexp">    &lt;slot name="right"&gt;&lt;/</span>slot&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure></div>
+
 <p>3.在使用组件的时候 ，中间文字利用父子组件传值 props 过去。</p>
 <p>4.而在Home主页中，因为一左一右，在使用组件的时候，直接将左边的icon 和右边的button 代码写入 在home组件中引用的HeadTop 组件中，如：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> &lt;head-top :title=<span class="string">"address"</span>&gt;</span><br><span class="line">   &lt;!-- 左边的搜索 --&gt;</span><br><span class="line">   &lt;span slot="left"&gt; icon &lt;/span&gt;</span><br><span class="line"></span><br><span class="line">   &lt;!-- 右边的登录注册 --&gt;</span><br><span class="line">   &lt;span slot="right"&gt; button &lt;/span&gt;</span><br><span class="line">&lt;/head-top&gt;</span><br></pre></td></tr></table></figure>
 
 <p>并且 使用 <code>slot=&quot;name</code>值”加以区分 不同的插槽。</p>
 <p>props传递数据，slot传递标签</p>
-<p>目前为止，有待更新。</p>
+<p>注意：</p>
+<ul>
+<li>1.在插槽标签中<code>&lt;slot&gt;&lt;/slot&gt;</code> 放置标签元素，属于默认配置。即使用该插槽的组件未给插槽传入任何值，</li>
+</ul>
+<p>插槽标签中<code>&lt;slot&gt;&lt;/slot&gt;</code>  中的元素会默认显示</p>
+<ul>
+<li>2.</li>
+</ul>
 
       
     </div>
@@ -216,7 +225,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
     </div>
   </div>
 
@@ -226,6 +235,10 @@ gitment.render('gitmentContainer')
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/08/13/node初识/">node初识</a>
+          </li>
         
           <li>
             <a href="/2019/07/25/初识MongoDB/">初识MongoDB</a>
@@ -241,10 +254,6 @@ gitment.render('gitmentContainer')
         
           <li>
             <a href="/2019/07/23/阮雪峰git-学习笔记/">阮雪峰git-学习笔记</a>
-          </li>
-        
-          <li>
-            <a href="/2019/07/23/图片md示例/">图片md示例</a>
           </li>
         
       </ul>
