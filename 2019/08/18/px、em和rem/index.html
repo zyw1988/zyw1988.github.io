@@ -5,15 +5,19 @@
   
 
   
-  <title>Tag: 初级 | ❤冰糖葫芦五加皮</title>
+  <title>px、em和rem | ❤冰糖葫芦五加皮</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="❤冰糖葫芦五加皮">
-<meta property="og:url" content="http://zyw1988.github.io/tags/初级/index.html">
+  <meta name="description" content="pxpx（像素）单位，作为具体的数值，设置长宽高和字体大小的时候比较精确和固定。 问题：1、固定长宽高在不同设备上打开会出现页面布局错误。2.固定的字体大小在改变浏览器大小的时候也会导致原有的页面布局被打破。 emem作为一个相对值，是基于父元素的字体大小 设置的，而且作为 一个相对值也是一个比例，计算公式 实际的字体像素值：em *(父元素的fontSize值)  remrem也是一个相对值，但">
+<meta property="og:type" content="article">
+<meta property="og:title" content="px、em和rem">
+<meta property="og:url" content="http://zyw1988.github.io/2019/08/18/px、em和rem/index.html">
 <meta property="og:site_name" content="❤冰糖葫芦五加皮">
+<meta property="og:description" content="pxpx（像素）单位，作为具体的数值，设置长宽高和字体大小的时候比较精确和固定。 问题：1、固定长宽高在不同设备上打开会出现页面布局错误。2.固定的字体大小在改变浏览器大小的时候也会导致原有的页面布局被打破。 emem作为一个相对值，是基于父元素的字体大小 设置的，而且作为 一个相对值也是一个比例，计算公式 实际的字体像素值：em *(父元素的fontSize值)  remrem也是一个相对值，但">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-18T02:00:15.407Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="❤冰糖葫芦五加皮">
+<meta name="twitter:title" content="px、em和rem">
+<meta name="twitter:description" content="pxpx（像素）单位，作为具体的数值，设置长宽高和字体大小的时候比较精确和固定。 问题：1、固定长宽高在不同设备上打开会出现页面布局错误。2.固定的字体大小在改变浏览器大小的时候也会导致原有的页面布局被打破。 emem作为一个相对值，是基于父元素的字体大小 设置的，而且作为 一个相对值也是一个比例，计算公式 实际的字体像素值：em *(父元素的fontSize值)  remrem也是一个相对值，但">
   
     <link rel="alternate" href="/atom.xml" title="❤冰糖葫芦五加皮" type="application/atom+xml">
   
@@ -64,40 +68,67 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/07/22/我的VUE初识/" class="archive-article-date">
-  <time datetime="2019-07-22T09:01:29.000Z" itemprop="datePublished">Jul 22</time>
+        <section id="main"><article id="post-px、em和rem" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/18/px、em和rem/" class="article-date">
+  <time datetime="2019-08-18T01:43:15.000Z" itemprop="datePublished">2019-08-18</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/22/我的VUE初识/">我的VUE初识</a>
+    <h1 class="article-title" itemprop="name">
+      px、em和rem
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="px"><a href="#px" class="headerlink" title="px"></a>px</h1><p>px（像素）单位，作为具体的数值，设置长宽高和字体大小的时候比较精确和固定。</p>
+<p>问题：1、固定长宽高在不同设备上打开会出现页面布局错误。2.固定的字体大小在改变浏览器大小的时候也会导致原有的页面布局被打破。</p>
+<h1 id="em"><a href="#em" class="headerlink" title="em"></a>em</h1><p>em作为一个相对值，是<strong>基于父元素的字体大小</strong> 设置的，而且作为 一个相对值也是一个比例，计算公式</p>
+<p>实际的字体像素值：<code>em *(父元素的fontSize值)</code> </p>
+<h1 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h1><p>rem也是一个相对值，但与<code>em</code>不同的是，<code>rem</code>是基于页面根元素html的。当给html设置一个统一的fontSize 之后，之后的元素设置一个相对值，后续更改也会简单。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 给html 设置 62.5%的fontSize，即62.5% * 16px = 10px</span></span><br><span class="line">html &#123; font-size:<span class="number">62.5</span>%&#125;</span><br><span class="line">body &#123;font-size: <span class="number">1.4</span>rem;&#125;  <span class="comment">/*1.4 × 10px = 14px */</span></span><br><span class="line">h1 &#123; font-size: <span class="number">2.4</span>rem;&#125;  <span class="comment">/*2.4 × 10px = 24px*/</span></span><br></pre></td></tr></table></figure>
 
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zyw1988.github.io/2019/08/18/px、em和rem/" data-id="cjzj6enox00017wvmlg75zbu6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/08/19/rotate和rotate3d/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          rotate和rotate3d
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/13/node初识/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">node初识</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         
