@@ -5,26 +5,27 @@
   
 
   
-  <title>❤冰糖葫芦五加皮</title>
+  <title>promise处理异步请求 | ❤冰糖葫芦五加皮</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
-  <meta name="description" content="title: promise处理异步请求date: 2019-08-21 09:53:15tags: 定义以及使用前景知识：1.区分同步任务和 异步任务：程序里面所有的任务，可以分成两类：同步任务（synchronous）和异步任务（asynchronous）。 1.同步任务是那些没有被引擎挂起、在主线程上排队执行的任务。只有前一个任务执行完毕，才能执行后一个任务。 2.异步任务是那些被引擎放在一">
+  <meta name="description" content="定义以及使用前景知识：1.区分同步任务和 异步任务：程序里面所有的任务，可以分成两类：同步任务（synchronous）和异步任务（asynchronous）。 1.同步任务是那些没有被引擎挂起、在主线程上排队执行的任务。只有前一个任务执行完毕，才能执行后一个任务。 2.异步任务是那些被引擎放在一边，不进入主线程、而进入任务队列的任务。只有引擎认为某个异步任务可以执行了（比如 Ajax 操作从服务">
+<meta name="keywords" content="promise">
 <meta property="og:type" content="article">
-<meta property="og:title" content="❤冰糖葫芦五加皮">
+<meta property="og:title" content="promise处理异步请求">
 <meta property="og:url" content="http://zyw1988.github.io/2019/08/21/promise处理异步请求/index.html">
 <meta property="og:site_name" content="❤冰糖葫芦五加皮">
-<meta property="og:description" content="title: promise处理异步请求date: 2019-08-21 09:53:15tags: 定义以及使用前景知识：1.区分同步任务和 异步任务：程序里面所有的任务，可以分成两类：同步任务（synchronous）和异步任务（asynchronous）。 1.同步任务是那些没有被引擎挂起、在主线程上排队执行的任务。只有前一个任务执行完毕，才能执行后一个任务。 2.异步任务是那些被引擎放在一">
+<meta property="og:description" content="定义以及使用前景知识：1.区分同步任务和 异步任务：程序里面所有的任务，可以分成两类：同步任务（synchronous）和异步任务（asynchronous）。 1.同步任务是那些没有被引擎挂起、在主线程上排队执行的任务。只有前一个任务执行完毕，才能执行后一个任务。 2.异步任务是那些被引擎放在一边，不进入主线程、而进入任务队列的任务。只有引擎认为某个异步任务可以执行了（比如 Ajax 操作从服务">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.loli.net/2019/08/21/YNxrMQ9enkdsyLT.png">
 <meta property="og:image" content="https://i.loli.net/2019/08/21/kdyDKU7s9faJChe.png">
 <meta property="og:image" content="https://i.loli.net/2019/08/21/k2z3TAiOlFbSXmU.png">
 <meta property="og:image" content="https://i.loli.net/2019/08/21/m1tS83TxfLhXZUe.png">
-<meta property="og:updated_time" content="2019-08-21T08:27:16.876Z">
+<meta property="og:updated_time" content="2019-08-21T08:31:35.790Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="❤冰糖葫芦五加皮">
-<meta name="twitter:description" content="title: promise处理异步请求date: 2019-08-21 09:53:15tags: 定义以及使用前景知识：1.区分同步任务和 异步任务：程序里面所有的任务，可以分成两类：同步任务（synchronous）和异步任务（asynchronous）。 1.同步任务是那些没有被引擎挂起、在主线程上排队执行的任务。只有前一个任务执行完毕，才能执行后一个任务。 2.异步任务是那些被引擎放在一">
+<meta name="twitter:title" content="promise处理异步请求">
+<meta name="twitter:description" content="定义以及使用前景知识：1.区分同步任务和 异步任务：程序里面所有的任务，可以分成两类：同步任务（synchronous）和异步任务（asynchronous）。 1.同步任务是那些没有被引擎挂起、在主线程上排队执行的任务。只有前一个任务执行完毕，才能执行后一个任务。 2.异步任务是那些被引擎放在一边，不进入主线程、而进入任务队列的任务。只有引擎认为某个异步任务可以执行了（比如 Ajax 操作从服务">
 <meta name="twitter:image" content="https://i.loli.net/2019/08/21/YNxrMQ9enkdsyLT.png">
   
     <link rel="alternate" href="/atom.xml" title="❤冰糖葫芦五加皮" type="application/atom+xml">
@@ -70,12 +71,24 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main"><article id="post-promise处理异步请求" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      promise处理异步请求
+    </h1>
+  
+
+    </header>
+  
   <div class="article-meta">
     <a href="/2019/08/21/promise处理异步请求/" class="article-date">
-  <time datetime="2019-08-21T01:53:15.464Z" itemprop="datePublished">2019-08-21</time>
+  <time datetime="2019-08-21T01:43:15.000Z" itemprop="datePublished">2019-08-21</time>
 </a>
     
     
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/promise/">promise</a></li></ul>
+
   </div>
   
     <span id="busuanzi_container_page_pv">
@@ -87,8 +100,7 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <p>title: promise处理异步请求<br>date: 2019-08-21 09:53:15<br>tags:</p>
-<h1 id="定义以及使用"><a href="#定义以及使用" class="headerlink" title="定义以及使用"></a>定义以及使用</h1><h2 id="前景知识："><a href="#前景知识：" class="headerlink" title="前景知识："></a>前景知识：</h2><h3 id="1-区分同步任务和-异步任务："><a href="#1-区分同步任务和-异步任务：" class="headerlink" title="1.区分同步任务和 异步任务："></a>1.区分同步任务和 异步任务：</h3><p>程序里面所有的任务，可以分成两类：同步任务（synchronous）和异步任务（asynchronous）。</p>
+        <h1 id="定义以及使用"><a href="#定义以及使用" class="headerlink" title="定义以及使用"></a>定义以及使用</h1><h2 id="前景知识："><a href="#前景知识：" class="headerlink" title="前景知识："></a>前景知识：</h2><h3 id="1-区分同步任务和-异步任务："><a href="#1-区分同步任务和-异步任务：" class="headerlink" title="1.区分同步任务和 异步任务："></a>1.区分同步任务和 异步任务：</h3><p>程序里面所有的任务，可以分成两类：同步任务（synchronous）和异步任务（asynchronous）。</p>
 <p>1.同步任务是那些没有被引擎挂起、在主线程上排队执行的任务。只有前一个任务执行完毕，才能执行后一个任务。</p>
 <p>2.异步任务是那些被引擎放在一边，不进入主线程、而进入任务队列的任务。只有引擎认为某个异步任务可以执行了（比如 Ajax 操作从服务器得到了结果），该任务（采用回调函数的形式）才会进入主线程执行。排在异步任务后面的代码，不用等待异步任务结束会马上运行，也就是说，异步任务不具有“堵塞”效应。</p>
 <p>3.如何检测 异步操作结束，之前可以通过 回调函数、监听事件完成等，但存在 不利于阅读，各个部分高度耦合，程序结构混乱以及流程难以追踪。</p>
@@ -213,7 +225,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github个人主页搭建/">github个人主页搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slot/">slot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/初级/">初级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端组件/">移动端组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github个人主页搭建/">github个人主页搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/">promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slot/">slot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/初级/">初级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端组件/">移动端组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
     </div>
   </div>
 
@@ -223,7 +235,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
+      <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
     </div>
   </div>
 
@@ -244,7 +256,7 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
-            <a href="/2019/08/21/promise处理异步请求/">(no title)</a>
+            <a href="/2019/08/21/promise处理异步请求/">promise处理异步请求</a>
           </li>
         
           <li>
