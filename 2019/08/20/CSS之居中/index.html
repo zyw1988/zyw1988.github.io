@@ -10,17 +10,17 @@
   
   
   
-  <meta name="description" content="前景知识 明确区分块级元素、行级元素和行级块元素。  熟悉块级元素和行级元素在布局上的不同和优势，以及如何手动更改。  熟悉盒模型，以及如何手动更改 IE盒模型和怪异盒模型   单一元素在浏览器中居中盒子​    方法1：绝对定位之常规操作 12345678910.box&amp;#123;    background-color: palegoldenrod;    width: 100px;    h">
+  <meta name="description" content="前景知识 明确区分块级元素、行级元素和行级块元素。  熟悉块级元素和行级元素在布局上的不同和优势，以及如何手动更改。  熟悉盒模型，以及如何手动更改 IE盒模型和怪异盒模型   单一元素在浏览器中居中">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS之居中">
 <meta property="og:url" content="http://zyw1988.github.io/2019/08/20/CSS之居中/index.html">
 <meta property="og:site_name" content="❤冰糖葫芦五加皮">
-<meta property="og:description" content="前景知识 明确区分块级元素、行级元素和行级块元素。  熟悉块级元素和行级元素在布局上的不同和优势，以及如何手动更改。  熟悉盒模型，以及如何手动更改 IE盒模型和怪异盒模型   单一元素在浏览器中居中盒子​    方法1：绝对定位之常规操作 12345678910.box&amp;#123;    background-color: palegoldenrod;    width: 100px;    h">
+<meta property="og:description" content="前景知识 明确区分块级元素、行级元素和行级块元素。  熟悉块级元素和行级元素在布局上的不同和优势，以及如何手动更改。  熟悉盒模型，以及如何手动更改 IE盒模型和怪异盒模型   单一元素在浏览器中居中">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-20T06:21:44.116Z">
+<meta property="og:updated_time" content="2019-08-25T01:28:16.412Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS之居中">
-<meta name="twitter:description" content="前景知识 明确区分块级元素、行级元素和行级块元素。  熟悉块级元素和行级元素在布局上的不同和优势，以及如何手动更改。  熟悉盒模型，以及如何手动更改 IE盒模型和怪异盒模型   单一元素在浏览器中居中盒子​    方法1：绝对定位之常规操作 12345678910.box&amp;#123;    background-color: palegoldenrod;    width: 100px;    h">
+<meta name="twitter:description" content="前景知识 明确区分块级元素、行级元素和行级块元素。  熟悉块级元素和行级元素在布局上的不同和优势，以及如何手动更改。  熟悉盒模型，以及如何手动更改 IE盒模型和怪异盒模型   单一元素在浏览器中居中">
   
     <link rel="alternate" href="/atom.xml" title="❤冰糖葫芦五加皮" type="application/atom+xml">
   
@@ -100,7 +100,9 @@
 <li><p>熟悉盒模型，以及如何手动更改 IE盒模型和怪异盒模型</p>
 </li>
 </ul>
-<h1 id="单一元素在浏览器中居中"><a href="#单一元素在浏览器中居中" class="headerlink" title="单一元素在浏览器中居中"></a>单一元素在浏览器中居中</h1><h2 id="盒子"><a href="#盒子" class="headerlink" title="盒子"></a>盒子</h2><p>​    方法1：绝对定位之常规操作</p>
+<h1 id="单一元素在浏览器中居中"><a href="#单一元素在浏览器中居中" class="headerlink" title="单一元素在浏览器中居中"></a>单一元素在浏览器中居中</h1><a id="more"></a>
+
+<h2 id="盒子"><a href="#盒子" class="headerlink" title="盒子"></a>盒子</h2><p>​    方法1：绝对定位之常规操作</p>
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">    background-color: palegoldenrod;</span><br><span class="line">    width: <span class="number">100</span>px;</span><br><span class="line">    height: <span class="number">100</span>px;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: <span class="number">50</span>%;</span><br><span class="line">    left: <span class="number">50</span>%;</span><br><span class="line">    transform: translateX(<span class="number">-50</span>%) translateY(<span class="number">-50</span>%);</span><br><span class="line">    <span class="comment">// transform 换成margin也可以，就是margin数值需要计算，遇到带小数的麻烦，transfrom直接-50%方便。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 <p>方法2：绝对定位之全是0</p>
@@ -122,6 +124,8 @@
 <p>补充：多行文本居中</p>
 <p>方法：给文字容器设置 table布局</p>
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.wrapper&#123;</span><br><span class="line">    width: <span class="number">500</span>px;</span><br><span class="line">    height: <span class="number">500</span>px;</span><br><span class="line">    background-color: powderblue;</span><br><span class="line"></span><br><span class="line">    text-align: center;</span><br><span class="line">    vertical-align:middle;</span><br><span class="line">    display:table-cell;     </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="图片居中"><a href="#图片居中" class="headerlink" title="图片居中"></a>图片居中</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">display: table-cell; <span class="comment">//最简单的 </span></span><br><span class="line">text-align: center;</span><br><span class="line">vertical-align: middle;</span><br></pre></td></tr></table></figure></div>
 
 
       
@@ -202,7 +206,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github个人主页搭建/">github个人主页搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/">promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slot/">slot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/初级/">初级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端组件/">移动端组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github个人主页搭建/">github个人主页搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/">promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slot/">slot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/初级/">初级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端组件/">移动端组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
     </div>
   </div>
 
@@ -212,7 +216,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
     </div>
   </div>
 
@@ -221,7 +225,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
     </div>
   </div>
 
@@ -233,23 +237,23 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
-            <a href="/2019/08/21/promise处理异步请求/">promise处理异步请求</a>
+            <a href="/2019/09/02/响应式相关/">响应式相关</a>
           </li>
         
           <li>
-            <a href="/2019/08/20/CSS之居中/">CSS之居中</a>
+            <a href="/2019/08/24/ES6/">ES6</a>
           </li>
         
           <li>
-            <a href="/2019/08/19/rotate和rotate3d/">rotate和rotate3d</a>
+            <a href="/2019/08/24/模拟前后端交互的小助手-mock-EasyMock/">模拟前后端交互的小助手-mock&amp;EasyMock</a>
           </li>
         
           <li>
-            <a href="/2019/08/18/px、em和rem/">px、em和rem</a>
+            <a href="/2019/08/23/致-所有的组件库们/">致-所有的组件库们</a>
           </li>
         
           <li>
-            <a href="/2019/08/13/node初识/">node初识</a>
+            <a href="/2019/08/21/CSS记账簿/">CSS记账簿</a>
           </li>
         
       </ul>

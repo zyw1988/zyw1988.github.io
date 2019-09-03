@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>模拟前后端交互的小助手-mock&amp;EasyMock | ❤冰糖葫芦五加皮</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="说在前面 知识储备：什么是跨域，为什么有跨域，如何解决跨域，在原生js和vue中分别如何处理跨域。网络请求和异步操作的关系，异步和同步的区分。 mock 是拦截Ajax 请求，生成随机数据返回 EasyMock 提供一个网页手动输入数据就能生成接口">
+<meta property="og:type" content="article">
+<meta property="og:title" content="模拟前后端交互的小助手-mock&amp;EasyMock">
+<meta property="og:url" content="http://zyw1988.github.io/2019/08/24/模拟前后端交互的小助手-mock-EasyMock/index.html">
+<meta property="og:site_name" content="❤冰糖葫芦五加皮">
+<meta property="og:description" content="说在前面 知识储备：什么是跨域，为什么有跨域，如何解决跨域，在原生js和vue中分别如何处理跨域。网络请求和异步操作的关系，异步和同步的区分。 mock 是拦截Ajax 请求，生成随机数据返回 EasyMock 提供一个网页手动输入数据就能生成接口">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-24T02:55:31.253Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="模拟前后端交互的小助手-mock&amp;EasyMock">
+<meta name="twitter:description" content="说在前面 知识储备：什么是跨域，为什么有跨域，如何解决跨域，在原生js和vue中分别如何处理跨域。网络请求和异步操作的关系，异步和同步的区分。 mock 是拦截Ajax 请求，生成随机数据返回 EasyMock 提供一个网页手动输入数据就能生成接口">
+  
+    <link rel="alternate" href="/atom.xml" title="❤冰糖葫芦五加皮" type="application/atom+xml">
+  
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+  <script>
+  let antiquityStorage = window.sessionStorage.getItem('antiquitySessionStorage');
+  if (antiquityStorage == '' || antiquityStorage == null) {
+    var antiquityLoader = '<div id="loaderbox"><div class="loader"><div class="load-roll"><div class="load-top"></div><div class="load-right"></div><div class="load-bottom"></div></div></div></div>';
+    document.write(antiquityLoader);
+    document.body.style.overflow = 'hidden'
+  }
+  </script>
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-模拟前后端交互的小助手-mock-EasyMock" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      模拟前后端交互的小助手-mock&amp;EasyMock
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/08/24/模拟前后端交互的小助手-mock-EasyMock/" class="article-date">
+  <time datetime="2019-08-24T02:41:28.000Z" itemprop="datePublished">2019-08-24</time>
+</a>
+    
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h1><ul>
+<li>知识储备：什么是跨域，为什么有跨域，如何解决跨域，在原生js和vue中分别如何处理跨域。网络请求和异步操作的关系，异步和同步的区分。</li>
+<li><a href="http://mockjs.com/" target="_blank" rel="noopener">mock</a> 是拦截Ajax 请求，生成随机数据返回</li>
+<li><a href="https://easy-mock.com/" target="_blank" rel="noopener">EasyMock</a> 提供一个网页手动输入数据就能生成接口</li>
+</ul>
+<a id="more"></a>
+
+<h1 id="mock-js"><a href="#mock-js" class="headerlink" title="mock.js"></a>mock.js</h1><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="1-安装："><a href="#1-安装：" class="headerlink" title="1.安装："></a>1.安装：</h3><p><code>npm install mockjs</code> </p>
+<h3 id="2-调用"><a href="#2-调用" class="headerlink" title="2.调用"></a>2.调用</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Mock = <span class="built_in">require</span>(<span class="string">'mockjs'</span>)</span><br><span class="line"><span class="keyword">var</span> data = Mock.mock(&#123;</span><br><span class="line">    <span class="comment">// 属性 list 的值是一个数组，其中含有 1 到 10 个元素</span></span><br><span class="line">    <span class="string">'list|1-10'</span>: [&#123;</span><br><span class="line">        <span class="comment">// 属性 id 是一个自增数，起始值为 1，每次增 1</span></span><br><span class="line">        <span class="string">'id|+1'</span>: <span class="number">1</span></span><br><span class="line">    &#125;]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 输出结果</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(data, <span class="literal">null</span>, <span class="number">4</span>))</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="3-语法规范"><a href="#3-语法规范" class="headerlink" title="3.语法规范"></a>3.语法规范</h3><p>mockjs 是通过特殊的语法规范 随机生成数据，用户可以自定义数据模板。</p>
+<p><strong>数据模板中的每个属性由 3 部分构成：属性名、生成规则、属性值：</strong></p>
+<p><code>&#39;name|rule&#39;: value</code></p>
+<p><strong>注意：</strong></p>
+<ul>
+<li><em>属性名</em> 和 <em>生成规则</em> 之间用竖线 <code>|</code> 分隔。</li>
+<li><em>生成规则</em> 是可选的。</li>
+</ul>
+<h4 id="1-属性名"><a href="#1-属性名" class="headerlink" title="1.属性名"></a>1.属性名</h4><h4 id="2-生成规则"><a href="#2-生成规则" class="headerlink" title="2.生成规则"></a>2.生成规则</h4><p>生成规则有 7 种格式：</p>
+<ol>
+<li><code>&#39;name|min-max&#39;: value</code></li>
+<li><code>&#39;name|count&#39;: value</code></li>
+<li><code>&#39;name|min-max.dmin-dmax&#39;: value</code></li>
+<li><code>&#39;name|min-max.dcount&#39;: value</code></li>
+<li><code>&#39;name|count.dmin-dmax&#39;: value</code></li>
+<li><code>&#39;name|count.dcount&#39;: value</code></li>
+<li><code>&#39;name|+step&#39;: value</code></li>
+</ol>
+<ul>
+<li><strong>生成规则 的 含义 需要依赖 属性值的类型 才能确定。</strong></li>
+<li><em>属性值</em> 中可以含有 <code>@占位符</code>。</li>
+<li><em>属性值</em> 还指定了最终值的初始值和类型。</li>
+</ul>
+<h4 id="3-属性值"><a href="#3-属性值" class="headerlink" title="3.属性值"></a>3.属性值</h4><h5 id="1-字符串-String"><a href="#1-字符串-String" class="headerlink" title="1. 字符串 String"></a>1. 字符串 <strong>String</strong></h5><ol>
+<li><p><code>&#39;name|min-max&#39;: string</code></p>
+<p>通过重复 <code>string</code> 生成一个字符串，重复次数大于等于 <code>min</code>，小于等于 <code>max</code>。</p>
+</li>
+<li><p><code>&#39;name|count&#39;: string</code></p>
+<p>通过重复 <code>string</code> 生成一个字符串，重复次数等于 <code>count</code>。</p>
+</li>
+</ol>
+<h5 id="2-数字-Number"><a href="#2-数字-Number" class="headerlink" title="2. 数字 Number"></a>2. 数字 <strong>Number</strong></h5><ol>
+<li><p><code>&#39;name|+1&#39;: number</code></p>
+<p>属性值自动加 1，初始值为 <code>number</code>。</p>
+</li>
+<li><p><code>&#39;name|min-max&#39;: number</code></p>
+<p>生成一个大于等于 <code>min</code>、小于等于 <code>max</code> 的整数，属性值 <code>number</code> 只是用来确定类型。</p>
+</li>
+<li><p><code>&#39;name|min-max.dmin-dmax&#39;: number</code></p>
+<p>生成一个浮点数，整数部分大于等于 <code>min</code>、小于等于 <code>max</code>，小数部分保留 <code>dmin</code> 到 <code>dmax</code> 位。</p>
+</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Mock.mock(&#123;</span><br><span class="line">    &apos;number1|1-100.1-10&apos;: 1,</span><br><span class="line">    &apos;number2|123.1-10&apos;: 1,</span><br><span class="line">    &apos;number3|123.3&apos;: 1,</span><br><span class="line">    &apos;number4|123.10&apos;: 1.123</span><br><span class="line">&#125;)</span><br><span class="line">// =&gt;</span><br><span class="line">&#123;</span><br><span class="line">    &quot;number1&quot;: 12.92,</span><br><span class="line">    &quot;number2&quot;: 123.51,</span><br><span class="line">    &quot;number3&quot;: 123.777,</span><br><span class="line">    &quot;number4&quot;: 123.1231091814</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="3-布尔型-Boolean"><a href="#3-布尔型-Boolean" class="headerlink" title="3. 布尔型 Boolean"></a>3. 布尔型 <strong>Boolean</strong></h5><ol>
+<li><p><code>&#39;name|1&#39;: boolean</code></p>
+<p>随机生成一个布尔值，值为 true 的概率是 1/2，值为 false 的概率同样是 1/2。</p>
+</li>
+<li><p><code>&#39;name|min-max&#39;: value</code></p>
+<p>随机生成一个布尔值，值为 <code>value</code> 的概率是 <code>min / (min + max)</code>，值为 <code>!value</code> 的概率是 <code>max / (min + max)</code>。</p>
+</li>
+</ol>
+<h5 id="4-对象-Object"><a href="#4-对象-Object" class="headerlink" title="4. 对象 Object"></a>4. 对象 <strong>Object</strong></h5><ol>
+<li><p><code>&#39;name|count&#39;: object</code></p>
+<p>从属性值 <code>object</code> 中随机选取 <code>count</code> 个属性。</p>
+</li>
+<li><p><code>&#39;name|min-max&#39;: object</code></p>
+<p>从属性值 <code>object</code> 中随机选取 <code>min</code> 到 <code>max</code> 个属性。</p>
+</li>
+</ol>
+<h5 id="5-数组-Array"><a href="#5-数组-Array" class="headerlink" title="5. 数组 Array"></a>5. 数组 <strong>Array</strong></h5><ol>
+<li><p><code>&#39;name|1&#39;: array</code></p>
+<p>从属性值 <code>array</code> 中随机选取 1 个元素，作为最终值。</p>
+</li>
+<li><p><code>&#39;name|+1&#39;: array</code></p>
+<p>从属性值 <code>array</code> 中顺序选取 1 个元素，作为最终值。</p>
+</li>
+<li><p><code>&#39;name|min-max&#39;: array</code></p>
+<p>通过重复属性值 <code>array</code> 生成一个新数组，重复次数大于等于 <code>min</code>，小于等于 <code>max</code>。</p>
+</li>
+<li><p><code>&#39;name|count&#39;: array</code></p>
+<p>通过重复属性值 <code>array</code> 生成一个新数组，重复次数为 <code>count</code>。</p>
+</li>
+</ol>
+<h5 id="6-函数-Function"><a href="#6-函数-Function" class="headerlink" title="6. 函数 Function"></a>6. 函数 <strong>Function</strong></h5><ol>
+<li><p><code>&#39;name&#39;: function</code></p>
+<p>执行函数 <code>function</code>，取其返回值作为最终的属性值，函数的上下文为属性 <code>&#39;name&#39;</code> 所在的对象。</p>
+</li>
+</ol>
+<h5 id="7-正则表达式-RegExp"><a href="#7-正则表达式-RegExp" class="headerlink" title="7. 正则表达式 RegExp"></a>7. 正则表达式 <strong>RegExp</strong></h5><h2 id="EasyMock"><a href="#EasyMock" class="headerlink" title="EasyMock"></a>EasyMock</h2><p>相比mockjs，EasyMock就是傻瓜式操作。打开官网即可-。-</p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/08/24/ES6/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            ES6
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/08/23/致-所有的组件库们/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">致-所有的组件库们</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="https://i.loli.net/2019/07/23/5d366a3da4aeb25677.jpg" title="幻化成羽"></img>
+    <h3 class="avatar-name">
+      
+        日啖荔枝三百颗
+      
+    </h3>
+    <p class="avatar-slogan">
+      
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github个人主页搭建/">github个人主页搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/">promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slot/">slot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/初级/">初级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端组件/">移动端组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/09/02/响应式相关/">响应式相关</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/24/ES6/">ES6</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/24/模拟前后端交互的小助手-mock-EasyMock/">模拟前后端交互的小助手-mock&amp;EasyMock</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/23/致-所有的组件库们/">致-所有的组件库们</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/21/CSS记账簿/">CSS记账簿</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://blog.csdn.net/qq_41880978" title target='_blank'
+        >CSDN</a>
+      
+        <a style="display: block;" href="https://github.com/zyw1988" title target='_blank'
+        >Github</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 zyw1988 &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
