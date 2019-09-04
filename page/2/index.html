@@ -61,6 +61,96 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-rotate和rotate3d" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/19/rotate和rotate3d/">rotate和rotate3d</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/08/19/rotate和rotate3d/" class="article-date">
+  <time datetime="2019-08-19T07:39:12.000Z" itemprop="datePublished">2019-08-19</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="rotate"><a href="#rotate" class="headerlink" title="rotate"></a>rotate</h1><p>平面的。</p>
+<p><img src="https://mdn.mozillademos.org/files/3548/transform-functions-rotate_19.5.png" alt></p>
+<p>旋转角度为正，则顺时针运动，反之逆时针。</p>
+<h1 id="rotate3d"><a href="#rotate3d" class="headerlink" title="rotate3d"></a>rotate3d</h1><p>立体的。</p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-CSS中常用的几个单位" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/18/CSS中常用的几个单位/">px、em和rem</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/08/18/CSS中常用的几个单位/" class="article-date">
+  <time datetime="2019-08-18T01:43:15.000Z" itemprop="datePublished">2019-08-18</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="px"><a href="#px" class="headerlink" title="px"></a>px</h1><p>px（像素）单位，作为具体的数值，设置长宽高和字体大小的时候比较精确和固定。</p>
+<p>问题：1、固定长宽高在不同设备上打开会出现页面布局错误。2.固定的字体大小在改变浏览器大小的时候也会导致原有的页面布局被打破。</p>
+<h1 id="em"><a href="#em" class="headerlink" title="em"></a>em</h1><p>em作为一个相对值，是<strong>基于父元素的字体大小</strong> 设置的，而且作为 一个相对值也是一个比例，计算公式</p>
+<p>实际的字体像素值：<code>em *(父元素的fontSize值)</code> </p>
+<p>一个简单的栗子：</p>
+<p>三级嵌套的div，内设文字，问题的字体大小都为 <code>font-size:1.5em;</code> 可以看到 文字的大小 是逐级增大的，每次的字体大小值都是基于上一个（即父元素）的fontSize</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    div&#123;</span><br><span class="line">        border: 1px solid #000;</span><br><span class="line">    &#125;</span><br><span class="line">    body,html&#123;</span><br><span class="line">        font-size: <span class="number">10</span>px;</span><br><span class="line">    &#125;</span><br><span class="line">    div .top&#123;</span><br><span class="line">        <span class="comment">// 每一层文字 大小 都是 父级的 1.5倍</span></span><br><span class="line">        font-size:<span class="number">1.5</span>em;</span><br><span class="line">    &#125;</span><br><span class="line">    div .middle&#123;</span><br><span class="line">        font-size:<span class="number">1.5</span>em;</span><br><span class="line">    &#125;</span><br><span class="line">    div .bottom&#123;</span><br><span class="line">        font-size:<span class="number">1.5</span>em;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 嵌套的三级div</span></span><br><span class="line"><span class="regexp">&lt;div class="top"&gt;</span></span><br><span class="line"><span class="regexp">        top</span></span><br><span class="line"><span class="regexp">        &lt;div class="middle"&gt;</span></span><br><span class="line"><span class="regexp">            middle</span></span><br><span class="line"><span class="regexp">            &lt;div class="bottom"&gt;</span></span><br><span class="line"><span class="regexp">                bottom</span></span><br><span class="line"><span class="regexp">            &lt;/</span>div&gt;</span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p>效果演示：</p>
+<p><img src="https://i.loli.net/2019/09/04/gzewnPXYW6lS8Is.png" alt></p>
+<h1 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h1><p>rem也是一个相对值，但与<code>em</code>不同的是，<code>rem</code>是基于<strong>页面根元素html</strong>的。当给html设置一个统一的fontSize 之后，之后的元素设置一个相对值，后续更改也会简单。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 给html 设置 62.5%的fontSize，即62.5% * 16px = 10px</span></span><br><span class="line">html &#123; font-size:<span class="number">62.5</span>%&#125;</span><br><span class="line">body &#123;font-size: <span class="number">1.4</span>rem;&#125;  <span class="comment">/*1.4 × 10px = 14px */</span></span><br><span class="line">h1 &#123; font-size: <span class="number">2.4</span>rem;&#125;  <span class="comment">/*2.4 × 10px = 24px*/</span></span><br></pre></td></tr></table></figure></div>
+
+<h1 id="viewport-width-amp-viewport-height"><a href="#viewport-width-amp-viewport-height" class="headerlink" title="viewport width &amp; viewport height"></a>viewport width &amp; viewport height</h1><p>基于浏览器 可视区大小（浏览器去掉任务栏，滚动轴的那个空白界面）</p>
+<p>值基于 1~100之间，50vw 即使画面宽度的一半</p>
+<h1 id="vmin-amp-vmax"><a href="#vmin-amp-vmax" class="headerlink" title="vmin  &amp; vmax"></a>vmin  &amp; vmax</h1><p>vmin 代表屏幕较短的一边，vmax 代表屏幕较长的一边</p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-node初识" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -429,54 +519,11 @@
 </article>
 
   
-    <article id="post-js复习笔记" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/19/js复习笔记/">我的js 复习笔记</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/07/19/js复习笔记/" class="article-date">
-  <time datetime="2019-07-19T06:20:42.000Z" itemprop="datePublished">2019-07-19</time>
-</a>
-    
-    
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h2 id="一、JS数据格式分类"><a href="#一、JS数据格式分类" class="headerlink" title="一、JS数据格式分类"></a>一、JS数据格式分类</h2><ul>
-<li><p>（一）JS中有5（6）种基本数据格式和1中引用类型，分别是 null，undefined，number，string，boolean，（ES6新增symbal），引用类型：Object、Array、Function、Date等</p>
-        
-          <p class="article-more-link">
-            <a href="/2019/07/19/js复习笔记/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
   </nav>
 
 
@@ -506,7 +553,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github个人主页搭建/">github个人主页搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/">promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slot/">slot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/初级/">初级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端组件/">移动端组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github个人主页搭建/">github个人主页搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/">promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slot/">slot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/初级/">初级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端组件/">移动端组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/组件库/">组件库</a></li></ul>
     </div>
   </div>
 
@@ -516,7 +563,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a>
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a> <a href="/tags/组件库/" style="font-size: 10px;">组件库</a>
     </div>
   </div>
 
@@ -537,6 +584,14 @@
       <ul>
         
           <li>
+            <a href="/2019/09/03/css之疑惑/">css之疑惑</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/03/软件扩——adobe-xd/">软件扩——adobe xd</a>
+          </li>
+        
+          <li>
             <a href="/2019/09/02/响应式相关/">响应式相关</a>
           </li>
         
@@ -546,14 +601,6 @@
         
           <li>
             <a href="/2019/08/24/模拟前后端交互的小助手-mock-EasyMock/">模拟前后端交互的小助手-mock&amp;EasyMock</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/23/致-所有的组件库们/">致-所有的组件库们</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/21/CSS记账簿/">CSS记账簿</a>
           </li>
         
       </ul>
