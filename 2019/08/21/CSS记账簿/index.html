@@ -19,7 +19,8 @@
 <meta property="og:description" content="CSS特性 层叠性：处理冲突的时候，后面的会覆盖前面的  继承性：子标签继承父标签的属性，譬如字体颜色，大小，  优先级：选择器的权重计算   css样式选择器">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml6988%5Cwps1.jpg">
-<meta property="og:updated_time" content="2019-09-08T14:36:09.630Z">
+<meta property="og:image" content="c:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567753062412.png">
+<meta property="og:updated_time" content="2019-09-14T06:12:33.769Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS记账簿">
 <meta name="twitter:description" content="CSS特性 层叠性：处理冲突的时候，后面的会覆盖前面的  继承性：子标签继承父标签的属性，譬如字体颜色，大小，  优先级：选择器的权重计算   css样式选择器">
@@ -170,7 +171,9 @@
 </ul>
 <h1 id="清除BFC"><a href="#清除BFC" class="headerlink" title="清除BFC"></a>清除BFC</h1><h2 id="BFC定义"><a href="#BFC定义" class="headerlink" title="BFC定义"></a>BFC定义</h2><p>浮动的特性导致浮动元素不再占用源文档流的位置，导致对后续元素的排版造成影响。</p>
 <p>或者子集如果设置浮动属性导致脱离文档流父级高度为0的情况。</p>
-<h2 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h2><h1 id="外边距塌陷"><a href="#外边距塌陷" class="headerlink" title="外边距塌陷"></a>外边距塌陷</h1><h1 id="CSS3新特性"><a href="#CSS3新特性" class="headerlink" title="CSS3新特性"></a>CSS3新特性</h1><p>（之前接触的比较零散，这里规整一下）</p>
+<h2 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h2><h1 id="外边距塌陷"><a href="#外边距塌陷" class="headerlink" title="外边距塌陷"></a>外边距塌陷</h1><p>1.给父元素加 1px的边框 or 内边距<code>padding</code></p>
+<p>2.添加 <code>overflow：hidden</code> （触发BFC）</p>
+<h1 id="CSS3新特性"><a href="#CSS3新特性" class="headerlink" title="CSS3新特性"></a>CSS3新特性</h1><p>（之前接触的比较零散，这里规整一下）</p>
 <h2 id="新增的属性选择器："><a href="#新增的属性选择器：" class="headerlink" title="新增的属性选择器："></a>新增的属性选择器：</h2><table>
 <thead>
 <tr>
@@ -239,6 +242,96 @@
 <li><p>visual studio code 中安装插件<code>Autoprefixer</code></p>
 </li>
 </ul>
+<h1 id="CSS复位"><a href="#CSS复位" class="headerlink" title="CSS复位"></a>CSS复位</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">margin:<span class="number">0</span>;</span><br><span class="line">padding:<span class="number">0</span>;</span><br><span class="line">box-sizing:border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>之后如果要继承 <code>box-sizing:border-box;</code> 后续代码则不需要添加。</p>
+<h1 id="使用vw定制rem自适应布局"><a href="#使用vw定制rem自适应布局" class="headerlink" title="使用vw定制rem自适应布局(*)"></a>使用vw定制rem自适应布局(*)</h1><p>前景知识： 通过JS设置不同屏幕宽高比的 <code>font-size</code>，rem基于根元素<code>font-size</code>设置页面的字体大小，做到自适应。</p>
+<p>现在：结合 vw 单位 和<code>calc()</code>  </p>
+<h1 id="排版竖行文字"><a href="#排版竖行文字" class="headerlink" title="排版竖行文字"></a>排版竖行文字</h1><p><code>writing-mode:horizontal-tb | vertical-rl | vertical-lr | sideways-rl | sideways-lr</code> </p>
+<p><code>horizontal-tb</code>  正常的横向书写</p>
+<p><code>vertical-rl</code> 竖写，并且从右往左</p>
+<p><code>vertical-lr</code> 竖写，并且从左到右</p>
+<p><code>sideways-rl</code>  内容垂直方向从上到下排列</p>
+<p><code>sideways-lr</code> 内容垂直方向从下到上排列</p>
+<h1 id="text-align"><a href="#text-align" class="headerlink" title="text-align"></a>text-align</h1><p>设置文本样式，</p>
+<p><code>text-align-last:justify</code> ，适用于 未知字数中文两端对齐</p>
+<p><code>text-align:center</code>，文字居中，在input 输入框也可以通过这个设置光标居中</p>
+<h1 id="文本溢出隐藏并显示省略号"><a href="#文本溢出隐藏并显示省略号" class="headerlink" title="文本溢出隐藏并显示省略号"></a>文本溢出隐藏并显示省略号</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 只有一行文本的时候</span></span><br><span class="line">overflow:hidden; <span class="comment">//超出的文本隐藏</span></span><br><span class="line">text-overflow:ellipsis; <span class="comment">//溢出用省略号显示</span></span><br><span class="line">white-space:nowrap; <span class="comment">//溢出不换行</span></span><br></pre></td></tr></table></figure></div>
+
+<h1 id="文本之间空隙"><a href="#文本之间空隙" class="headerlink" title="文本之间空隙"></a>文本之间空隙</h1><p><code>letter-spacing</code> 设置具体px可以将文字间隔开。</p>
+<p>妙用：设置负值，文本将倒序。</p>
+<p>恭喜发财 变成 财发喜恭</p>
+<h1 id="左重右轻（只在flex）"><a href="#左重右轻（只在flex）" class="headerlink" title="左重右轻（只在flex）"></a>左重右轻（只在flex）</h1><p>横向flex 布局时，最后一个加上<code>margin-left=auto</code> 可以实现最后一个图标向右对齐。</p>
+<p>效果</p>
+<p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567753062412.png" alt="1567753062412"></p>
+<h1 id="attr抓取data"><a href="#attr抓取data" class="headerlink" title="attr抓取data-*"></a>attr抓取data-*</h1><p>一直以为attr 属性值只能在 js中通过api 获取。</p>
+<p>css 中能直接通过 <code>attr(data-xx)</code> 获取到 用户自定义属性 <code>data-xx</code> 的值。在CSS中 同时使用 <code>content</code> 和<code>attr</code> 就能直接赋值。</p>
+<h1 id="简单的表单验证"><a href="#简单的表单验证" class="headerlink" title="简单的表单验证"></a>简单的表单验证</h1><p>用到的 知识点：伪元素   <code>:valid</code>  和  <code>:invalid</code> 和 <code>pattern</code></p>
+<p> <code>:valid</code>   选择器在表单元素的值需要根据指定条件验证时设置指定样式</p>
+<p>​            注意：只作用于能指定区间值的元素，例如 input 元素中的 min 和 max 属性，及正确的 email 字段, 合法的数字字段等。</p>
+<p> <code>:invalid</code> 相对的就是不符合指定条件时的样式 </p>
+<p> <code>pattern</code> 即 指定样式， 使用正则表达式、</p>
+<h1 id="focus-within"><a href="#focus-within" class="headerlink" title=":focus-within"></a>:focus-within</h1><p>当元素本身或其后代获得焦点时，<code>:focus-within</code>伪类的元素就会有效。</p>
+<p>应用：button 获取被点击时切换颜色</p>
+<h1 id="禁止右键操作"><a href="#禁止右键操作" class="headerlink" title="禁止右键操作"></a>禁止右键操作</h1><p>整个页面禁止右键，在body上添加</p>
+<p><code>oncontextmenu=self.event.returnValue=false onselect=&quot;return false&quot;</code></p>
+<h3 id="禁止鼠标右键保存图片"><a href="#禁止鼠标右键保存图片" class="headerlink" title="禁止鼠标右键保存图片"></a>禁止鼠标右键保存图片</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;logo.png&quot; width=&quot;150&quot; height=&quot;150&quot; oncontextmenu=&quot;return false;&quot;&gt;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="禁止鼠标拖动图片"><a href="#禁止鼠标拖动图片" class="headerlink" title="禁止鼠标拖动图片"></a>禁止鼠标拖动图片</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;logo.png&quot; width=&quot;150&quot; height=&quot;150&quot; ondragstart=&quot;return false;&quot;&gt;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="文字禁止鼠标选中"><a href="#文字禁止鼠标选中" class="headerlink" title="文字禁止鼠标选中"></a>文字禁止鼠标选中</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p onselectstart=&quot;return false;&quot;&gt;文字禁止鼠标选中&lt;/p&gt;</span><br><span class="line">&lt;p&gt;普通文字可以选中&lt;/p&gt;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="禁止复制文本"><a href="#禁止复制文本" class="headerlink" title="禁止复制文本"></a>禁止复制文本</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p onselect=&quot;document.selection.empty();&quot;&gt;禁止复制文本&lt;/p&gt;</span><br><span class="line">&lt;p&gt;普通文字可以复制&lt;/p&gt;</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="移动端尺寸基础知识"><a href="#移动端尺寸基础知识" class="headerlink" title="移动端尺寸基础知识"></a>移动端尺寸基础知识</h1><p><a href="https://www.cnblogs.com/chris-oil/p/5367106.html" target="_blank" rel="noopener">参考</a></p>
+<p>安卓手机 ：360 *640 </p>
+<p>iphone：主流：iphone6 ：375*667</p>
+<p>移动端开发的屏幕、图像、<a href="https://juejin.im/post/5d70747cf265da03e16897c8" target="_blank" rel="noopener">字体与布局的兼容适配</a></p>
+<h1 id="querySelector方法"><a href="#querySelector方法" class="headerlink" title="querySelector方法"></a>querySelector方法</h1><p>方法返回文档中匹配指定 CSS 选择器的一个元素。仅返回匹配指定选择器的第一个元素。如果你需要返回所有的元素，请使用 <code>querySelectorAll()</code> 方法替代。</p>
+<p><code>querySelector</code> 接受的是一个CSS选择符、包括 class类名，id名，标签名， 后代选择器也可以用</p>
+<p>注意：</p>
+<ul>
+<li>接收的css选择符必须严格按照CSS选择符规范，类和ID均不能以数字开头。</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">querySelector(<span class="string">'.btn'</span>)</span><br><span class="line">querySelector(<span class="string">'.wrap .con'</span>)</span><br><span class="line">querySelector(<span class="string">'#btn'</span>)</span><br><span class="line">querySelector(<span class="string">'button'</span>)</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><code>querySelector</code> 返回的是 <code>Static Node List</code> ，相比较于<code>getelementById</code> 获取的是实时的、动态的。</li>
+</ul>
+<h1 id="text-transform"><a href="#text-transform" class="headerlink" title="text-transform"></a>text-transform</h1><p>控制文本的大小写。</p>
+<p>属性值为：</p>
+<p><code>capitalize</code>    文本中的每个单词以大写字母开头。<br><code>uppercase</code>    定义仅有大写字母。<br><code>lowercase</code>    定义无大写字母，仅有小写字母。</p>
+<h1 id="clip-path"><a href="#clip-path" class="headerlink" title="clip-path"></a>clip-path</h1><p>利用坐标 绘制多边形，绘制方向是 顺时针，然后根据直线连起来。</p>
+<p>使用方法有两种 ：</p>
+<h2 id="1）-CSS"><a href="#1）-CSS" class="headerlink" title="1） CSS"></a>1） CSS</h2><ul>
+<li><p>基础多边形：<code>.element { clip-path: ploygon(x1 y1, x2 y2, x3 y3, ...) }</code></p>
+</li>
+<li><p>圆形</p>
+<p><code>.element { clip-path: circle(r at x y) };</code></p>
+<p>r是圆的大小，x y 分别为愿新的坐标，可以用百分比</p>
+</li>
+<li><p>椭圆</p>
+<p><code>.element { clip-path: ellipse(w h at x y) };</code>    </p>
+<p>r是圆的大小，h 为垂直高度，x y 为椭圆的圆心。</p>
+</li>
+<li><p>矩形</p>
+<p><code>.element { clip-path: inset(x y z p) };</code></p>
+<p>为离top的距离 y为right的距离 z为bottom的距离 p为left的距离。跟多边形一样也是顺时针，跟多边形不同的是多边形是用边来使用的</p>
+</li>
+</ul>
+<h2 id="2）-SVG"><a href="#2）-SVG" class="headerlink" title="2） SVG"></a>2） SVG</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.element</span> &#123; <span class="attribute">clip-path</span>: <span class="built_in">url</span>(<span class="string">"选择器"</span>)&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><a href="https://www.jianshu.com/p/9890792dbc8b" target="_blank" rel="noopener">详细的</a></p>
+<h1 id="box-shadow"><a href="#box-shadow" class="headerlink" title="box-shadow"></a>box-shadow</h1><p>语法：<code>box-shadow: 水平阴影的位置  垂直阴影的位置 模糊距离 阴影的大小 阴影颜色 内侧/外侧阴影</code></p>
+<p>阴影叠加： 第一个是权重最高的。</p>
+<p>阴影的颜色： 继承父集的color</p>
+<h1 id="clip"><a href="#clip" class="headerlink" title="clip"></a>clip</h1><p>剪裁<strong>绝对定位</strong>元素。clip 允许您规定一个元素的可见尺寸，这样此元素就会被修剪并显示为这个形状。</p>
+<p>语法：<code>clip:rect(top,right,bottom,left)</code></p>
+<p>参数含义：</p>
+<p><code>top</code>：矩形上长对应父元素上长的距离(上长就是矩形上边的长)<br><code>right</code>： 矩形右宽对应父元素左宽的距离(右宽就是矩形右边的宽)<br><code>bottom</code>: 矩形下长对应父元素上长的距离<br><code>left</code>： 矩形左宽对应父元素左宽的距离</p>
+<p><a href>clip 和clip-path 有什么区别</a></p>
+<p>clip 只能裁剪正方形，必须要绝对定位。</p>
+<p>clip-path 对元素的定位没有要去，可以裁剪更多形状。</p>
 
       
     </div>
@@ -318,7 +411,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github个人主页搭建/">github个人主页搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/">promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slot/">slot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/初级/">初级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字体/">字体</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端/">移动端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端组件/">移动端组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/组件库/">组件库</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/canvas/">canvas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github个人主页搭建/">github个人主页搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/">promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slot/">slot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/初级/">初级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字体/">字体</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端/">移动端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端组件/">移动端组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/组件库/">组件库</a></li></ul>
     </div>
   </div>
 
@@ -328,7 +421,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/移动端/" style="font-size: 10px;">移动端</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a> <a href="/tags/组件库/" style="font-size: 10px;">组件库</a>
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/移动端/" style="font-size: 10px;">移动端</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a> <a href="/tags/组件库/" style="font-size: 10px;">组件库</a>
     </div>
   </div>
 
@@ -349,6 +442,10 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
+            <a href="/2019/09/14/canvas笔记/">canvas笔记</a>
+          </li>
+        
+          <li>
             <a href="/2019/09/06/移动端开发/">移动端开发</a>
           </li>
         
@@ -362,10 +459,6 @@ gitment.render('gitmentContainer')
         
           <li>
             <a href="/2019/09/03/软件扩——adobe-xd/">软件扩——adobe xd</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/02/响应式相关/">响应式相关</a>
           </li>
         
       </ul>

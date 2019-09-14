@@ -61,6 +61,56 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-移动端组件——better-scroll" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/21/移动端组件——better-scroll/">移动端组件——better-scroll</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/08/21/移动端组件——better-scroll/" class="article-date">
+  <time datetime="2019-08-21T08:37:35.000Z" itemprop="datePublished">2019-08-21</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>移动端 触摸滚动插件</p>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h2 id="1-html结构："><a href="#1-html结构：" class="headerlink" title="1.html结构："></a>1.html结构：</h2><p>必须有包裹，即<code>div.wrapper</code> 包裹 <code>div.content</code> 标签和类名不做需求。并且，内部<code>content</code> 高度/宽度 必须大于外部的盒子，才能拖动。</p>
+<h2 id="2-JS部分："><a href="#2-JS部分：" class="headerlink" title="2.JS部分："></a>2.JS部分：</h2><p>实例化 better-scroll 对象</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> bscroll = <span class="keyword">new</span> BScroll(<span class="string">'.wrapper'</span>,&#123;&#125;);</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="3-额外功能：滑动实时显示滑动的距离"><a href="#3-额外功能：滑动实时显示滑动的距离" class="headerlink" title="3.额外功能：滑动实时显示滑动的距离"></a>3.额外功能：滑动实时显示滑动的距离</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 属性probeType设置，一共有4个值，0，1,2,3 ,0和1是不进行实时侦测位置，2是在手指滚动的过程中侦测，手指离开之后就不进行侦测，3是只要是滚动就侦测，手指离开之后有个惯性滚动，即在这个过程中也会侦测</span></span><br><span class="line"><span class="keyword">const</span> bscroll = <span class="keyword">new</span> BScroll(<span class="string">'.wrapper'</span>,&#123;</span><br><span class="line">    probeType：<span class="number">3</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">bscroll.on(<span class="string">'scroll'</span>,position =&gt;&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(position)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="4-内部点击事件。"><a href="#4-内部点击事件。" class="headerlink" title="4.内部点击事件。"></a>4.内部点击事件。</h2><p>如果在wrapper内部有按钮或者需要点击事件的，点击会无法执行。需要额外增加click属性。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> bscroll = <span class="keyword">new</span> BScroll(<span class="string">'.wrapper'</span>,&#123;</span><br><span class="line">    click:<span class="literal">true</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="5-上拉刷新：thresold"><a href="#5-上拉刷新：thresold" class="headerlink" title="5.上拉刷新：thresold"></a>5.上拉刷新：thresold</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> bscroll = <span class="keyword">new</span> BScroll(<span class="string">'.wrapper'</span>,&#123;</span><br><span class="line">   pullUpLoad:<span class="literal">true</span></span><br><span class="line">&#125;);</span><br><span class="line">bscroll.on(<span class="string">'pullingUp'</span>,()=&gt;&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'上拉显示更多'</span>)；</span><br><span class="line">    <span class="comment">//发送网络请求，请求更多资源</span></span><br><span class="line">    <span class="comment">//等请求完成，并且将新数据展示出来之后，必须执行  停止上拉加载更多 </span></span><br><span class="line">    bscroll.finishPullUp()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="6-封装-滚动组件，减少耦合"><a href="#6-封装-滚动组件，减少耦合" class="headerlink" title="6.封装 滚动组件，减少耦合"></a>6.封装 滚动组件，减少耦合</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"wrapper"</span> ref=<span class="string">"wrapper"</span>&gt;</span><br><span class="line">    	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"content"</span>&gt;</span><br><span class="line">        	&lt;slot&gt;&lt;/slot&gt;</span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;    </span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp"> import BScroll from 'better-scroll'</span></span><br><span class="line"><span class="regexp"> export default&#123;</span></span><br><span class="line"><span class="regexp">	data()&#123;</span></span><br><span class="line"><span class="regexp">        return &#123;</span></span><br><span class="line"><span class="regexp">            scroll:null</span></span><br><span class="line"><span class="regexp">        &#125;</span></span><br><span class="line"><span class="regexp">    &#125;,</span></span><br><span class="line"><span class="regexp">     mounted()&#123;</span></span><br><span class="line"><span class="regexp">         this.scroll = new BScroll(this.$refs.wrapper,&#123;</span></span><br><span class="line"><span class="regexp">             </span></span><br><span class="line"><span class="regexp">         &#125;)</span></span><br><span class="line"><span class="regexp">     &#125;</span></span><br><span class="line"><span class="regexp">	&#125;         </span></span><br><span class="line"><span class="regexp">            </span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p>引用该组件的时候，手动给最外层的盒子，添加高度或宽度</p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-promise处理异步请求" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -484,42 +534,6 @@
 </article>
 
   
-    <article id="post-图片md示例" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/23/图片md示例/">图片md示例</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/07/23/图片md示例/" class="article-date">
-  <time datetime="2019-07-23T02:15:34.000Z" itemprop="datePublished">2019-07-23</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <p><img src="https://i.loli.net/2019/07/23/5d366da8ea8fc53681.png" alt="运动函数"></p>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
 
 
   <nav id="page-nav">
@@ -554,7 +568,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github个人主页搭建/">github个人主页搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/">promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slot/">slot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/初级/">初级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字体/">字体</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端/">移动端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端组件/">移动端组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/组件库/">组件库</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/canvas/">canvas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github个人主页搭建/">github个人主页搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/">promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slot/">slot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/初级/">初级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字体/">字体</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端/">移动端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端组件/">移动端组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/组件库/">组件库</a></li></ul>
     </div>
   </div>
 
@@ -564,7 +578,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/移动端/" style="font-size: 10px;">移动端</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a> <a href="/tags/组件库/" style="font-size: 10px;">组件库</a>
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/移动端/" style="font-size: 10px;">移动端</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a> <a href="/tags/组件库/" style="font-size: 10px;">组件库</a>
     </div>
   </div>
 
@@ -585,6 +599,10 @@
       <ul>
         
           <li>
+            <a href="/2019/09/14/canvas笔记/">canvas笔记</a>
+          </li>
+        
+          <li>
             <a href="/2019/09/06/移动端开发/">移动端开发</a>
           </li>
         
@@ -598,10 +616,6 @@
         
           <li>
             <a href="/2019/09/03/软件扩——adobe-xd/">软件扩——adobe xd</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/02/响应式相关/">响应式相关</a>
           </li>
         
       </ul>
