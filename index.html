@@ -61,6 +61,47 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-max-height" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/16/max-height/">max-height</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/09/16/max-height/" class="article-date">
+  <time datetime="2019-09-16T13:45:49.000Z" itemprop="datePublished">2019-09-16</time>
+</a>
+    
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
+
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="引论"><a href="#引论" class="headerlink" title="引论"></a>引论</h1><p> 今天在看的公开课，功能是实现 一个带鼠标悬停会出现旋转的二级菜单的 CSS导航栏。</p>
+<p>出现的一个问题，是 鼠标滑过 一级菜单时 二级菜单会旋转着出现。鼠标离开二级菜单会旋转着消失（<code>transform:rotateY(0deg)</code> ) 当鼠标再次滑过二级菜单的位置时（二级已经消失），二级菜单仍然会再次出现。这不符合预期。只有滑过一级菜单，对应的二级菜单才应该出现。</p>
+<p>解决方法：<code>max-height</code> 设为0 。</p>
+<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p>重新学习些 <code>max-height</code></p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-canvas笔记" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -88,7 +129,8 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <h1 id="1-基础的api"><a href="#1-基础的api" class="headerlink" title="1.基础的api"></a>1.基础的api</h1><p><code>ctx.beginPath();</code> // 开始路径绘制 ，如果没有设置，接下来所有画的线条都会秉持一个样式，相当于画别的东西的时候重新拿个笔</p>
+        <h1 id="1-基础的api"><a href="#1-基础的api" class="headerlink" title="1.基础的api"></a>1.基础的api</h1><p><code>ctx.beginPath();</code> // 开始路径绘制 ，如果没有设置，接下来所有画的线条都会秉持一个样式，相当于画别的东西的时候重新拿个笔。</p>
+<p>如果 需要绘制多条属性颜色不一样的线条，需要重新开启新路径。不然属性颜色会被覆盖。</p>
 <p><code>ctx.moveTo(20, 20);</code> // 设置路径起点，坐标为(20,20) ，<strong>相当于落笔的坐标</strong></p>
 <p><code>ctx.lineTo(200, 20);</code> // 绘制一条到(200,20)的轨迹，<strong>到这时线条都是看不见的。</strong></p>
 <p><code>ctx.lineWidth = 1.0;</code> // 设置线宽 </p>
@@ -217,7 +259,7 @@
       
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/03/css之疑惑/">css之疑惑</a>
+      <a class="article-title" href="/2019/09/03/css之疑惑/">css之工作笔记</a>
     </h1>
   
 
@@ -478,56 +520,6 @@
 </article>
 
   
-    <article id="post-CSS记账簿" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/21/CSS记账簿/">CSS记账簿</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/08/21/CSS记账簿/" class="article-date">
-  <time datetime="2019-08-21T08:39:40.000Z" itemprop="datePublished">2019-08-21</time>
-</a>
-    
-    
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
-
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="CSS特性"><a href="#CSS特性" class="headerlink" title="CSS特性"></a>CSS特性</h1><ul>
-<li><p>层叠性：处理冲突的时候，后面的会覆盖前面的</p>
-</li>
-<li><p>继承性：子标签继承父标签的属性，譬如字体颜色，大小，</p>
-</li>
-<li><p>优先级：选择器的权重计算</p>
-</li>
-</ul>
-<h1 id="css样式选择器"><a href="#css样式选择器" class="headerlink" title="css样式选择器"></a>css样式选择器</h1>
-        
-          <p class="article-more-link">
-            <a href="/2019/08/21/CSS记账簿/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
 
 
   <nav id="page-nav">
@@ -572,7 +564,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/移动端/" style="font-size: 10px;">移动端</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a> <a href="/tags/组件库/" style="font-size: 10px;">组件库</a>
+      <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/移动端/" style="font-size: 10px;">移动端</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a> <a href="/tags/组件库/" style="font-size: 10px;">组件库</a>
     </div>
   </div>
 
@@ -593,6 +585,10 @@
       <ul>
         
           <li>
+            <a href="/2019/09/16/max-height/">max-height</a>
+          </li>
+        
+          <li>
             <a href="/2019/09/14/canvas笔记/">canvas笔记</a>
           </li>
         
@@ -605,11 +601,7 @@
           </li>
         
           <li>
-            <a href="/2019/09/03/css之疑惑/">css之疑惑</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/03/软件扩——adobe-xd/">软件扩——adobe xd</a>
+            <a href="/2019/09/03/css之疑惑/">css之工作笔记</a>
           </li>
         
       </ul>

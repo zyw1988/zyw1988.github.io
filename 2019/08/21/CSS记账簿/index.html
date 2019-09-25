@@ -10,20 +10,20 @@
   
   
   
-  <meta name="description" content="CSS特性 层叠性：处理冲突的时候，后面的会覆盖前面的  继承性：子标签继承父标签的属性，譬如字体颜色，大小，  优先级：选择器的权重计算   css样式选择器">
+  <meta name="description" content="CSS特性 层叠性：处理冲突的时候，后面的会覆盖前面的 继承性：子标签继承父标签的属性，譬如字体颜色，大小， 优先级：选择器的权重计算  CSS 属性选择器 ~  相同父元素下 所有目标元素 例子： 12345为所有相同的父元素中位于 p 元素之后的所有 ul 元素设置背景：p~ul&amp;#123;　　background:#ff0000;&amp;#125;  + 紧跟的同类元素   css样式选择器">
 <meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS记账簿">
 <meta property="og:url" content="http://zyw1988.github.io/2019/08/21/CSS记账簿/index.html">
 <meta property="og:site_name" content="❤冰糖葫芦五加皮">
-<meta property="og:description" content="CSS特性 层叠性：处理冲突的时候，后面的会覆盖前面的  继承性：子标签继承父标签的属性，譬如字体颜色，大小，  优先级：选择器的权重计算   css样式选择器">
+<meta property="og:description" content="CSS特性 层叠性：处理冲突的时候，后面的会覆盖前面的 继承性：子标签继承父标签的属性，譬如字体颜色，大小， 优先级：选择器的权重计算  CSS 属性选择器 ~  相同父元素下 所有目标元素 例子： 12345为所有相同的父元素中位于 p 元素之后的所有 ul 元素设置背景：p~ul&amp;#123;　　background:#ff0000;&amp;#125;  + 紧跟的同类元素   css样式选择器">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml6988%5Cwps1.jpg">
 <meta property="og:image" content="c:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567753062412.png">
-<meta property="og:updated_time" content="2019-09-14T06:12:33.769Z">
+<meta property="og:updated_time" content="2019-09-22T15:04:51.956Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS记账簿">
-<meta name="twitter:description" content="CSS特性 层叠性：处理冲突的时候，后面的会覆盖前面的  继承性：子标签继承父标签的属性，譬如字体颜色，大小，  优先级：选择器的权重计算   css样式选择器">
+<meta name="twitter:description" content="CSS特性 层叠性：处理冲突的时候，后面的会覆盖前面的 继承性：子标签继承父标签的属性，譬如字体颜色，大小， 优先级：选择器的权重计算  CSS 属性选择器 ~  相同父元素下 所有目标元素 例子： 12345为所有相同的父元素中位于 p 元素之后的所有 ul 元素设置背景：p~ul&amp;#123;　　background:#ff0000;&amp;#125;  + 紧跟的同类元素   css样式选择器">
 <meta name="twitter:image" content="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml6988%5Cwps1.jpg">
   
     <link rel="alternate" href="/atom.xml" title="❤冰糖葫芦五加皮" type="application/atom+xml">
@@ -99,11 +99,16 @@
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
         <h1 id="CSS特性"><a href="#CSS特性" class="headerlink" title="CSS特性"></a>CSS特性</h1><ul>
-<li><p>层叠性：处理冲突的时候，后面的会覆盖前面的</p>
+<li>层叠性：处理冲突的时候，后面的会覆盖前面的</li>
+<li>继承性：子标签继承父标签的属性，譬如字体颜色，大小，</li>
+<li>优先级：选择器的权重计算</li>
+</ul>
+<h1 id="CSS-属性选择器"><a href="#CSS-属性选择器" class="headerlink" title="CSS 属性选择器"></a>CSS 属性选择器</h1><ul>
+<li><p><code>~</code>  相同父元素下 所有目标元素</p>
+<p>例子：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">为所有相同的父元素中位于 <span class="selector-tag">p</span> 元素之后的所有 <span class="selector-tag">ul</span> 元素设置背景：</span><br><span class="line"><span class="selector-tag">p</span>~<span class="selector-tag">ul</span>&#123;</span><br><span class="line"></span><br><span class="line">　　<span class="attribute">background</span>:<span class="number">#ff0000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 </li>
-<li><p>继承性：子标签继承父标签的属性，譬如字体颜色，大小，</p>
-</li>
-<li><p>优先级：选择器的权重计算</p>
+<li><p><code>+</code> 紧跟的同类元素</p>
 </li>
 </ul>
 <h1 id="css样式选择器"><a href="#css样式选择器" class="headerlink" title="css样式选择器"></a>css样式选择器</h1><a id="more"></a>
@@ -253,9 +258,13 @@
 <p><code>vertical-lr</code> 竖写，并且从左到右</p>
 <p><code>sideways-rl</code>  内容垂直方向从上到下排列</p>
 <p><code>sideways-lr</code> 内容垂直方向从下到上排列</p>
-<h1 id="text-align"><a href="#text-align" class="headerlink" title="text-align"></a>text-align</h1><p>设置文本样式，</p>
+<h1 id="文字属性"><a href="#文字属性" class="headerlink" title="文字属性"></a>文字属性</h1><h2 id="1-text-align"><a href="#1-text-align" class="headerlink" title="1.text-align"></a>1.text-align</h2><p>设置文本样式，</p>
 <p><code>text-align-last:justify</code> ，适用于 未知字数中文两端对齐</p>
-<p><code>text-align:center</code>，文字居中，在input 输入框也可以通过这个设置光标居中</p>
+<p><code>text-align:center</code>，文字居中，在input 输入框也可以通过</p>
+<p>这个设置光标居中</p>
+<h2 id="2-line-height"><a href="#2-line-height" class="headerlink" title="2.line-height"></a>2.line-height</h2><p>行高，</p>
+<p>可以设置好为 数值 <code>line-height:2</code> 即为两倍字体大小</p>
+<p>像素值：<code>line-height:10px</code></p>
 <h1 id="文本溢出隐藏并显示省略号"><a href="#文本溢出隐藏并显示省略号" class="headerlink" title="文本溢出隐藏并显示省略号"></a>文本溢出隐藏并显示省略号</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 只有一行文本的时候</span></span><br><span class="line">overflow:hidden; <span class="comment">//超出的文本隐藏</span></span><br><span class="line">text-overflow:ellipsis; <span class="comment">//溢出用省略号显示</span></span><br><span class="line">white-space:nowrap; <span class="comment">//溢出不换行</span></span><br></pre></td></tr></table></figure></div>
 
 <h1 id="文本之间空隙"><a href="#文本之间空隙" class="headerlink" title="文本之间空隙"></a>文本之间空隙</h1><p><code>letter-spacing</code> 设置具体px可以将文字间隔开。</p>
@@ -332,6 +341,20 @@
 <p><a href>clip 和clip-path 有什么区别</a></p>
 <p>clip 只能裁剪正方形，必须要绝对定位。</p>
 <p>clip-path 对元素的定位没有要去，可以裁剪更多形状。</p>
+<h1 id="not"><a href="#not" class="headerlink" title=":not()"></a>:not()</h1><p>CSS 否定伪类，:not(X)，是以一个简单的以选择器X为参数的功能性标记函数。它匹配不符合参数选择器X描述的元素。X不能包含另外一个否定选择器。</p>
+<p>:not伪类的优先级即为它参数选择器的优先级。:not伪类不像其它伪类，它不会增加选择器的优先级。</p>
+<p><strong>参数</strong>：<code>:not()</code> 伪类可以将一个或多个以逗号分隔的选择器作为其参数。选择器中不得包含另一个否定选择符或伪元素。</p>
+<p><strong>应用</strong>：商品列表中 当用户鼠标悬浮某一商品的时候，其他的同类商品都 模糊或者暗淡，突出当前用户选中的。</p>
+<p>【例子】：</p>
+<p>html结构</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>css部分</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 当 wrapper 有hover的时候 子集 box 没有被hover 的时候，即除了hover之外的*/</span></span><br><span class="line"><span class="selector-class">.wrapper</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.box</span><span class="selector-pseudo">:not(</span><span class="selector-pseudo">:hover)</span>  &#123;</span><br><span class="line">    <span class="attribute">filter</span>: <span class="built_in">blur</span>(3px);</span><br><span class="line">  	<span class="attribute">opacity</span>: <span class="number">0.5</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="过滤filter"><a href="#过滤filter" class="headerlink" title="过滤filter()"></a>过滤filter()</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">filter: none | blur() | brightness() | contrast() | drop-shadow() | grayscale() | hue-rotate() | invert() | opacity() | saturate() | sepia() | url();</span><br></pre></td></tr></table></figure></div>
+
+<p><a href="https://www.runoob.com/cssref/css3-pr-filter.html" target="_blank" rel="noopener">未应用</a></p>
 
       
     </div>
@@ -421,7 +444,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/移动端/" style="font-size: 10px;">移动端</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a> <a href="/tags/组件库/" style="font-size: 10px;">组件库</a>
+      <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/移动端/" style="font-size: 10px;">移动端</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a> <a href="/tags/组件库/" style="font-size: 10px;">组件库</a>
     </div>
   </div>
 
@@ -442,6 +465,10 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
+            <a href="/2019/09/16/max-height/">max-height</a>
+          </li>
+        
+          <li>
             <a href="/2019/09/14/canvas笔记/">canvas笔记</a>
           </li>
         
@@ -454,11 +481,7 @@ gitment.render('gitmentContainer')
           </li>
         
           <li>
-            <a href="/2019/09/03/css之疑惑/">css之疑惑</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/03/软件扩——adobe-xd/">软件扩——adobe xd</a>
+            <a href="/2019/09/03/css之疑惑/">css之工作笔记</a>
           </li>
         
       </ul>

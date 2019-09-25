@@ -5,18 +5,23 @@
   
 
   
-  <title>Tag: canvas | ❤冰糖葫芦五加皮</title>
+  <title>max-height | ❤冰糖葫芦五加皮</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="❤冰糖葫芦五加皮">
-<meta property="og:url" content="http://zyw1988.github.io/tags/canvas/index.html">
+  <meta name="description" content="引论 今天在看的公开课，功能是实现 一个带鼠标悬停会出现旋转的二级菜单的 CSS导航栏。 出现的一个问题，是 鼠标滑过 一级菜单时 二级菜单会旋转着出现。鼠标离开二级菜单会旋转着消失（transform:rotateY(0deg) ) 当鼠标再次滑过二级菜单的位置时（二级已经消失），二级菜单仍然会再次出现。这不符合预期。只有滑过一级菜单，对应的二级菜单才应该出现。 解决方法：max-height">
+<meta name="keywords" content="CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="max-height">
+<meta property="og:url" content="http://zyw1988.github.io/2019/09/16/max-height/index.html">
 <meta property="og:site_name" content="❤冰糖葫芦五加皮">
+<meta property="og:description" content="引论 今天在看的公开课，功能是实现 一个带鼠标悬停会出现旋转的二级菜单的 CSS导航栏。 出现的一个问题，是 鼠标滑过 一级菜单时 二级菜单会旋转着出现。鼠标离开二级菜单会旋转着消失（transform:rotateY(0deg) ) 当鼠标再次滑过二级菜单的位置时（二级已经消失），二级菜单仍然会再次出现。这不符合预期。只有滑过一级菜单，对应的二级菜单才应该出现。 解决方法：max-height">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-09-16T14:04:19.004Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="❤冰糖葫芦五加皮">
+<meta name="twitter:title" content="max-height">
+<meta name="twitter:description" content="引论 今天在看的公开课，功能是实现 一个带鼠标悬停会出现旋转的二级菜单的 CSS导航栏。 出现的一个问题，是 鼠标滑过 一级菜单时 二级菜单会旋转着出现。鼠标离开二级菜单会旋转着消失（transform:rotateY(0deg) ) 当鼠标再次滑过二级菜单的位置时（二级已经消失），二级菜单仍然会再次出现。这不符合预期。只有滑过一级菜单，对应的二级菜单才应该出现。 解决方法：max-height">
   
     <link rel="alternate" href="/atom.xml" title="❤冰糖葫芦五加皮" type="application/atom+xml">
   
@@ -59,47 +64,85 @@
   </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main">
+        <section id="main"><article id="post-max-height" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="global-container archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
+    <header class="article-header">
       
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/14/canvas笔记/">canvas笔记</a>
+    <h1 class="article-title" itemprop="name">
+      max-height
     </h1>
   
-      
+
     </header>
-    <div class="article-meta archive-article-meta">
-      <a href="/2019/09/14/canvas笔记/" class="article-date">
-  <time datetime="2019-09-14T06:10:57.000Z" itemprop="datePublished">2019-09-14</time>
+  
+  <div class="article-meta">
+    <a href="/2019/09/16/max-height/" class="article-date">
+  <time datetime="2019-09-16T13:45:49.000Z" itemprop="datePublished">2019-09-16</time>
 </a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas/">canvas</a></li></ul>
+    
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
 
-    </div>
   </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="引论"><a href="#引论" class="headerlink" title="引论"></a>引论</h1><p> 今天在看的公开课，功能是实现 一个带鼠标悬停会出现旋转的二级菜单的 CSS导航栏。</p>
+<p>出现的一个问题，是 鼠标滑过 一级菜单时 二级菜单会旋转着出现。鼠标离开二级菜单会旋转着消失（<code>transform:rotateY(0deg)</code> ) 当鼠标再次滑过二级菜单的位置时（二级已经消失），二级菜单仍然会再次出现。这不符合预期。只有滑过一级菜单，对应的二级菜单才应该出现。</p>
+<p>解决方法：<code>max-height</code> 设为0 。</p>
+<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p>重新学习些 <code>max-height</code></p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/09/14/canvas笔记/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">canvas笔记</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
 </article>
-  
-  
-    </div></section>
-  
-
-
 </section>
         <aside id="sidebar">
   

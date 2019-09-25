@@ -5,7 +5,7 @@
   
 
   
-  <title>css之疑惑 | ❤冰糖葫芦五加皮</title>
+  <title>css之工作笔记 | ❤冰糖葫芦五加皮</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
@@ -13,14 +13,14 @@
   <meta name="description" content="怕什么真理无穷，进一寸有一寸的欢喜。——可爱的博客er  布局页面的时候发现 上层盒子设置阴影会被下层盒子覆盖。搜索说 可以通过设置 z-index 更改层级，我这里更改无效。只能position:relative  相对于原来位置定位，原来的占位还是存在的。但为啥就让阴影显示出来了呢。  纯文本渲染输出 需要空格隔开：letter-spacing:xxpx 可跟normal、inherit、具体">
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css之疑惑">
+<meta property="og:title" content="css之工作笔记">
 <meta property="og:url" content="http://zyw1988.github.io/2019/09/03/css之疑惑/index.html">
 <meta property="og:site_name" content="❤冰糖葫芦五加皮">
 <meta property="og:description" content="怕什么真理无穷，进一寸有一寸的欢喜。——可爱的博客er  布局页面的时候发现 上层盒子设置阴影会被下层盒子覆盖。搜索说 可以通过设置 z-index 更改层级，我这里更改无效。只能position:relative  相对于原来位置定位，原来的占位还是存在的。但为啥就让阴影显示出来了呢。  纯文本渲染输出 需要空格隔开：letter-spacing:xxpx 可跟normal、inherit、具体">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-06T13:13:59.043Z">
+<meta property="og:updated_time" content="2019-09-17T03:33:58.002Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css之疑惑">
+<meta name="twitter:title" content="css之工作笔记">
 <meta name="twitter:description" content="怕什么真理无穷，进一寸有一寸的欢喜。——可爱的博客er  布局页面的时候发现 上层盒子设置阴影会被下层盒子覆盖。搜索说 可以通过设置 z-index 更改层级，我这里更改无效。只能position:relative  相对于原来位置定位，原来的占位还是存在的。但为啥就让阴影显示出来了呢。  纯文本渲染输出 需要空格隔开：letter-spacing:xxpx 可跟normal、inherit、具体">
   
     <link rel="alternate" href="/atom.xml" title="❤冰糖葫芦五加皮" type="application/atom+xml">
@@ -70,7 +70,7 @@
       
   
     <h1 class="article-title" itemprop="name">
-      css之疑惑
+      css之工作笔记
     </h1>
   
 
@@ -105,6 +105,14 @@
 </li>
 </ol>
 <a id="more"></a>
+
+<p>3.今天遇到一个动画问题。要求鼠标滑过的时候 导航栏中的文字下方要出现滑动的线条，且线条从左进，从右出。</p>
+<p>按照以往的思路 控制包裹文字的元素的宽度width从0到100% 就可以。但是在这里还不足够，因为是从同一个方向进和出。</p>
+<p>在这里，需要用到 transform的属性<code>transform-origin</code>，并且因为用到了transform，就不需要<code>width</code>，可以直接控制scale缩放比。默认是 100%，初始状态是 scale(0)，鼠标hover 的时候 <code>scale(1)</code>。</p>
+<p>相对应的。初始状态时<code>transform-origin:100% 50%</code> 结束的状态<code>transform-origin:0 50%</code>;</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">nav</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">transform</span>:<span class="built_in">scale</span>(0);</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">bottom</span>: -<span class="number">36px</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">transform-origin</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">transition</span>: transform .<span class="number">25s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">nav</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span><span class="selector-pseudo">:hover</span> &gt;<span class="selector-tag">a</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">    <span class="attribute">transform</span>:<span class="built_in">scale</span>(1);</span><br><span class="line">    <span class="attribute">transform-origin</span>: <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+
       
     </div>
     
@@ -193,7 +201,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/移动端/" style="font-size: 10px;">移动端</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a> <a href="/tags/组件库/" style="font-size: 10px;">组件库</a>
+      <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/移动端/" style="font-size: 10px;">移动端</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a> <a href="/tags/组件库/" style="font-size: 10px;">组件库</a>
     </div>
   </div>
 
@@ -214,6 +222,10 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
+            <a href="/2019/09/16/max-height/">max-height</a>
+          </li>
+        
+          <li>
             <a href="/2019/09/14/canvas笔记/">canvas笔记</a>
           </li>
         
@@ -226,11 +238,7 @@ gitment.render('gitmentContainer')
           </li>
         
           <li>
-            <a href="/2019/09/03/css之疑惑/">css之疑惑</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/03/软件扩——adobe-xd/">软件扩——adobe xd</a>
+            <a href="/2019/09/03/css之疑惑/">css之工作笔记</a>
           </li>
         
       </ul>
