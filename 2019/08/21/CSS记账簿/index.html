@@ -20,7 +20,16 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml6988%5Cwps1.jpg">
 <meta property="og:image" content="c:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567753062412.png">
-<meta property="og:updated_time" content="2019-09-22T15:04:51.956Z">
+<meta property="og:image" content="c:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567753062412.png">
+<meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568086838980.png">
+<meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568092442485.png">
+<meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570283450517.png">
+<meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570283480457.png">
+<meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570284233038.png">
+<meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570284255781.png">
+<meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570284140143.png">
+<meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570284168610.png">
+<meta property="og:updated_time" content="2019-10-07T14:33:01.489Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS记账簿">
 <meta name="twitter:description" content="CSS特性 层叠性：处理冲突的时候，后面的会覆盖前面的 继承性：子标签继承父标签的属性，譬如字体颜色，大小， 优先级：选择器的权重计算  CSS 属性选择器 ~  相同父元素下 所有目标元素 例子： 12345为所有相同的父元素中位于 p 元素之后的所有 ul 元素设置背景：p~ul&amp;#123;　　background:#ff0000;&amp;#125;  + 紧跟的同类元素   css样式选择器">
@@ -355,6 +364,109 @@
 <h1 id="过滤filter"><a href="#过滤filter" class="headerlink" title="过滤filter()"></a>过滤filter()</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">filter: none | blur() | brightness() | contrast() | drop-shadow() | grayscale() | hue-rotate() | invert() | opacity() | saturate() | sepia() | url();</span><br></pre></td></tr></table></figure></div>
 
 <p><a href="https://www.runoob.com/cssref/css3-pr-filter.html" target="_blank" rel="noopener">未应用</a></p>
+<h1 id="CSS复位-1"><a href="#CSS复位-1" class="headerlink" title="CSS复位"></a>CSS复位</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">margin:<span class="number">0</span>;</span><br><span class="line">padding:<span class="number">0</span>;</span><br><span class="line">box-sizing:border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>之后如果要继承 <code>box-sizing:border-box;</code> 后续代码则不需要添加。</p>
+<h1 id="使用vw定制rem自适应布局-1"><a href="#使用vw定制rem自适应布局-1" class="headerlink" title="使用vw定制rem自适应布局(*)"></a>使用vw定制rem自适应布局(*)</h1><p>前景知识： 通过JS设置不同屏幕宽高比的 <code>font-size</code>，rem基于根元素<code>font-size</code>设置页面的字体大小，做到自适应。</p>
+<p>现在：结合 vw 单位 和<code>calc()</code>  </p>
+<h1 id="排版竖行文字-1"><a href="#排版竖行文字-1" class="headerlink" title="排版竖行文字"></a>排版竖行文字</h1><p><code>writing-mode:horizontal-tb | vertical-rl | vertical-lr | sideways-rl | sideways-lr</code> </p>
+<p><code>horizontal-tb</code>  正常的横向书写</p>
+<p><code>vertical-rl</code> 竖写，并且从右往左</p>
+<p><code>vertical-lr</code> 竖写，并且从左到右</p>
+<p><code>sideways-rl</code>  内容垂直方向从上到下排列</p>
+<p><code>sideways-lr</code> 内容垂直方向从下到上排列</p>
+<h1 id="居中两端对齐"><a href="#居中两端对齐" class="headerlink" title="居中两端对齐"></a>居中两端对齐</h1><p><code>text-align-last:justify</code> ，适用于 未知字数中文两端对齐</p>
+<h1 id="文本溢出隐藏并显示省略号-1"><a href="#文本溢出隐藏并显示省略号-1" class="headerlink" title="文本溢出隐藏并显示省略号"></a>文本溢出隐藏并显示省略号</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 只有一行文本的时候</span></span><br><span class="line">overflow:hidden; <span class="comment">//超出的文本隐藏</span></span><br><span class="line">text-overflow:ellipsis; <span class="comment">//溢出用省略号显示</span></span><br><span class="line">white-space:nowrap; <span class="comment">//溢出不换行</span></span><br></pre></td></tr></table></figure></div>
+
+<h1 id="文本之间空隙-1"><a href="#文本之间空隙-1" class="headerlink" title="文本之间空隙"></a>文本之间空隙</h1><p><code>letter-spacing</code> 设置具体px可以将文字间隔开。</p>
+<p>妙用：设置负值，文本将倒序。</p>
+<p>恭喜发财 变成 财发喜恭</p>
+<h1 id="左重右轻（只在flex）-1"><a href="#左重右轻（只在flex）-1" class="headerlink" title="左重右轻（只在flex）"></a>左重右轻（只在flex）</h1><p>横向flex 布局时，最后一个加上<code>margin-left=auto</code> 可以实现最后一个图标向右对齐。</p>
+<p>效果</p>
+<p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567753062412.png" alt="1567753062412"></p>
+<h1 id="attr抓取data-搭配content"><a href="#attr抓取data-搭配content" class="headerlink" title="attr抓取data-*(搭配content )"></a>attr抓取data-*(搭配content )</h1><p>一直以为attr 属性值只能在 js中通过api 获取。</p>
+<p>content 属性与 :before 及 :after 伪元素配合使用，来插入生成内容。</p>
+<p>css 中能直接通过 <code>attr(data-xx)</code> 获取到 用户自定义属性 <code>data-xx</code> 的值。在CSS中 同时使用 <code>content</code> 和<code>attr</code> 就能直接赋值。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">button::after &#123;</span><br><span class="line">    content: attr(data-num);</span><br><span class="line">&#125;</span><br><span class="line">&lt;button data-num=<span class="string">"123"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br></pre></td></tr></table></figure></div>
+
+<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568086838980.png" alt="1568086838980"></p>
+<p><strong>Tip:</strong> 只能赋值给 伪元素<code>::after</code> 或者 <code>::before</code></p>
+<h1 id="简单的表单验证-1"><a href="#简单的表单验证-1" class="headerlink" title="简单的表单验证"></a>简单的表单验证</h1><p>用到的 知识点：伪元素   <code>:valid</code>  和  <code>:invalid</code> 和 <code>pattern</code></p>
+<p> <code>:valid</code>   选择器在表单元素的值需要根据指定条件验证时设置指定样式</p>
+<p>​            注意：只作用于能指定区间值的元素，例如 input 元素中的 min 和 max 属性，及正确的 email 字段, 合法的数字字段等。</p>
+<p> <code>:invalid</code> 相对的就是不符合指定条件时的样式 </p>
+<p> <code>pattern</code> 即 指定样式， 使用正则表达式、</p>
+<h1 id="focus-within-1"><a href="#focus-within-1" class="headerlink" title=":focus-within"></a>:focus-within</h1><p>新的CSS伪类</p>
+<p>当元素本身或<strong>其后代</strong>获得焦点时，<code>:focus-within</code>伪类的元素就会有效。</p>
+<p>应用：button 获取被点击时切换颜色</p>
+<h1 id="filter（滤镜）属性"><a href="#filter（滤镜）属性" class="headerlink" title="filter（滤镜）属性"></a>filter（滤镜）属性</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">filter: none | blur() | brightness() | contrast() | drop-shadow() | grayscale() | hue-rotate() | invert() | opacity() | saturate() | sepia() | url();</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h2><h1 id="valid-和-invalid校验表单"><a href="#valid-和-invalid校验表单" class="headerlink" title=":valid  和:invalid校验表单"></a>:valid  和:invalid校验表单</h1><p>需要搭配 <code>pattern</code> 使用，写在input 标签上</p>
+<h1 id="单边框（box-shadow）"><a href="#单边框（box-shadow）" class="headerlink" title="单边框（box-shadow）"></a>单边框（box-shadow）</h1><p>1.左侧内置单边框</p>
+<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568092442485.png" alt="1568092442485"></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">box-shadow:inset <span class="number">5</span>px <span class="number">0</span> <span class="number">0</span> green;</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="background-clip"><a href="#background-clip" class="headerlink" title="background-clip"></a>background-clip</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-clip: border-box|padding-box|content-box|text;</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="盒子阴影"><a href="#盒子阴影" class="headerlink" title="盒子阴影"></a>盒子阴影</h1><p><code>box-shadow</code> 属性值包含：X偏移，Y偏移，阴影模糊半径，阴影扩散半径，和阴影颜色并以多个逗号分隔。由逗号分隔的列表来描述一个或多个阴影效果。该属性可以让几乎所有元素的边框产生阴影。如果元素同时设置了 <code>border-radius</code>，阴影也会有圆角效果。</p>
+<p><code>box-shadow:offsetX offsetY blur-radius spread-radius color</code></p>
+<h2 id="xy偏移量"><a href="#xy偏移量" class="headerlink" title="xy偏移量"></a>xy偏移量</h2><p>x 和y 偏移量都= 0 ，那么阴影位于元素后面。这时如果设置了<code>&lt;blur-radius&gt;</code> 或<code>&lt;spread-radius&gt;</code> 则有模糊效果</p>
+<p><code>box-shadow: 0 0 10px 0 grey;</code></p>
+<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570283450517.png" alt="1570283450517"></p>
+<p>增加了 <code>inset</code> </p>
+<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570283480457.png" alt="1570283480457"></p>
+<h2 id="模糊半径"><a href="#模糊半径" class="headerlink" title="模糊半径"></a>模糊半径</h2><p>模糊半径<code>blur-radius</code>  不能为负值。值越大，阴影越淡。</p>
+<p>扩散半径 为1px 和30px 的比较</p>
+<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570284233038.png" alt="1570284233038"></p>
+<p>带上 inset 的效果</p>
+<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570284255781.png" alt="1570284255781"></p>
+<h2 id="扩散半径"><a href="#扩散半径" class="headerlink" title="扩散半径"></a>扩散半径</h2><p>这是第四个值。取正值时，阴影扩大；取负值时，阴影收缩。默认为0，此时阴影与元素同样大。需要考虑 <code>inset</code> </p>
+<p><code>spread-radius</code> 为1px  和30px  的效果</p>
+<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570284140143.png" alt="1570284140143"></p>
+<p>带上 inset 的效果</p>
+<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570284168610.png" alt="1570284168610"></p>
+<h1 id="带图片的响应式图片容器"><a href="#带图片的响应式图片容器" class="headerlink" title="带图片的响应式图片容器"></a>带图片的响应式图片容器</h1><p>功能：实现在宽度设置百分比的情况下，拖动浏览器下 demo保持<strong>正方形</strong>。同时内部image 不会被拉伸，同比例缩放。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.demo</span> &#123;</span><br><span class="line">    <span class="comment">/* background: #333; */</span></span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">'../images/feifei.jpg'</span>);</span><br><span class="line">    <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">    <span class="attribute">background-position</span>: center center;</span><br><span class="line">    <span class="attribute">background-size</span>: cover;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.demo</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.demo</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>原理： padding使用百分比是基于父级的宽度。没有给demo 高度，使用paddingTop 撑开，同时paddingTop 撑开的高度 = 父级宽度* 100% ，实现正方形。</p>
+<p>图片使用 backgroundImage 放入，设置 居于中心放置 ，使用 <code>cover</code> 。</p>
+<h1 id="table-布局的初使用"><a href="#table-布局的初使用" class="headerlink" title="table 布局的初使用"></a>table 布局的初使用</h1><p><code>display:table</code> 子元素子父元素中水平垂直居中</p>
+<p>使用：1.父级设置<code>display:table</code></p>
+<p>​           2.子集设置：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">display</span><span class="selector-pseudo">:table-cell</span>;</span><br><span class="line"><span class="selector-tag">vertical-align</span><span class="selector-pseudo">:middle</span>;</span><br><span class="line"><span class="selector-tag">text-align</span><span class="selector-pseudo">:center</span>;</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="object-fit"><a href="#object-fit" class="headerlink" title="object-fit"></a>object-fit</h1><h1 id="滚动条样式美化"><a href="#滚动条样式美化" class="headerlink" title="滚动条样式美化"></a>滚动条样式美化</h1><p><code>::-webkit-scrollbar</code> CSS伪类选择器影响了一个元素的滚动条的样式</p>
+<p>【但是 MDN 提示，该特征是非标准尽量不要在生产环境中使用。】</p>
+<ul>
+<li><code>::-webkit-scrollbar</code> — 整个滚动条.</li>
+<li><code>::-webkit-scrollbar-button</code> — 滚动条上的按钮 (上下箭头).</li>
+<li><code>::-webkit-scrollbar-thumb</code> — 滚动条上的滚动滑块.</li>
+<li><code>::-webkit-scrollbar-track</code> — 滚动条轨道.</li>
+<li><code>::-webkit-scrollbar-track-piece</code> — 滚动条没有滑块的轨道部分.</li>
+<li><code>::-webkit-scrollbar-corner</code> — 当同时有垂直滚动条和水平滚动条时交汇的部分.</li>
+<li><code>::-webkit-resizer</code> — 某些元素的corner部分的部分样式(例:textarea的可拖动按钮).</li>
+</ul>
+<h1 id="CSS中自定义属性"><a href="#CSS中自定义属性" class="headerlink" title="CSS中自定义属性"></a>CSS中自定义属性</h1><p><code>--*</code> CSS变量，带有<code>--</code>的前缀的属性名，表示的是带有值的自定义属性，其可以通过<code>var</code> 函数在全文档范围内复用。并且值将会借助级联算法和自定义属性值运算出来。</p>
+<p>举例：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> <span class="selector-tag">div</span>&#123;</span><br><span class="line">     <span class="comment">/* 1.自定义属性 */</span></span><br><span class="line">     <span class="attribute">--percent</span>:<span class="number">50</span>;</span><br><span class="line">     <span class="comment">/* width: 200px; */</span></span><br><span class="line">     <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">     <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">     <span class="attribute">border</span>: <span class="number">1px</span> solid;</span><br><span class="line">     <span class="comment">/* 2.利用线性渐变实现进度条 */</span></span><br><span class="line">     <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(#0ff,#0ff);</span><br><span class="line">     <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">     <span class="comment">/* var 获取自定义属性的值 */</span></span><br><span class="line">     <span class="attribute">background-size</span>: <span class="built_in">calc</span>(var(--percent) * <span class="number">1%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><code>var</code> 获取到 <code>--percent</code> 定义的值</li>
+<li><code>--percent</code> 定义的值 是可以被计算的 在这里 使用<code>calc</code> 计算成百分比</li>
+</ul>
+<p>并且：如果是同名的 自定义属性，使用在最近父级中被定义的。</p>
+<h1 id="outline-轮廓"><a href="#outline-轮廓" class="headerlink" title="outline 轮廓"></a>outline 轮廓</h1><p>轮廓与边框在以下几个方面存在不同：</p>
+<ul>
+<li><p>轮廓不占据空间，它们被描绘于内容之上</p>
+</li>
+<li><p>轮廓可以是非矩形的。在Gecko/Firefox中，轮廓是矩形的，但是Opera则会围绕元素结构绘制非矩形的形状，如下图</p>
+</li>
+<li><p>包括 <code>outline-color</code> <code>outline-style</code> <code>outline-width</code> </p>
+</li>
+</ul>
+<p>语法：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 宽度 | 样式 | 颜色 */</span></span><br><span class="line"><span class="selector-tag">outline</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-tag">white</span>;</span><br></pre></td></tr></table></figure></div>
+
 
       
     </div>
