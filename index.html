@@ -61,6 +61,135 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-CSS选择器之表单样式中的妙用" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/15/CSS选择器之表单样式中的妙用/">CSS选择器之表单样式中的妙用</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/10/15/CSS选择器之表单样式中的妙用/" class="article-date">
+  <time datetime="2019-10-15T14:23:40.000Z" itemprop="datePublished">2019-10-15</time>
+</a>
+    
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
+
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="CSS-样式-表单样式"><a href="#CSS-样式-表单样式" class="headerlink" title="CSS 样式+ 表单样式"></a>CSS 样式+ 表单样式</h1><p>又名：复习不常用的CSS选择器</p>
+<p>最近沉迷于样式编写，发现不仅一些动画效果和样式切换可以完全使用CSS编写，而且通过相对单位rem，vw，vh 简单获取到设备宽高度简化了js 的使用。</p>
+<h2 id><a href="#" class="headerlink" title="+"></a>+</h2><p><code>eleA + eleB</code> :选择 eleA 元素之后紧跟的每个 eleB元素，即 兄弟元素</p>
+<h2 id="-1"><a href="#-1" class="headerlink" title="~"></a>~</h2><p><code>eleA ~ eleB</code> 选择器 eleA  之后出现的所有 eleB，但是 eleB不必直接紧随 eleA。即 eleB 可以是子级，也可以是子级的子级.</p>
+<p>例子后续补充（以表单元素为例</p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-jQuery-补充知识" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/12/jQuery-补充知识/">jQuery 补充知识</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/10/12/jQuery-补充知识/" class="article-date">
+  <time datetime="2019-10-12T09:40:55.000Z" itemprop="datePublished">2019-10-12</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>一、隐式迭代</p>
+<p>即 如果选出一组jq对象，设置样式的话，不同 for循环可以统一设置(相同的操作)。（不完全理解仅做插眼知识点）</p>
+<p>适用场景： 排他</p>
+<p>例子：只有当前选中有特殊样式，切换的时候样式回复默认</p>
+<p>二、CSS 对象形式修改样式，样式名可以不加引号，样式属性值如果是 数字的话也可以不加引号，数字之外的值必须加引号。</p>
+<p>三、事件切换：<code>hover()</code></p>
+<p>整合了mouseover 和mouseout，鼠标经过和鼠标离开两个事件 。</p>
+<p>并且：如果hover中只写了一个函数，那么鼠标经过和鼠标离开都会执行这个函数。</p>
+<p>例子：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'.nav&gt;li'</span>).hover(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="keyword">this</span>).children(<span class="string">"ul"</span>).slideToggle();</span><br><span class="line">    <span class="comment">// 即鼠标经过和离开 都会进行 滑动的切换。</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
+
+<p>优化：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'.nav&gt;li'</span>).hover(function()&#123;</span><br><span class="line">    $(<span class="keyword">this</span>).children(<span class="string">"ul"</span>).stop().slideToggle();</span><br><span class="line">    <span class="comment">// 默认实惠执行动画队列里的所有动画，会有一种抽风的感觉。</span></span><br><span class="line">    <span class="comment">//加上 .stop() 即执行最近一次的动画，</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
+
+<p>获取属性：</p>
+<p>prop() 固有属性 a 的href title</p>
+<p>attr() 自定义属性譬如：class  id </p>
+<p>获取input 的值</p>
+<p><code>val()</code></p>
+<p>表单元素修改事件：<code>change()</code></p>
+<p>保留小数</p>
+<p><code>toFixed(num)</code>  保留num 位小数</p>
+<p>substr(num): 原生js方法，在字符串中抽取从 <em>start</em> 下标开始的指定数目的字符。</p>
+<p>Jquery元素遍历（进行不同的操作）</p>
+<p><code>$(&quot;div&quot;).each(function(index , domEle){ })</code> index是每个元素的索引号，domEle是每个DOM元素对象，不是jQuery 对象。</p>
+<p>$.each() 和上面的一样，不过这个遍历方法更多的用来遍历数据，譬如数组、对象等。</p>
+<p>元素位置的获取和设置</p>
+<ol>
+<li><p><code>offset()</code> 设置或返回被选元素相对于<strong>文档</strong>的偏移坐标，跟 父级没有关系。 该方法有两个属性：left、top, <code>offset().top</code> 用于获取距离文档顶部的距离，<code>offset().left</code> 用于获取居里文档左侧的距离。</p>
+<p>使用对象来一起设置 顶部和左侧的偏移</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'div'</span>).offset(&#123;</span><br><span class="line">    top:<span class="number">10</span>,</span><br><span class="line">    left:<span class="number">10</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+
+
+
+</li>
+</ol>
+<ol start="2">
+<li><code>position()</code> 返回的距离带有定位父级的距离</li>
+</ol>
+<p>获取 滚动距离 </p>
+<p>页面滚动事件：<code>$(window).scroll(function(){...})</code> </p>
+<p>设置/ 获取 页面滚动距离<code>$(document).scrollTop()</code> </p>
+<p>带有动画的返回顶部，需要操作<code>body,html</code> (只有元素才能动画，不能操作 document)</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'body,html'</span>).animate(&#123;</span><br><span class="line">    <span class="string">'scrollTop'</span>:<span class="number">0</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+
+<p>实现 对象拷贝</p>
+<p><code>$.extend([deep],target,object,[objectN])</code> </p>
+<ol>
+<li>deep 如果设置为true为深拷贝，默认为false 浅拷贝</li>
+<li>target要拷贝的目标对象</li>
+<li>待拷贝到第一个对象的对象 </li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-max-height" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -222,7 +351,7 @@
 <p><a href="https://www.fontke.com/tool/convfont/" target="_blank" rel="noopener">在线转换字体格式</a> </p>
 <h1 id="引用的方式"><a href="#引用的方式" class="headerlink" title="引用的方式"></a>引用的方式</h1><ul>
 <li><p>使用 <code>@font-face</code> 定义字体属性，包括<code>font-family</code> 定义字体名字，<code>src</code> 文字引用地址，多个地址之间使用 逗号 隔开。</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@font-face &#123;</span><br><span class="line">      font-family: <span class="xml"><span class="tag">&lt;<span class="name">YourWebFontName</span>&gt;</span>;</span></span><br><span class="line">      src: &lt;source&gt; [&lt;format&gt;][,&lt;source&gt; [&lt;format&gt;]]*;</span><br><span class="line">      [font-weight: &lt;weight&gt;];</span><br><span class="line">      [font-style: &lt;style&gt;];</span><br><span class="line">&#125;</span><br><span class="line">//  []包裹的是非必要属性</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@font-face &#123;</span><br><span class="line">      font-family: &lt;YourWebFontName&gt;;</span><br><span class="line">      src: &lt;source&gt; [&lt;format&gt;][,&lt;source&gt; [&lt;format&gt;]]*;</span><br><span class="line">      [font-weight: &lt;weight&gt;];</span><br><span class="line">      [font-style: &lt;style&gt;];</span><br><span class="line">&#125;</span><br><span class="line">//  []包裹的是非必要属性</span><br></pre></td></tr></table></figure></div>
 
 
 
@@ -431,95 +560,6 @@
 </article>
 
   
-    <article id="post-模拟前后端交互的小助手-mock-EasyMock" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/24/模拟前后端交互的小助手-mock-EasyMock/">模拟前后端交互的小助手-mock&amp;EasyMock</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/08/24/模拟前后端交互的小助手-mock-EasyMock/" class="article-date">
-  <time datetime="2019-08-24T02:41:28.000Z" itemprop="datePublished">2019-08-24</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h1><ul>
-<li>知识储备：什么是跨域，为什么有跨域，如何解决跨域，在原生js和vue中分别如何处理跨域。网络请求和异步操作的关系，异步和同步的区分。</li>
-<li><a href="http://mockjs.com/" target="_blank" rel="noopener">mock</a> 是拦截Ajax 请求，生成随机数据返回</li>
-<li><a href="https://easy-mock.com/" target="_blank" rel="noopener">EasyMock</a> 提供一个网页手动输入数据就能生成接口</li>
-</ul>
-        
-          <p class="article-more-link">
-            <a href="/2019/08/24/模拟前后端交互的小助手-mock-EasyMock/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-致-所有的组件库们" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/23/致-所有的组件库们/">致-所有的组件库们</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/08/23/致-所有的组件库们/" class="article-date">
-  <time datetime="2019-08-23T05:34:42.000Z" itemprop="datePublished">2019-08-23</time>
-</a>
-    
-    
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/组件库/">组件库</a></li></ul>
-
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="MUI"><a href="#MUI" class="headerlink" title="MUI"></a>MUI</h1><p><a href="http://dev.dcloud.net.cn/mui/" target="_blank" rel="noopener">官网</a> </p>
-<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1566538557061.png" alt="1566538557061"></p>
-<p>优点： 有底部tabbar、常用icon。</p>
-<p>缺点：是要下载复制到对应文件夹使用的，css样式和js需要手动导入。</p>
-        
-          <p class="article-more-link">
-            <a href="/2019/08/23/致-所有的组件库们/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
 
 
   <nav id="page-nav">
@@ -564,7 +604,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/移动端/" style="font-size: 10px;">移动端</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a> <a href="/tags/组件库/" style="font-size: 10px;">组件库</a>
+      <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/移动端/" style="font-size: 10px;">移动端</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 15px;">笔记</a> <a href="/tags/组件库/" style="font-size: 10px;">组件库</a>
     </div>
   </div>
 
@@ -573,7 +613,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
     </div>
   </div>
 
@@ -585,6 +625,14 @@
       <ul>
         
           <li>
+            <a href="/2019/10/15/CSS选择器之表单样式中的妙用/">CSS选择器之表单样式中的妙用</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/12/jQuery-补充知识/">jQuery 补充知识</a>
+          </li>
+        
+          <li>
             <a href="/2019/09/16/max-height/">max-height</a>
           </li>
         
@@ -594,14 +642,6 @@
         
           <li>
             <a href="/2019/09/06/移动端开发/">移动端开发</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/06/CSS中引用的外部字体文件以及如何压缩/">CSS中引用的外部字体文件以及如何压缩</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/03/css之疑惑/">css之工作笔记</a>
           </li>
         
       </ul>
