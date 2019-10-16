@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>我的js 复习笔记 | ❤冰糖葫芦五加皮</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="一、JS数据格式分类 （一）JS中有5（6）种基本数据格式和1中引用类型，分别是 null，undefined，number，string，boolean，（ES6新增symbal），引用类型：Object、Array、Function、Date等">
+<meta name="keywords" content="笔记,vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的js 复习笔记">
+<meta property="og:url" content="http://zyw1988.github.io/2019/07/19/1.js复习笔记/index.html">
+<meta property="og:site_name" content="❤冰糖葫芦五加皮">
+<meta property="og:description" content="一、JS数据格式分类 （一）JS中有5（6）种基本数据格式和1中引用类型，分别是 null，undefined，number，string，boolean，（ES6新增symbal），引用类型：Object、Array、Function、Date等">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml13596%5Cwps1.jpg">
+<meta property="og:image" content="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml13596%5Cwps2.jpg">
+<meta property="og:image" content="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml13596%5Cwps3.jpg">
+<meta property="og:image" content="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml13596%5Cwps4.jpg">
+<meta property="og:image" content="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml13596%5Cwps5.jpg">
+<meta property="og:image" content="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml13596%5Cwps6.jpg">
+<meta property="og:image" content="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml13596%5Cwps7.jpg">
+<meta property="og:image" content="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml13596%5Cwps8.jpg">
+<meta property="og:image" content="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml13596%5Cwps9.jpg">
+<meta property="og:updated_time" content="2019-07-22T03:55:28.031Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="我的js 复习笔记">
+<meta name="twitter:description" content="一、JS数据格式分类 （一）JS中有5（6）种基本数据格式和1中引用类型，分别是 null，undefined，number，string，boolean，（ES6新增symbal），引用类型：Object、Array、Function、Date等">
+<meta name="twitter:image" content="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml13596%5Cwps1.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="❤冰糖葫芦五加皮" type="application/atom+xml">
+  
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+  <script>
+  let antiquityStorage = window.sessionStorage.getItem('antiquitySessionStorage');
+  if (antiquityStorage == '' || antiquityStorage == null) {
+    var antiquityLoader = '<div id="loaderbox"><div class="loader"><div class="load-roll"><div class="load-top"></div><div class="load-right"></div><div class="load-bottom"></div></div></div></div>';
+    document.write(antiquityLoader);
+    document.body.style.overflow = 'hidden'
+  }
+  </script>
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-1.js复习笔记" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      我的js 复习笔记
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/07/19/1.js复习笔记/" class="article-date">
+  <time datetime="2019-07-19T06:20:42.000Z" itemprop="datePublished">2019-07-19</time>
+</a>
+    
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h2 id="一、JS数据格式分类"><a href="#一、JS数据格式分类" class="headerlink" title="一、JS数据格式分类"></a>一、JS数据格式分类</h2><ul>
+<li><p>（一）JS中有5（6）种基本数据格式和1中引用类型，分别是 null，undefined，number，string，boolean，（ES6新增symbal），引用类型：Object、Array、Function、Date等</p>
+<a id="more"></a>
+</li>
+<li><p>（二）通过typeOf会显示的数据类型：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>显示</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>null</td>
+<td>Object（null类型被当做一个空对象引用）</td>
+</tr>
+<tr>
+<td>{}</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>123</td>
+<td>Number</td>
+</tr>
+<tr>
+<td>NaN</td>
+<td>Number（注意：①任何有关NaN的计算都不等于NaN②NaN不等于任何值，包括自己）</td>
+</tr>
+<tr>
+<td>’string‘</td>
+<td>string</td>
+</tr>
+<tr>
+<td>true/false</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>undefined</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+<li><p>（三）通过instanceOff 会显示的数据类型</p>
+</li>
+</ul>
+<h2 id="二、数组方法"><a href="#二、数组方法" class="headerlink" title="二、数组方法"></a>二、数组方法</h2><table>
+<thead>
+<tr>
+<th></th>
+<th>解释</th>
+<th>返回值</th>
+<th>原数组是否被修改</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>join(separator)</td>
+<td>将数组的元素组成一个字符串以separator为分隔符，省略的话则用默认用逗号为分隔符，该方法只接收一个参数：即分隔符</td>
+<td>拼接过的字符串</td>
+<td>否</td>
+</tr>
+<tr>
+<td>push()</td>
+<td>可以接收任意数量的参数，把它们逐个添加到数组末尾，并返回修改后数组的长度。</td>
+<td>更新之后的长度</td>
+<td>是</td>
+</tr>
+<tr>
+<td>pop()</td>
+<td>移除数组末尾最后一项，减少数组的 length 值，然后返回移除的项</td>
+<td>被删掉的数组</td>
+<td>是</td>
+</tr>
+<tr>
+<td>shift()</td>
+<td>删除原数组第一项，并返回删除元素的值；如果数组为空则返回undefined 。 无参。</td>
+<td>被删掉的数组</td>
+<td>是</td>
+</tr>
+<tr>
+<td>unshift()</td>
+<td>将参数添加到原数组开头，并返回数组的长度 。</td>
+<td>更新之后的长度</td>
+<td>是</td>
+</tr>
+<tr>
+<td>sort()</td>
+<td>按升序排列数组项——即最小的值位于最前面，最大的值排在最后面。传入的参数是两个，return的是二者的差值，如果&gt;1则升序<img src="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml13596%5Cwps1.jpg" alt="img"></td>
+<td>更新之后的数组</td>
+<td>是</td>
+</tr>
+<tr>
+<td>reverse()</td>
+<td>反转数组项的顺序。</td>
+<td>新数组</td>
+<td>是</td>
+</tr>
+<tr>
+<td>concat()</td>
+<td>用于连接两个或多个数组。将参数添加到原数组中。这个方法会先创建当前数组一个副本，然后将接收到的参数添加到这个副本的末尾，最后返回新构建的数组。在无参数的情况下，它只是复制当前数组并返回副本。</td>
+<td>返回新数组</td>
+<td>否</td>
+</tr>
+<tr>
+<td>slice(startIndex,endIndex)</td>
+<td>字符串也有这个方法返回从原数组中指定开始下标到结束下标之间的项组成的新数组。会有两个参数，如果第二个参数没有则默认一直到数组最后。相当于截了一段原数组中的一段。<img src="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml13596%5Cwps2.jpg" alt="img"></td>
+<td>被‘剪’出来的数组</td>
+<td>否</td>
+</tr>
+<tr>
+<td>splice(startIndex,deleteNum,new1,new2)</td>
+<td>删除：可以删除任意数量的项，只需指定 2 个参数：要删除的第一项的位置和要删除的项数。例如， splice(0,2)会删除数组中的前两项。插入：可以向指定位置插入任意数量的项，只需提供 3 个参数：起始位置、 0（要删除的项数）和要插入的项。例如，splice(2,0,4,6)会从当前数组的位置 2 开始插入4和6。替换：可以向指定位置插入任意数量的项，且同时删除任意数量的项，只需指定 3 个参数：起始位置、要删除的项数和要插入的任意数量的项。插入的项数不必与删除的项数相等。例如，splice (2,1,4,6)会删除当前数组位置 2 的项，然后再从位置 2 开始插入4和6。<img src="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml13596%5Cwps3.jpg" alt="img"></td>
+<td>如果删除，会返回被删除的数组。如果不是删除，则返回一个空数组[]</td>
+<td>删除：改变原数组插入：无返回值，原数组被改变</td>
+</tr>
+<tr>
+<td>indexOflastIndexOf</td>
+<td>字符串也有这个方法。可返回某个指定的字符串值在字符串中首次出现的位置。不存在返回-1，存在位置索引。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>forEach(f)</td>
+<td>循环操作，参数是function</td>
+<td>无返回值</td>
+<td></td>
+</tr>
+<tr>
+<td>map()</td>
+<td>指“映射”，对数组中的每一项运行给定函数，返回每次函数调用的结果组成的<strong>数组。</strong></td>
+<td>调用结果组成的数组</td>
+<td>是</td>
+</tr>
+<tr>
+<td>filter()</td>
+<td>“过滤”功能，数组中的每一项运行给定函数，返回满足过滤条件组成的数组。</td>
+<td>数组</td>
+<td>不改变原数组</td>
+</tr>
+<tr>
+<td>Every()</td>
+<td>判断数组中每一项都是否满足条件，只有所有项都满足条件，才会返回true。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>some()</td>
+<td>判断数组中是否存在满足条件的项，只要有一项满足条件，就会返回true。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>reduce(function(prev, cur, index, array),初始值)reduceRigth()</td>
+<td>都会实现迭代数组的所有项，然后构建一个最终返回的值。reduce()方法从数组的第一项开始，逐个遍历到最后。而 reduceRight()则从数组的最后一项开始，向前遍历到第一项。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>findIndex(func())</td>
+<td>找到索引</td>
+<td>索引值</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="三、字符串方法"><a href="#三、字符串方法" class="headerlink" title="三、字符串方法"></a>三、字符串方法</h2><table>
+<thead>
+<tr>
+<th></th>
+<th>解释</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>indexOf()</td>
+<td>返回子字符串第一次出现的位置，从startIndex开始查找，找不到时返回-1</td>
+<td>目标字符串第一次出现的位置，或者 -1</td>
+</tr>
+<tr>
+<td>lastIndexOf()</td>
+<td>从最后往前找子字符串，找不到时返回-1（与 indexOf的区别就是开始的方向不同）</td>
+<td></td>
+</tr>
+<tr>
+<td>match()</td>
+<td>正则匹配</td>
+<td></td>
+</tr>
+<tr>
+<td>charAt(index)</td>
+<td>取出单独的字符串，index为字符串下标</td>
+<td>子字符串</td>
+</tr>
+<tr>
+<td>charCodeAt(index)</td>
+<td>返回子字符串的unicode编码，</td>
+<td>子字符串的编码值</td>
+</tr>
+<tr>
+<td>substring(start,end)</td>
+<td>截取字符串，从start开始，截取end位</td>
+<td>子字符串</td>
+</tr>
+<tr>
+<td>slice(start,end)</td>
+<td>遇上相同</td>
+<td>子字符串</td>
+</tr>
+<tr>
+<td>split(separator,limit)</td>
+<td>以separator为查找目标字符串，并以此为分隔符，分割开原始字符串<strong>形成数组</strong>。limit是返回的字符串个数，如果不设置则以最大的个数显示。separator设置为””，则以逗号隔开；如果separator不设置，则返回原数组。<img src="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml13596%5Cwps4.jpg" alt="img"></td>
+<td>数组</td>
+</tr>
+<tr>
+<td>replace</td>
+<td>替换字符串。如果找不到目标元素则返回源字符串；并且是找到第一个目标元素就停止</td>
+<td>返回替换之后的数组。原数组不变。</td>
+</tr>
+<tr>
+<td>inclueds</td>
+<td>表示是否找到目标字符串</td>
+<td>布尔值</td>
+</tr>
+<tr>
+<td>repeat(n)</td>
+<td>将源字符串重复n次并拼接成一个新的字符串，如果n为0，则返回空字符串</td>
+<td>字符串（原字符串不改变）</td>
+</tr>
+<tr>
+<td>padStart()padEnd()</td>
+<td>字符串补全长度方法，头部补全/尾部补全</td>
+<td>（原字符串不改变）</td>
+</tr>
+<tr>
+<td>substring (start,stop)</td>
+<td>用于提取字符串中介于两个指定下标之间的字符。</td>
+<td>返回的子串包括 start 处的字符，但不包括 stop 处的字符.如果参数 start 与 stop 相等，那么该方法返回的就是一个空串（即长度为 0 的字符串）。如果 start 比 stop 大，那么该方法在提取子串之前会先交换这两个参数。</td>
+</tr>
+<tr>
+<td>其他的一些方法</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>parseInt</td>
+<td>可传入两个参数。如果只有一个参数：从0位开始到非数字位结束。如果有两个参数：parseInt(a,b)，a是以b为基数的数，转化为十进制数。parseInt(10,2)—&gt;2parseInt(5,4)—-&gt;NaN 因为4作为进制基数，不可能存在比基数大的数（以2位例，都是1和0 ，不会有2和3）</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h2><ul>
+<li><p>隐形类型转换</p>
+</li>
+<li><p>显式类型转换</p>
+<ul>
+<li><p><code>parseInt(str,radix)</code> :radix指的是被解析的数字的基数。如果省略或者为0，函数会根据str的开头字母来判断:</p>
+<ul>
+<li><p>如果 string 以 “0x” 开头，parseInt() 会把 string 的其余部分解析为十六进制的整数。</p>
+</li>
+<li><p>如果 string 以 0 开头，那么 ECMAScript v3 允许 parseInt() 的一个实现把其后的字符解析为八进制或十六进制的数字。</p>
+</li>
+<li><p>如果 string 以 1 ~ 9 的数字开头，parseInt() 将把它解析为十进制的整数。</p>
+</li>
+</ul>
+</li>
+<li><p><code>parseFloat(string):</code> 解析一个字符串，并返回一个浮点数。判断字符串的首个字符是否是数字，如果是则对字符串解析，指导数字的末端，然后以数字返回该字符串。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="四、原生基础DOM操作"><a href="#四、原生基础DOM操作" class="headerlink" title="四、原生基础DOM操作"></a>四、原生基础DOM操作</h2><table>
+<thead>
+<tr>
+<th>语句</th>
+<th>含义</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>查找</td>
+<td>docementById</td>
+<td></td>
+</tr>
+<tr>
+<td>document.getElementsByClassName</td>
+<td>返回一个数组</td>
+<td></td>
+</tr>
+<tr>
+<td>document.getElementsByTagName</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>document.getElementsByName</td>
+<td>根据元素的name属性查找</td>
+<td></td>
+</tr>
+<tr>
+<td>document.querySelector()</td>
+<td>返回单个Node，IE8+(含），如果匹配到多个结果，只返回第一个。括号内可以是class ,id,标签，标签+class</td>
+<td></td>
+</tr>
+<tr>
+<td>document.querySelectorAll</td>
+<td>返回一个 NodeList</td>
+<td></td>
+</tr>
+<tr>
+<td>获取父级节点</td>
+<td>Node.parentNode</td>
+<td>//返回父节点</td>
+</tr>
+<tr>
+<td>Node.ownerDocument</td>
+<td>//返回祖先节点</td>
+<td></td>
+</tr>
+<tr>
+<td>获取子节点</td>
+<td>Node.childNodes</td>
+<td>//返回相邻后代的元素节点和文本节点对象的集合(换行算作文本节点)</td>
+</tr>
+<tr>
+<td>Node.children</td>
+<td>//返回相邻后代的元素节点集合</td>
+<td></td>
+</tr>
+<tr>
+<td>Node.firstElementChild</td>
+<td>//返回相邻后代第一个的元素节点</td>
+<td></td>
+</tr>
+<tr>
+<td>Node.lastElementChild</td>
+<td>//返回相邻后代最后一个的元素节点</td>
+<td></td>
+</tr>
+<tr>
+<td>获取同级元素</td>
+<td>Node.previousSibling</td>
+<td>// 返回前一个节点</td>
+</tr>
+<tr>
+<td>Node.previousElementSibling</td>
+<td>返回前一个元素节点</td>
+<td></td>
+</tr>
+<tr>
+<td>Node.nextSibling</td>
+<td>// 返回后一个节点</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Node.nextElementSibling</td>
+<td>返回后一个元素节点</td>
+</tr>
+<tr>
+<td>创建</td>
+<td>document.createElement</td>
+<td>创建元素</td>
+</tr>
+<tr>
+<td>document.createTextNode</td>
+<td>创建文本节点</td>
+<td></td>
+</tr>
+<tr>
+<td>document.cloneNode (true)</td>
+<td>克隆一个节点，它接收一个bool参数，用来表示是否复制子元素</td>
+<td></td>
+</tr>
+<tr>
+<td>document.createAttribute(“class”)</td>
+<td>创建属性节点</td>
+<td></td>
+</tr>
+<tr>
+<td>复制节点</td>
+<td>var newNode=Node.cloneNode(Boolean)</td>
+<td>//Boolean:true  返回Node及其全部子孙节点    //Boolean:false 只返回Node节点</td>
+</tr>
+<tr>
+<td>删除子节点</td>
+<td>parentNode.removeChild(childNode)</td>
+<td>//已知父节点</td>
+</tr>
+<tr>
+<td>node.parentNode.removeChild(childNod)</td>
+<td>//未知父节点</td>
+<td></td>
+</tr>
+<tr>
+<td>插入子节点</td>
+<td>parentNode.appendChild(newNode)</td>
+<td>//增加节点至子节点末尾</td>
+</tr>
+<tr>
+<td>parentNode .insertBefore(newNode,targetNode)</td>
+<td>//增加节点至targetNode之前</td>
+<td></td>
+</tr>
+<tr>
+<td>替换节点</td>
+<td>replaceChild</td>
+<td></td>
+</tr>
+<tr>
+<td>子节点相关</td>
+<td>children</td>
+<td>所有子节点（会有文本，注释等）</td>
+</tr>
+<tr>
+<td>childNodes</td>
+<td>所有元素子节点</td>
+<td></td>
+</tr>
+<tr>
+<td>firstChild</td>
+<td>返回第一个子节点，不存在返回null，</td>
+<td></td>
+</tr>
+<tr>
+<td>lastChild</td>
+<td>返回最后一个子节点，不存在返回null</td>
+<td></td>
+</tr>
+<tr>
+<td>firstElementChild</td>
+<td>返回第一个元素子节点</td>
+<td></td>
+</tr>
+<tr>
+<td>lastElementChild</td>
+<td>返回最后一个元素子节点</td>
+<td></td>
+</tr>
+<tr>
+<td>兄弟节点</td>
+<td>previousSibling</td>
+<td>节点的前一个节点，如果不存在则返回null。注意有可能拿到的节点是文本节点或注释节点，与预期的不符，要进行处理一下。</td>
+</tr>
+<tr>
+<td>nextSibling</td>
+<td>节点的后一个节点</td>
+<td></td>
+</tr>
+<tr>
+<td>previousElementSibling</td>
+<td>返回前一个元素节点</td>
+<td></td>
+</tr>
+<tr>
+<td>nextElementSibling</td>
+<td>返回后一个元素节点</td>
+<td></td>
+</tr>
+<tr>
+<td>元素属性</td>
+<td>setAttribute</td>
+<td>设置属性</td>
+</tr>
+<tr>
+<td>getAttribute</td>
+<td>返回 属性值</td>
+<td></td>
+</tr>
+<tr>
+<td>样式</td>
+<td>直接 .style.样式</td>
+<td></td>
+</tr>
+<tr>
+<td>判断是否包含样式</td>
+<td>classList.contains(‘zzz’)</td>
+<td></td>
+</tr>
+<tr>
+<td>样式的添加</td>
+<td>classList.add()</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="BOM含义及使用"><a href="#BOM含义及使用" class="headerlink" title="BOM含义及使用"></a>BOM含义及使用</h2><ul>
+<li><p>含义：浏览器对象模型。</p>
+<p><img src="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml13596%5Cwps5.jpg" alt="img"></p>
+</li>
+<li><p>常用语句</p>
+<table>
+<thead>
+<tr>
+<th>window对象语句</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>window.open(url,target,param)</code></td>
+<td>打开窗口。 其中url表示要打开的地址；target表示新窗口的位置（ _blank,     _self,    _parent）;param新窗口的设置</td>
+</tr>
+<tr>
+<td><code>window.close()</code></td>
+<td>关闭窗口</td>
+</tr>
+</tbody></table>
+<p><strong>浏览器窗口尺寸获取</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>window.innerHeight</code></td>
+<td>浏览器窗口的内部高度，不包括任务栏和滚动条滚动的距离，仅仅值展现网页内容的区域范围</td>
+<td>始用于Chrome、FireFox、Opera、Safari</td>
+</tr>
+<tr>
+<td><code>window.innerWidth</code></td>
+<td>浏览器窗口的内部宽度</td>
+<td></td>
+</tr>
+<tr>
+<td><code>document.documentElement.clientHeight</code></td>
+<td>适用于 IE5,6,7,8版本的语句</td>
+<td></td>
+</tr>
+<tr>
+<td><code>document.documentElement.clientWidth</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>document.body.clientHeight</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>document.body.clientWidth</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>screen.availWidth</code></td>
+<td>可用的屏幕宽度，不会随着浏览器的拉动而变化</td>
+<td></td>
+</tr>
+<tr>
+<td><code>screen.availHeight</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="五、JS渲染"><a href="#五、JS渲染" class="headerlink" title="五、JS渲染"></a>五、JS渲染</h2><ul>
+<li><p>（一）、渲染的定义：整个渲染的过程其实就是将URL对应的各种资源，通过浏览器渲染引擎的解析，输出可视化的图像</p>
+</li>
+<li><p>（二）、渲染的步骤：1.HTML解析：将HTML文本解析成DOM树（文档对象模型）2.CSS解析：CSS对象模型3.将CSS与DOM合并，构建渲染树（renderingtree）4.布局和绘制</p>
+</li>
+<li><p>（三）、reflow回流和repaing重绘</p>
+<ul>
+<li><p>reflow：元素的样式发生改变，影响其父元素和往上追溯的祖先元素，浏览器需要重新渲染的过程。</p>
+<p>涉及到的有：元素的显示与隐藏（树状目录的折叠展开）、占位面积（变大变小）、定位方式、文字大小、hover伪类的激活，class操作，style属性改变。</p>
+</li>
+<li><p>（重绘）：不影响周围或内部布局的属性，只是改变元素的<strong>背景色、文字</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="六、对象的几种创建方法"><a href="#六、对象的几种创建方法" class="headerlink" title="六、对象的几种创建方法"></a>六、对象的几种创建方法</h2><ul>
+<li><p>1.字面量创建：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name:<span class="string">'范冰冰'</span>,</span><br><span class="line">    age:<span class="number">18</span>,</span><br><span class="line">    hello:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"I am is "</span>+<span class="keyword">this</span>.name)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>2.构造函数：</p>
+<ul>
+<li>①.系统自带的构造函数 Object()  var obj = new Object() 和1方法是一样的。</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj  =<span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">obj.name = <span class="string">"张予曦"</span>;</span><br><span class="line">obj.age = <span class="number">20</span>;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p>自定义构造函数：也是一样通过<code>new</code> 创建实例，为了区分其他，采用驼峰命名法</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">fucntion Person(name)&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.health = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">this</span>.color = <span class="string">'yellow'</span>;</span><br><span class="line">    <span class="keyword">this</span>.live = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.health--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> per1 = <span class="keyword">new</span> Person();</span><br><span class="line"><span class="keyword">var</span> per2 = <span class="keyword">new</span> Person();</span><br></pre></td></tr></table></figure></div>
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="扩-原型链的相关知识"><a href="#扩-原型链的相关知识" class="headerlink" title="扩-原型链的相关知识"></a>扩-原型链的相关知识</h2><p>接上节 对象的创建方法，构造函数通常都具有 属性<code>prototype</code>  和<code>constructor</code> ，而通过new 创建的实例具有属性<code>_proto_</code> ，并且<code>per1._proto_ == Person.prototype</code> ，<code>Person.prototype.constructor == Person</code></p>
+<p> 细节：</p>
+<ul>
+<li><p>控制台打印：</p>
+<p><img src="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml13596%5Cwps6.jpg" alt="img"></p>
+</li>
+</ul>
+<p>per1._proto_和Person.prototype 是相等的。</p>
+<ul>
+<li><p>同时点开 constructor，发现 constructor构造器就是指向构造函数Person的</p>
+<p><img src="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml13596%5Cwps7.jpg" alt="img"></p>
+</li>
+<li><p>与此同时，原型上也具有 <strong>proto</strong>,点开发现，<strong>proto</strong>是指向Object的。</p>
+<p><img src="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml13596%5Cwps8.jpg" alt="img"></p>
+</li>
+<li><p>这样我们就可以得出一个结论，构造函数的原型同时又是 Object的实例，又可以形成 一个原型链，效果如图所示。</p>
+</li>
+</ul>
+<p><img src="file:///C:%5CUsers%5CASUS%5CAppData%5CLocal%5CTemp%5Cksohtml13596%5Cwps9.jpg" alt="img"></p>
+<h2 id="扩2-继承"><a href="#扩2-继承" class="headerlink" title="扩2-继承"></a>扩2-继承</h2><p>从优到劣，三种继承方式</p>
+<ul>
+<li><p>原型继承</p>
+<ul>
+<li><p>通过更改 <code>prototype</code> 和 <code>constructor</code> 的指向</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Student.prototype = <span class="keyword">new</span> Person();</span><br><span class="line">Student.prototype.constructor = Student;</span><br></pre></td></tr></table></figure></div>
+
+<p>Student需要继承Person。Student的prototype == Person，Student原型链上的构造器指向自己。</p>
+<p>优缺点：1.公共属性上的值可读不可写；2.所有经由Student new出来的实例对于Person 上的属性是共享的。</p>
+</li>
+</ul>
+</li>
+<li><p>借用构造函数</p>
+</li>
+<li><p>借用构造函数（通过call）</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.name = <span class="string">'zss'</span>;</span><br><span class="line">	<span class="keyword">this</span>.age = <span class="number">18</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name,age,score</span>)</span>&#123;</span><br><span class="line">	Person.call(<span class="keyword">this</span>,name,age);</span><br><span class="line">	<span class="keyword">this</span>.score = <span class="number">99</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>优缺点：继承过来的属性都是在自己身上的，可读可写的。同时构造器也是正确的。</p>
+<p>​                方法没有继承，仅仅继承了属性</p>
+</li>
+<li><p>组合继承方式</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Student.prototype =Person.prototype;</span><br><span class="line">Student.prototype.constructor = Student;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name,age,score</span>)</span>&#123;</span><br><span class="line">	Person.call(<span class="keyword">this</span>,name,age);</span><br><span class="line">	<span class="keyword">this</span>.score = <span class="number">99</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+</li>
+</ul>
+<h2 id="八、call和apply的应用区别"><a href="#八、call和apply的应用区别" class="headerlink" title="八、call和apply的应用区别"></a>八、call和apply的应用区别</h2><ul>
+<li>语法上：<ul>
+<li>apply只能传两个参数，且第二个参数为数据</li>
+<li>call可以传多个参数</li>
+</ul>
+</li>
+</ul>
+<h2 id="判断是否是数组"><a href="#判断是否是数组" class="headerlink" title="判断是否是数组"></a>判断是否是数组</h2><ul>
+<li><code>Array.isArray(arr)</code></li>
+<li><code>arr instanceof Array</code></li>
+<li><code>Object.prototype.toString.call()</code> 基本的数据类型都可以判断，即使是null 和undefined</li>
+</ul>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/07/22/2.如何使用hexo美化自己的个人博客/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            如何使用hexo美化自己的个人博客
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="https://i.loli.net/2019/07/23/5d366a3da4aeb25677.jpg" title="幻化成羽"></img>
+    <h3 class="avatar-name">
+      
+        日啖荔枝三百颗
+      
+    </h3>
+    <p class="avatar-slogan">
+      
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/canvas/">canvas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github个人主页搭建/">github个人主页搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/">promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slot/">slot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/公开课/">公开课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/初级/">初级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字体/">字体</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端/">移动端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端组件/">移动端组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/组件库/">组件库</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/canvas/" style="font-size: 15px;">canvas</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/公开课/" style="font-size: 10px;">公开课</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/移动端/" style="font-size: 10px;">移动端</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 15px;">笔记</a> <a href="/tags/组件库/" style="font-size: 10px;">组件库</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/16/canvas做画板/">canvas做画板</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/15/CSS选择器之表单样式中的妙用/">CSS选择器之表单样式中的妙用</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/12/jQuery-补充知识/">jQuery 补充知识</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/16/max-height/">max-height</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/14/canvas笔记/">canvas笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://blog.csdn.net/qq_41880978" title target='_blank'
+        >CSDN</a>
+      
+        <a style="display: block;" href="https://github.com/zyw1988" title target='_blank'
+        >Github</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 zyw1988 &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
