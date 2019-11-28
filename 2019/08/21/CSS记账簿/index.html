@@ -29,7 +29,7 @@
 <meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570284255781.png">
 <meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570284140143.png">
 <meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570284168610.png">
-<meta property="og:updated_time" content="2019-10-07T14:33:01.489Z">
+<meta property="og:updated_time" content="2019-10-18T09:12:51.341Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS记账簿">
 <meta name="twitter:description" content="CSS特性 层叠性：处理冲突的时候，后面的会覆盖前面的 继承性：子标签继承父标签的属性，譬如字体颜色，大小， 优先级：选择器的权重计算  CSS 属性选择器 ~  相同父元素下 所有目标元素 例子： 12345为所有相同的父元素中位于 p 元素之后的所有 ul 元素设置背景：p~ul&amp;#123;　　background:#ff0000;&amp;#125;  + 紧跟的同类元素   css样式选择器">
@@ -276,6 +276,8 @@
 <p>像素值：<code>line-height:10px</code></p>
 <h1 id="文本溢出隐藏并显示省略号"><a href="#文本溢出隐藏并显示省略号" class="headerlink" title="文本溢出隐藏并显示省略号"></a>文本溢出隐藏并显示省略号</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 只有一行文本的时候</span></span><br><span class="line">overflow:hidden; <span class="comment">//超出的文本隐藏</span></span><br><span class="line">text-overflow:ellipsis; <span class="comment">//溢出用省略号显示</span></span><br><span class="line">white-space:nowrap; <span class="comment">//溢出不换行</span></span><br></pre></td></tr></table></figure></div>
 
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 多行文本</span></span><br><span class="line">overflow:hidden; </span><br><span class="line">text-overflow:ellipsis; </span><br><span class="line">display:-webkit-box; </span><br><span class="line">-webkit-box-orient:vertical;</span><br><span class="line">-webkit-line-clamp:<span class="number">2</span></span><br></pre></td></tr></table></figure></div>
+
 <h1 id="文本之间空隙"><a href="#文本之间空隙" class="headerlink" title="文本之间空隙"></a>文本之间空隙</h1><p><code>letter-spacing</code> 设置具体px可以将文字间隔开。</p>
 <p>妙用：设置负值，文本将倒序。</p>
 <p>恭喜发财 变成 财发喜恭</p>
@@ -467,6 +469,42 @@
 <p>语法：</p>
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 宽度 | 样式 | 颜色 */</span></span><br><span class="line"><span class="selector-tag">outline</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-tag">white</span>;</span><br></pre></td></tr></table></figure></div>
 
+<h1 id="SVG"><a href="#SVG" class="headerlink" title="SVG"></a>SVG</h1><p>可缩放的矢量图</p>
+<ul>
+<li>使用代码书写而成</li>
+<li>缩放不会失真</li>
+<li>内容轻量</li>
+</ul>
+<h1 id="数据连接"><a href="#数据连接" class="headerlink" title="数据连接"></a>数据连接</h1><p><strong>data url</strong></p>
+<p>将目标文件的数据直接写在路径位置。</p>
+<p>语法：<code>data:MIME,数据</code></p>
+<ul>
+<li>减少浏览器的请求</li>
+<li>减少响应时间</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>不利于浏览器的缓存，会在刷新的时候重新请求</li>
+</ul>
+<p>一般针对 图片。</p>
+<h2 id="base64编码形式"><a href="#base64编码形式" class="headerlink" title="base64编码形式"></a>base64编码形式</h2><h1 id="浏览器兼容性"><a href="#浏览器兼容性" class="headerlink" title="浏览器兼容性"></a>浏览器兼容性</h1><h2 id="不通浏览器针对新的CSS3熟悉兼容"><a href="#不通浏览器针对新的CSS3熟悉兼容" class="headerlink" title="不通浏览器针对新的CSS3熟悉兼容"></a>不通浏览器针对新的CSS3熟悉兼容</h2><p>可以用插件傻瓜式操作</p>
+<h2 id="背景图多选一"><a href="#背景图多选一" class="headerlink" title="背景图多选一"></a>背景图多选一</h2><p>语法：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background-image</span>: <span class="selector-tag">image-set</span>( "<span class="selector-tag">cat</span><span class="selector-class">.png</span>" 1<span class="selector-tag">x</span>,</span><br><span class="line">                             "<span class="selector-tag">cat-2x</span><span class="selector-class">.png</span>" 2<span class="selector-tag">x</span>,</span><br><span class="line">                             "<span class="selector-tag">cat-print</span><span class="selector-class">.png</span>" 600<span class="selector-tag">dpi</span>);</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="针对IE的CSS前缀"><a href="#针对IE的CSS前缀" class="headerlink" title="针对IE的CSS前缀"></a>针对IE的CSS前缀</h2><ul>
+<li><p><code>*</code> IE 5、6、6</p>
+</li>
+<li><p><code>_</code> 兼容 IE5—IE6</p>
+</li>
+<li><p><code>属性值\9</code>  兼容IE5-IE10</p>
+</li>
+<li><p><code>属性值\0</code> 兼容IE8-IE10</p>
+</li>
+<li><p><code>属性值\9\0</code>  兼容IE9-IE10</p>
+<p>IE 的外边距 BUG，浮动元素的左外边距翻倍。</p>
+</li>
+<li></li>
+</ul>
 
       
     </div>
@@ -577,6 +615,10 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
+            <a href="/2019/10/18/CCSS之大坑/">CCSS之大坑</a>
+          </li>
+        
+          <li>
             <a href="/2019/10/16/canvas做画板/">canvas做画板</a>
           </li>
         
@@ -590,10 +632,6 @@ gitment.render('gitmentContainer')
         
           <li>
             <a href="/2019/09/16/max-height/">max-height</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/14/canvas笔记/">canvas笔记</a>
           </li>
         
       </ul>

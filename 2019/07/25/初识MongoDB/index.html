@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/07/26/5d3a5a783dd8780573.png">
 <meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1564045639556.png">
 <meta property="og:image" content="https://i.loli.net/2019/07/26/5d3a5a918c5d347259.png">
-<meta property="og:updated_time" content="2019-07-26T01:42:54.376Z">
+<meta property="og:updated_time" content="2019-10-21T13:30:39.480Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初识MongoDB">
 <meta name="twitter:description" content="数据库的必要：浏览器都是在内存中运行断电数据会丢失。  一数据库的分类  关系型数据库 MySQL、Oracle、DB2 数据库中都是表   非关系型数据库 MongoDB、Redis 键值对数据库 文档数据库MongoDB">
@@ -131,28 +131,34 @@
 </li>
 <li><p>启动数据库</p>
 <ul>
-<li><p>安装</p>
+<li><p>1.安装</p>
 </li>
-<li><p>配置环境变量</p>
+<li><p>2.配置环境变量</p>
+<p>将安装目录 配置到 path 中：</p>
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\MongoDB\Server\<span class="number">3.4</span>\bin</span><br></pre></td></tr></table></figure></div>
 
 <p>将这条地址增加到 path变量下</p>
 </li>
-<li><p>c盘新建 数据文件 data/db</p>
-</li>
-<li><p>命令行输入 <code>mongod</code> 启动（启动服务器）：用来保存数据</p>
+<li><p>3.C盘新建 数据文件 data，data中再新建文件db</p>
 </li>
 </ul>
-<p><img src="https://i.loli.net/2019/07/26/5d3a5a4bf001e43889.png" alt="1564024593929"></p>
+</li>
+</ul>
 <ul>
+<li><p>4.命令行输入 <code>mongod</code> 启动（<strong>启动服务器</strong>）：用来保存数据</p>
+<p><img src="https://i.loli.net/2019/07/26/5d3a5a4bf001e43889.png" alt="1564024593929"></p>
+</li>
 <li><p>显示 启动成功</p>
 </li>
-<li><p>再重新打开cmd 输入<code>mongo</code> （启动客户端）：用来操作数据</p>
+<li><p>5.再重新打开cmd 输入<code>mongo</code> （<strong>启动客户端</strong>）：用来操作数据</p>
 <p>显示connecting：xxx，连接MongoDB成功。</p>
-</li>
-</ul>
+<p>在 C盘data文件夹下的db文件中会生成一系列文件。</p>
 <p><img src="https://i.loli.net/2019/07/26/5d3a5a61d429e32361.png" alt="1564025630211"></p>
 </li>
+</ul>
+<p>​    因为每次都要开启mongodb 的服务器和客户端，比较繁琐。</p>
+<p>​    ——将MongoDB设置为系统服务</p>
+<ul>
 <li><p>指令学习</p>
 <ul>
 <li><p>前提知识：MongoDB 不需要提前创建数据库和集合，在创建文档的时候回一并创建。</p>
@@ -382,6 +388,10 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
+            <a href="/2019/10/18/CCSS之大坑/">CCSS之大坑</a>
+          </li>
+        
+          <li>
             <a href="/2019/10/16/canvas做画板/">canvas做画板</a>
           </li>
         
@@ -395,10 +405,6 @@ gitment.render('gitmentContainer')
         
           <li>
             <a href="/2019/09/16/max-height/">max-height</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/14/canvas笔记/">canvas笔记</a>
           </li>
         
       </ul>

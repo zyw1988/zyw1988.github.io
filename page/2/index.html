@@ -61,6 +61,51 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-响应式相关" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/02/响应式相关/">响应式相关</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/09/02/响应式相关/" class="article-date">
+  <time datetime="2019-09-02T14:30:07.000Z" itemprop="datePublished">2019-09-02</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>简单来说：不同的设备都能适配显示内容。</p>
+<h1 id="之前涉及到的"><a href="#之前涉及到的" class="headerlink" title="之前涉及到的"></a>之前涉及到的</h1><ul>
+<li><p>1.移动端单位改为rem 或者 em</p>
+</li>
+<li><p>2.添加<code>&lt;meta name=&quot;viewport&quot;&gt;</code> 设定宽度为设备宽度，最小宽度最大宽度等。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2019/09/02/响应式相关/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="w-ES6" class="article global-container article-type-w" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -284,7 +329,7 @@
 
 <h2 id="5-上拉刷新：thresold"><a href="#5-上拉刷新：thresold" class="headerlink" title="5.上拉刷新：thresold"></a>5.上拉刷新：thresold</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> bscroll = <span class="keyword">new</span> BScroll(<span class="string">'.wrapper'</span>,&#123;</span><br><span class="line">   pullUpLoad:<span class="literal">true</span></span><br><span class="line">&#125;);</span><br><span class="line">bscroll.on(<span class="string">'pullingUp'</span>,()=&gt;&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'上拉显示更多'</span>)；</span><br><span class="line">    <span class="comment">//发送网络请求，请求更多资源</span></span><br><span class="line">    <span class="comment">//等请求完成，并且将新数据展示出来之后，必须执行  停止上拉加载更多 </span></span><br><span class="line">    bscroll.finishPullUp()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="6-封装-滚动组件，减少耦合"><a href="#6-封装-滚动组件，减少耦合" class="headerlink" title="6.封装 滚动组件，减少耦合"></a>6.封装 滚动组件，减少耦合</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"wrapper"</span> ref=<span class="string">"wrapper"</span>&gt;</span><br><span class="line">    	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"content"</span>&gt;</span><br><span class="line">        	&lt;slot&gt;&lt;/slot&gt;</span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;    </span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp"> import BScroll from 'better-scroll'</span></span><br><span class="line"><span class="regexp"> export default&#123;</span></span><br><span class="line"><span class="regexp">	data()&#123;</span></span><br><span class="line"><span class="regexp">        return &#123;</span></span><br><span class="line"><span class="regexp">            scroll:null</span></span><br><span class="line"><span class="regexp">        &#125;</span></span><br><span class="line"><span class="regexp">    &#125;,</span></span><br><span class="line"><span class="regexp">     mounted()&#123;</span></span><br><span class="line"><span class="regexp">         this.scroll = new BScroll(this.$refs.wrapper,&#123;</span></span><br><span class="line"><span class="regexp">             </span></span><br><span class="line"><span class="regexp">         &#125;)</span></span><br><span class="line"><span class="regexp">     &#125;</span></span><br><span class="line"><span class="regexp">	&#125;         </span></span><br><span class="line"><span class="regexp">            </span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure></div>
+<h2 id="6-封装-滚动组件，减少耦合"><a href="#6-封装-滚动组件，减少耦合" class="headerlink" title="6.封装 滚动组件，减少耦合"></a>6.封装 滚动组件，减少耦合</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"wrapper"</span> ref=<span class="string">"wrapper"</span>&gt;</span><br><span class="line">    	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"content"</span>&gt;</span><br><span class="line">        	&lt;slot&gt;<span class="xml"><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span></span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;    </span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp"> import BScroll from 'better-scroll'</span></span><br><span class="line"><span class="regexp"> export default&#123;</span></span><br><span class="line"><span class="regexp">	data()&#123;</span></span><br><span class="line"><span class="regexp">        return &#123;</span></span><br><span class="line"><span class="regexp">            scroll:null</span></span><br><span class="line"><span class="regexp">        &#125;</span></span><br><span class="line"><span class="regexp">    &#125;,</span></span><br><span class="line"><span class="regexp">     mounted()&#123;</span></span><br><span class="line"><span class="regexp">         this.scroll = new BScroll(this.$refs.wrapper,&#123;</span></span><br><span class="line"><span class="regexp">             </span></span><br><span class="line"><span class="regexp">         &#125;)</span></span><br><span class="line"><span class="regexp">     &#125;</span></span><br><span class="line"><span class="regexp">	&#125;         </span></span><br><span class="line"><span class="regexp">            </span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure></div>
 
 <p>引用该组件的时候，手动给最外层的盒子，添加高度或宽度</p>
 
@@ -480,47 +525,6 @@
 </article>
 
   
-    <article id="post-node初识" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/13/node初识/">node初识</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/08/13/node初识/" class="article-date">
-  <time datetime="2019-08-13T05:33:52.000Z" itemprop="datePublished">2019-08-13</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="开启一个简单的服务器"><a href="#开启一个简单的服务器" class="headerlink" title="开启一个简单的服务器"></a>开启一个简单的服务器</h1><p>1.使用模块<code>http</code></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1.创建Server</span></span><br><span class="line"><span class="keyword">var</span> server = http.createServer()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.监听request请求事件，请求设置处理函数</span></span><br><span class="line">server.on(<span class="string">'request'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'收到了请求'</span>,req)</span><br><span class="line">    res.write(<span class="string">'hello world'</span>)</span><br><span class="line">    res.end() <span class="comment">//以上可以直接 res.end('hello world)</span></span><br><span class="line">	<span class="comment">//获取到 请求路径的地址</span></span><br><span class="line">    <span class="keyword">var</span> url = req.url</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3.绑定端口号，默认是80，</span></span><br><span class="line">server.listen(<span class="number">80</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'server is on ,you can use it!'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-        
-          <p class="article-more-link">
-            <a href="/2019/08/13/node初识/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
 
 
   <nav id="page-nav">
@@ -586,6 +590,10 @@
       <ul>
         
           <li>
+            <a href="/2019/10/18/CCSS之大坑/">CCSS之大坑</a>
+          </li>
+        
+          <li>
             <a href="/2019/10/16/canvas做画板/">canvas做画板</a>
           </li>
         
@@ -599,10 +607,6 @@
         
           <li>
             <a href="/2019/09/16/max-height/">max-height</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/14/canvas笔记/">canvas笔记</a>
           </li>
         
       </ul>

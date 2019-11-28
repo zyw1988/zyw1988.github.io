@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="❤冰糖葫芦五加皮">
 <meta property="og:description" content="前景知识 明确区分块级元素、行级元素和行级块元素。  熟悉块级元素和行级元素在布局上的不同和优势，以及如何手动更改。  熟悉盒模型，以及如何手动更改 IE盒模型和怪异盒模型   单一元素在浏览器中居中">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-10T04:44:38.416Z">
+<meta property="og:updated_time" content="2019-10-18T09:15:24.335Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS之居中">
 <meta name="twitter:description" content="前景知识 明确区分块级元素、行级元素和行级块元素。  熟悉块级元素和行级元素在布局上的不同和优势，以及如何手动更改。  熟悉盒模型，以及如何手动更改 IE盒模型和怪异盒模型   单一元素在浏览器中居中">
@@ -125,8 +125,9 @@
 
 <h2 id="5-table-cell"><a href="#5-table-cell" class="headerlink" title="5.table-cell"></a>5.table-cell</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">display</span><span class="selector-pseudo">:table-cell</span>;</span><br><span class="line"><span class="selector-tag">text-align</span>: <span class="selector-tag">center</span>;</span><br><span class="line"><span class="selector-tag">vertical-align</span>: <span class="selector-tag">middle</span>;</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="6-absolute-四个方位值相等-marginAuto"><a href="#6-absolute-四个方位值相等-marginAuto" class="headerlink" title="6.absolute+ 四个方位值相等+marginAuto"></a>6.absolute+ 四个方位值相等+marginAuto</h2><p>不一定四个方位值是0</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0px</span>;</span><br><span class="line">    // margin不能漏了</span><br><span class="line">    <span class="selector-tag">margin</span>: <span class="selector-tag">auto</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="6-absolute-四个方位值相等-marginAuto"><a href="#6-absolute-四个方位值相等-marginAuto" class="headerlink" title="6.absolute+ 四个方位值相等+marginAuto"></a>6.absolute+ 四个方位值相等+marginAuto</h2><p>不一定四个方位值是0，必须定宽。</p>
+<p>宽度定了，margin为自适应，吸收剩余空间，把元素置于中间</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0px</span>;</span><br><span class="line">    // margin不能漏了</span><br><span class="line">    <span class="selector-tag">margin</span>: <span class="selector-tag">auto</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 <h2 id="7-grid"><a href="#7-grid" class="headerlink" title="7.grid"></a>7.grid</h2><p>父级：<code>display:grid</code></p>
 <p>子集：<code>align-self: center;justify-self: center;</code></p>
@@ -258,6 +259,10 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
+            <a href="/2019/10/18/CCSS之大坑/">CCSS之大坑</a>
+          </li>
+        
+          <li>
             <a href="/2019/10/16/canvas做画板/">canvas做画板</a>
           </li>
         
@@ -271,10 +276,6 @@ gitment.render('gitmentContainer')
         
           <li>
             <a href="/2019/09/16/max-height/">max-height</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/14/canvas笔记/">canvas笔记</a>
           </li>
         
       </ul>

@@ -111,7 +111,7 @@
 <p><img src="https://i.loli.net/2019/07/24/5d37fc8d4457140363.png" alt></p>
 <p>1.常见HeadTop 顶部栏组件。在四个一级路由中只有Home主页的顶部栏左、右各有一个<code>span</code>放置着一个icon 和button，其他一级路由的顶部栏只有中间的title部分，且title文字不同。</p>
 <p>2.在 只有 Home主页具有的左右模块上 插槽 slot，因为有两个 ，使用name属性加以区分。</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;!-- 左边的插槽空位--&gt;</span><br><span class="line">	&lt;slot name=<span class="string">"left"</span>&gt;&lt;/slot&gt;</span><br><span class="line">    &lt;span&gt; &#123;&#123; title &#125;&#125;&lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">   &lt;!-- 右边的插槽空位--&gt;</span></span><br><span class="line"><span class="regexp">    &lt;slot name="right"&gt;&lt;/</span>slot&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;!-- 左边的插槽空位--&gt;</span><br><span class="line">	&lt;slot name=<span class="string">"left"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span></span><br><span class="line">    &lt;span&gt; &#123;&#123; title &#125;&#125;&lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">   &lt;!-- 右边的插槽空位--&gt;</span></span><br><span class="line"><span class="regexp">    &lt;slot name="right"&gt;&lt;/</span>slot&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure></div>
 
 <p>3.在使用组件的时候 ，中间文字利用父子组件传值 props 过去。</p>
 <p>4.而在Home主页中，因为一左一右，在使用组件的时候，直接将左边的icon 和右边的button 代码写入 在home组件中引用的HeadTop 组件中，如：</p>
@@ -237,6 +237,10 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
+            <a href="/2019/10/18/CCSS之大坑/">CCSS之大坑</a>
+          </li>
+        
+          <li>
             <a href="/2019/10/16/canvas做画板/">canvas做画板</a>
           </li>
         
@@ -250,10 +254,6 @@ gitment.render('gitmentContainer')
         
           <li>
             <a href="/2019/09/16/max-height/">max-height</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/14/canvas笔记/">canvas笔记</a>
           </li>
         
       </ul>

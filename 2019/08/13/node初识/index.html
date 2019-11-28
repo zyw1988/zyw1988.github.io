@@ -10,19 +10,20 @@
   
   
   
-  <meta name="description" content="开启一个简单的服务器1.使用模块http 12345678910111213141516171819var http = require(&apos;http&apos;)// 1.创建Servervar server = http.createServer()// 2.监听request请求事件，请求设置处理函数server.on(&apos;request&apos;,function(req,res)&amp;#123;    conso">
+  <meta name="description" content="node1.安装 2.执行 1.读、写文件使用 fs模块123fs.writeFile(&apos;./newfile.txt&apos;,&apos;大家好这是fs写的新文件&apos;,function(error)&amp;#123;    console.log(error)&amp;#125;);  2.开启一个简单的服务器1.使用模块http2.创建 server实例server.on 接收请求，作出不同响应默认：server.on(&amp;qu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="node初识">
 <meta property="og:url" content="http://zyw1988.github.io/2019/08/13/node初识/index.html">
 <meta property="og:site_name" content="❤冰糖葫芦五加皮">
-<meta property="og:description" content="开启一个简单的服务器1.使用模块http 12345678910111213141516171819var http = require(&apos;http&apos;)// 1.创建Servervar server = http.createServer()// 2.监听request请求事件，请求设置处理函数server.on(&apos;request&apos;,function(req,res)&amp;#123;    conso">
+<meta property="og:description" content="node1.安装 2.执行 1.读、写文件使用 fs模块123fs.writeFile(&apos;./newfile.txt&apos;,&apos;大家好这是fs写的新文件&apos;,function(error)&amp;#123;    console.log(error)&amp;#125;);  2.开启一个简单的服务器1.使用模块http2.创建 server实例server.on 接收请求，作出不同响应默认：server.on(&amp;qu">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1565675474226.png">
 <meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1565681200385.png">
-<meta property="og:updated_time" content="2019-08-21T14:26:23.830Z">
+<meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1573919738305.png">
+<meta property="og:updated_time" content="2019-11-28T05:05:55.226Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="node初识">
-<meta name="twitter:description" content="开启一个简单的服务器1.使用模块http 12345678910111213141516171819var http = require(&apos;http&apos;)// 1.创建Servervar server = http.createServer()// 2.监听request请求事件，请求设置处理函数server.on(&apos;request&apos;,function(req,res)&amp;#123;    conso">
+<meta name="twitter:description" content="node1.安装 2.执行 1.读、写文件使用 fs模块123fs.writeFile(&apos;./newfile.txt&apos;,&apos;大家好这是fs写的新文件&apos;,function(error)&amp;#123;    console.log(error)&amp;#125;);  2.开启一个简单的服务器1.使用模块http2.创建 server实例server.on 接收请求，作出不同响应默认：server.on(&amp;qu">
 <meta name="twitter:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1565675474226.png">
   
     <link rel="alternate" href="/atom.xml" title="❤冰糖葫芦五加皮" type="application/atom+xml">
@@ -95,7 +96,26 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <h1 id="开启一个简单的服务器"><a href="#开启一个简单的服务器" class="headerlink" title="开启一个简单的服务器"></a>开启一个简单的服务器</h1><p>1.使用模块<code>http</code></p>
+        <h1 id="node"><a href="#node" class="headerlink" title="node"></a>node</h1><p>1.安装</p>
+<p>2.执行</p>
+<h1 id="1-读、写文件"><a href="#1-读、写文件" class="headerlink" title="1.读、写文件"></a>1.读、写文件</h1><h2 id="使用-fs模块"><a href="#使用-fs模块" class="headerlink" title="使用 fs模块"></a>使用 <code>fs</code>模块</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fs.writeFile(<span class="string">'./newfile.txt'</span>,<span class="string">'大家好这是fs写的新文件'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">error</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="2-开启一个简单的服务器"><a href="#2-开启一个简单的服务器" class="headerlink" title="2.开启一个简单的服务器"></a>2.开启一个简单的服务器</h1><h2 id="1-使用模块http"><a href="#1-使用模块http" class="headerlink" title="1.使用模块http"></a>1.使用模块<code>http</code></h2><h2 id="2-创建-server实例"><a href="#2-创建-server实例" class="headerlink" title="2.创建 server实例"></a>2.创建 server实例</h2><h3 id="server-on-接收请求，作出不同响应"><a href="#server-on-接收请求，作出不同响应" class="headerlink" title="server.on 接收请求，作出不同响应"></a><code>server.on</code> 接收请求，作出不同响应</h3><p>默认：<code>server.on(&quot;request&quot;,function(req,res){})</code></p>
+<p>细分：对请求的内容区分，相应不同内容。</p>
+<ul>
+<li>获取到 url地址<code>req.url</code></li>
+<li>判断 <code>req.url</code> 内容返回不同的内容。</li>
+</ul>
+<h3 id="2-1响应：res-write-quot-quot"><a href="#2-1响应：res-write-quot-quot" class="headerlink" title="2.1响应：res.write(&quot;&quot;)"></a>2.1响应：<code>res.write(&quot;&quot;)</code></h3><ul>
+<li><p>响应write 可以由多个，但是必须要有end。有时候可以省略end，直接在end的时候放入内容。</p>
+</li>
+<li><p>相应内容为中文的时候，需要设置响应头。</p>
+<p>服务器默认发送的内容是 utf-8编码格式，但是浏览器不知道服务器使用的什么格式</p>
+<p><code>res.setHeader(&#39;Content-Type&#39;,&#39;text/plain;charset=utf-8&#39;)</code></p>
+</li>
+</ul>
+<h3 id="2-2结束响应res-end"><a href="#2-2结束响应res-end" class="headerlink" title="2.2结束响应res.end()"></a>2.2结束响应<code>res.end()</code></h3><h2 id="3-server-listen-绑定端口号"><a href="#3-server-listen-绑定端口号" class="headerlink" title="3.server.listen 绑定端口号"></a>3.<code>server.listen</code> 绑定端口号</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">server.listen(<span class="number">3000</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"服务器已经开启了喵"</span>)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1.创建Server</span></span><br><span class="line"><span class="keyword">var</span> server = http.createServer()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.监听request请求事件，请求设置处理函数</span></span><br><span class="line">server.on(<span class="string">'request'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'收到了请求'</span>,req)</span><br><span class="line">    res.write(<span class="string">'hello world'</span>)</span><br><span class="line">    res.end() <span class="comment">//以上可以直接 res.end('hello world)</span></span><br><span class="line">	<span class="comment">//获取到 请求路径的地址</span></span><br><span class="line">    <span class="keyword">var</span> url = req.url</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3.绑定端口号，默认是80，</span></span><br><span class="line">server.listen(<span class="number">80</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'server is on ,you can use it!'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
 
 <a id="more"></a>
@@ -116,6 +136,15 @@
 
 <p>页面显示：</p>
 <p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1565681200385.png" alt="1565681200385"></p>
+<h1 id="使用模板引擎"><a href="#使用模板引擎" class="headerlink" title="使用模板引擎"></a>使用模板引擎</h1><p>1.安装：<code>npm install art-template</code></p>
+<p>2.加载：<code>var template = require(&#39;art-template&#39;)</code> </p>
+<p>3.模板结构置于html文件中</p>
+<p>4.渲染：</p>
+<ul>
+<li>template(filename,data); //基于模板名渲染</li>
+<li>template.compile(source,options);//将模板源代码编译成函数</li>
+<li>template.render(source,data,options);//模板源代码编译成函数立即执行</li>
+</ul>
 <h1 id="export-和require"><a href="#export-和require" class="headerlink" title="export 和require"></a>export 和require</h1><p>require 可以加载 核心模块，第三方模块，自定义模块。当需要 加载多个js文件的时候，就需要用require 和export。</p>
 <ul>
 <li><p>export 是导出文件变量，由require接收。</p>
@@ -124,7 +153,151 @@
 </li>
 </ul>
 <h1 id="express"><a href="#express" class="headerlink" title="express"></a>express</h1><p>原先http略有不足，无法满足需求，需要使用框架加快开发效率。</p>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><ul>
+<li><p>基于 Node.js 封装的上层服务框架，它提供了更简洁的 API 更实用的新功能。</p>
+</li>
+<li><p>它通过中间件和路由让程序的组织管理变的更加容易；它提供了丰富的 HTTP 工具；</p>
+</li>
+<li><p>它让动态视图的渲染变的更加容易；它还定义了一组可拓展标准。</p>
+</li>
+</ul>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ul>
+<li><p>安装（属于第三方插件</p>
+<p><code>npm install --save express</code></p>
+</li>
+<li><p>初始化</p>
+<p><code>npm init</code></p>
+</li>
+<li><p>引包</p>
+<p><code>var express = require(&#39;express&#39;);</code></p>
+</li>
+<li><p>创建实例</p>
+<p><code>var app = express();</code></p>
+</li>
+<li><p>监听：</p>
+<p><code>app.listen(3000,function(){}</code></p>
+<p><code>);</code></p>
+</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1. 创建 app</span></span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.监听</span></span><br><span class="line">app.listen(<span class="number">3000</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'使用 express创建的 接口'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+
+<p>拓展——：nodemon ,第三方命名航工具，<code>nodemon</code>来帮我们解决频繁修改代码重启服务器问题。</p>
+<p>是一个基于nodejs开发的一个第三方命令行工具。</p>
+<ul>
+<li><p>安装：<code>npm install --global nodemon</code></p>
+</li>
+<li><p>使用：<code>nodemon xxx.js</code></p>
+<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1573919738305.png" alt="1573919738305"></p>
+</li>
+</ul>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><ul>
+<li>send: 相比较于原始的 <code>res.write()</code> 和<code>res.end()</code> 搭配使用，<code>send</code>会自动完善 contenttype 部分。</li>
+</ul>
+<h2 id="静态资源的区别开放"><a href="#静态资源的区别开放" class="headerlink" title="静态资源的区别开放"></a>静态资源的区别开放</h2><p>1.<code>app.use(&#39;/static/image&#39;,express.static(&#39;./static/public&#39;));</code></p>
+<p>当以 <code>/static/image/</code> 开头的时候，去 <code>/static/image/</code> 目录下查找对应的资源。</p>
+<p>2.当省略 /static/ 第一个路径名，即客户端调用//image 的时候也会自动查找到 /static/image </p>
+<p><code>app.use(express.static(&#39;./static/public&#39;))</code></p>
+<h3 id="路由函数"><a href="#路由函数" class="headerlink" title="路由函数"></a>路由函数</h3><p>创建<code>router.js</code> 文件，内部放置所有的路径请求和响应。</p>
+<h4 id="请求方法不同"><a href="#请求方法不同" class="headerlink" title="请求方法不同"></a>请求方法不同</h4><ul>
+<li>post    <code>app.get()</code></li>
+<li>get     <code>app.post()</code></li>
+</ul>
+<h2 id="在-express中使用-art-template"><a href="#在-express中使用-art-template" class="headerlink" title="在 express中使用 art-template"></a>在 express中使用 art-template</h2><p>安装</p>
+<p><code>npm install --save art-template</code></p>
+<p><code>npm install --save express-art-template</code></p>
+<p>配置</p>
+<p><code>app.engine(&#39;art&#39;,require(&#39;express-art-template&#39;))</code></p>
+<p>当渲染使用 <code>.art</code>结尾的文件的时候，使用 art-template 模板引擎</p>
+<p>使用 </p>
+<p>创建 404.html 文件，再修改成 404.art</p>
+<p><code>res.render(&#39;404.art&#39;)</code></p>
+<p>但这样会出现 修改文件后缀名的情况，为了避免。可以直接在配置的时候 使用<code>app.engine(&#39;html&#39;,require(&#39;express-art-template&#39;))</code></p>
+<h2 id="在表单中获取post-请求"><a href="#在表单中获取post-请求" class="headerlink" title="在表单中获取post 请求"></a>在表单中获取post 请求</h2><p>body-parser</p>
+<p>没有内置获取post请求的 api</p>
+<p>安装：</p>
+<p><code>npm install --save body-parser</code></p>
+<p>引包：</p>
+<p><code>var bodyParser = require(&#39;body-parser&#39;)</code></p>
+<p>配置body-parser中间件</p>
+<p><code>app.use(bodyParser.urlencoded({ extended: false}));</code></p>
+<p><code>app.use(bodyParser.json());</code></p>
+<h1 id="crud-node-express"><a href="#crud-node-express" class="headerlink" title="crud-node-express"></a>crud-node-express</h1><p>1.页面引用了 bootstrap 模板，资源文件使用 npm 下载，并在app.js 中开放路径</p>
+<p>2.渲染 html 文件需要加载express-art-template文件，前者又 需要 art-template</p>
+<p>3.数据存放在本地json中，利用fs 读取，<strong>因为在json中是字符串格式</strong>，需要<code>JSON.parse()</code> 进行格式转换 才能用来渲染。</p>
+<p>4.制作 路由文件，接口比较多的情况下 将所有路由分离<strong>出来成一个router.js文</strong>件。代码比较简洁。 express 有单独的包装路由的api</p>
+<p>方法：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.引用</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="comment">// 2.创建路由容器</span></span><br><span class="line"><span class="keyword">var</span> router = express.Router();</span><br><span class="line"><span class="comment">//3.把路由挂载到router路由容器中</span></span><br><span class="line">router.get(<span class="string">'/'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;);</span><br><span class="line"><span class="comment">// 4.将router导出</span></span><br><span class="line"><span class="built_in">module</span>.exports = router;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">在入口函数中将router挂载</span><br><span class="line"><span class="keyword">var</span> router = <span class="built_in">require</span>(<span class="string">'./router'</span>);</span><br><span class="line">app.use(router);</span><br></pre></td></tr></table></figure></div>
+
+<p>注意 挂在路由在 配置中间件之后。挂载需要时间</p>
+<p>路由设计</p>
+<table>
+<thead>
+<tr>
+<th>请求方法</th>
+<th>请求路径</th>
+<th>get参数</th>
+<th>post参数</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GET</td>
+<td>/students</td>
+<td></td>
+<td></td>
+<td>渲染页面</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/students/new</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/students</td>
+<td></td>
+<td>name.age,gender,bobby</td>
+<td>处理提交的新增数据</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/students/edit</td>
+<td>id</td>
+<td></td>
+<td>改-找到对应的数据列表</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/students/edit</td>
+<td></td>
+<td>id,name,age,gender.hobby</td>
+<td>改-提交修改的数据</td>
+</tr>
+<tr>
+<td>GET</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
       
     </div>
     
@@ -234,6 +407,10 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
+            <a href="/2019/10/18/CCSS之大坑/">CCSS之大坑</a>
+          </li>
+        
+          <li>
             <a href="/2019/10/16/canvas做画板/">canvas做画板</a>
           </li>
         
@@ -247,10 +424,6 @@ gitment.render('gitmentContainer')
         
           <li>
             <a href="/2019/09/16/max-height/">max-height</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/14/canvas笔记/">canvas笔记</a>
           </li>
         
       </ul>
