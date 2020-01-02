@@ -1,299 +1,210 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="utf-8">
-  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
 
-  
-  <title>移动端组件——better-scroll | ❤冰糖葫芦五加皮</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-  
-  <meta name="description" content="定义移动端 触摸滚动插件 使用1.html结构：必须有包裹，即div.wrapper 包裹 div.content 标签和类名不做需求。并且，内部content 高度/宽度 必须大于外部的盒子，才能拖动。 2.JS部分：实例化 better-scroll 对象 1const bscroll = new BScroll(&apos;.wrapper&apos;,&amp;#123;&amp;#125;);  3.额外功能：滑动实时显示">
-<meta property="og:type" content="article">
-<meta property="og:title" content="移动端组件——better-scroll">
-<meta property="og:url" content="http://zyw1988.github.io/2019/08/21/移动端组件——better-scroll/index.html">
-<meta property="og:site_name" content="❤冰糖葫芦五加皮">
-<meta property="og:description" content="定义移动端 触摸滚动插件 使用1.html结构：必须有包裹，即div.wrapper 包裹 div.content 标签和类名不做需求。并且，内部content 高度/宽度 必须大于外部的盒子，才能拖动。 2.JS部分：实例化 better-scroll 对象 1const bscroll = new BScroll(&apos;.wrapper&apos;,&amp;#123;&amp;#125;);  3.额外功能：滑动实时显示">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-21T08:38:20.385Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="移动端组件——better-scroll">
-<meta name="twitter:description" content="定义移动端 触摸滚动插件 使用1.html结构：必须有包裹，即div.wrapper 包裹 div.content 标签和类名不做需求。并且，内部content 高度/宽度 必须大于外部的盒子，才能拖动。 2.JS部分：实例化 better-scroll 对象 1const bscroll = new BScroll(&apos;.wrapper&apos;,&amp;#123;&amp;#125;);  3.额外功能：滑动实时显示">
-  
-    <link rel="alternate" href="/atom.xml" title="❤冰糖葫芦五加皮" type="application/atom+xml">
-  
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/highlight.css">
-  <script>
-  let antiquityStorage = window.sessionStorage.getItem('antiquitySessionStorage');
-  if (antiquityStorage == '' || antiquityStorage == null) {
-    var antiquityLoader = '<div id="loaderbox"><div class="loader"><div class="load-roll"><div class="load-top"></div><div class="load-right"></div><div class="load-bottom"></div></div></div></div>';
-    document.write(antiquityLoader);
-    document.body.style.overflow = 'hidden'
-  }
-  </script>
+    <title>
+        
+        移动端组件——better-scroll - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
 </head>
-</html>
+
 <body>
-  <div id="fullpage" class="mobile-nav-right">
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> 我的记录板 </i>
+</div>
+
+<div class="index-container">
     
-      <div id="wrapper" title="图片来自网络">
-    
-    
-      <header id="header">
-  <div id="nav-toggle" class="nav-toggle"></div>
-  <div class="head-box global-width">
-    <nav class="nav-box nav-right">
-      
-        <a class="nav-item" href="/" title
+    <div class="index-left">
         
-        >首页</a>
-      
-        <a class="nav-item" href="/archives" title
-        
-        >归档</a>
-      
-    </nav>
-  </div>
-</header>
-      <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><article id="post-移动端组件——better-scroll" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 class="article-title" itemprop="name">
-      移动端组件——better-scroll
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/08/21/移动端组件——better-scroll/" class="article-date">
-  <time datetime="2019-08-21T08:37:35.000Z" itemprop="datePublished">2019-08-21</time>
-</a>
-    
-    
-  </div>
-  
-    <span id="busuanzi_container_page_pv">
-      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-    </span>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>移动端 触摸滚动插件</p>
-<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h2 id="1-html结构："><a href="#1-html结构：" class="headerlink" title="1.html结构："></a>1.html结构：</h2><p>必须有包裹，即<code>div.wrapper</code> 包裹 <code>div.content</code> 标签和类名不做需求。并且，内部<code>content</code> 高度/宽度 必须大于外部的盒子，才能拖动。</p>
-<h2 id="2-JS部分："><a href="#2-JS部分：" class="headerlink" title="2.JS部分："></a>2.JS部分：</h2><p>实例化 better-scroll 对象</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> bscroll = <span class="keyword">new</span> BScroll(<span class="string">'.wrapper'</span>,&#123;&#125;);</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="3-额外功能：滑动实时显示滑动的距离"><a href="#3-额外功能：滑动实时显示滑动的距离" class="headerlink" title="3.额外功能：滑动实时显示滑动的距离"></a>3.额外功能：滑动实时显示滑动的距离</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 属性probeType设置，一共有4个值，0，1,2,3 ,0和1是不进行实时侦测位置，2是在手指滚动的过程中侦测，手指离开之后就不进行侦测，3是只要是滚动就侦测，手指离开之后有个惯性滚动，即在这个过程中也会侦测</span></span><br><span class="line"><span class="keyword">const</span> bscroll = <span class="keyword">new</span> BScroll(<span class="string">'.wrapper'</span>,&#123;</span><br><span class="line">    probeType：<span class="number">3</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">bscroll.on(<span class="string">'scroll'</span>,position =&gt;&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(position)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="4-内部点击事件。"><a href="#4-内部点击事件。" class="headerlink" title="4.内部点击事件。"></a>4.内部点击事件。</h2><p>如果在wrapper内部有按钮或者需要点击事件的，点击会无法执行。需要额外增加click属性。</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> bscroll = <span class="keyword">new</span> BScroll(<span class="string">'.wrapper'</span>,&#123;</span><br><span class="line">    click:<span class="literal">true</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="5-上拉刷新：thresold"><a href="#5-上拉刷新：thresold" class="headerlink" title="5.上拉刷新：thresold"></a>5.上拉刷新：thresold</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> bscroll = <span class="keyword">new</span> BScroll(<span class="string">'.wrapper'</span>,&#123;</span><br><span class="line">   pullUpLoad:<span class="literal">true</span></span><br><span class="line">&#125;);</span><br><span class="line">bscroll.on(<span class="string">'pullingUp'</span>,()=&gt;&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'上拉显示更多'</span>)；</span><br><span class="line">    <span class="comment">//发送网络请求，请求更多资源</span></span><br><span class="line">    <span class="comment">//等请求完成，并且将新数据展示出来之后，必须执行  停止上拉加载更多 </span></span><br><span class="line">    bscroll.finishPullUp()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="6-封装-滚动组件，减少耦合"><a href="#6-封装-滚动组件，减少耦合" class="headerlink" title="6.封装 滚动组件，减少耦合"></a>6.封装 滚动组件，减少耦合</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"wrapper"</span> ref=<span class="string">"wrapper"</span>&gt;</span><br><span class="line">    	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"content"</span>&gt;</span><br><span class="line">        	&lt;slot&gt;<span class="xml"><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span></span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;    </span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp"> import BScroll from 'better-scroll'</span></span><br><span class="line"><span class="regexp"> export default&#123;</span></span><br><span class="line"><span class="regexp">	data()&#123;</span></span><br><span class="line"><span class="regexp">        return &#123;</span></span><br><span class="line"><span class="regexp">            scroll:null</span></span><br><span class="line"><span class="regexp">        &#125;</span></span><br><span class="line"><span class="regexp">    &#125;,</span></span><br><span class="line"><span class="regexp">     mounted()&#123;</span></span><br><span class="line"><span class="regexp">         this.scroll = new BScroll(this.$refs.wrapper,&#123;</span></span><br><span class="line"><span class="regexp">             </span></span><br><span class="line"><span class="regexp">         &#125;)</span></span><br><span class="line"><span class="regexp">     &#125;</span></span><br><span class="line"><span class="regexp">	&#125;         </span></span><br><span class="line"><span class="regexp">            </span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure></div>
-
-<p>引用该组件的时候，手动给最外层的盒子，添加高度或宽度</p>
-
-      
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/" />
+        </div>
+        <div class="name">
+            <i>zyw1988</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
     </div>
     
-      <footer class="article-footer">
-        完
-      </footer>
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#定义"><span class="toc-text">定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用"><span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-html结构："><span class="toc-text">1.html结构：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-JS部分："><span class="toc-text">2.JS部分：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-额外功能：滑动实时显示滑动的距离"><span class="toc-text">3.额外功能：滑动实时显示滑动的距离</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-内部点击事件。"><span class="toc-text">4.内部点击事件。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-上拉刷新：thresold"><span class="toc-text">5.上拉刷新：thresold</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-封装-滚动组件，减少耦合"><span class="toc-text">6.封装 滚动组件，减少耦合</span></a></li></ol></li></ol>
+</div>
     
-  </div>
-  
-    
-<nav id="article-nav">
-  <div class="article-nav-block">
-    
-      <a href="/2019/08/21/CSS记账簿/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
-          
-            CSS记账簿
-          
-        </div>
-      </a>
-    
-  </div>
-  <div class="article-nav-block">
-    
-      <a href="/2019/08/21/promise处理异步请求/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">promise处理异步请求</div>
-        <strong class="article-nav-caption"></strong>
-      </a>
-    
-  </div>
-</nav>
-
-    
-<div id="gitmentContainer"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  owner: '',
-  repo: '',
-  oauth: {
-    client_id: '',
-    client_secret: '',
-  },
-})
-gitment.render('gitmentContainer')
-</script>
-
-  
-  
-</article>
-</section>
-        <aside id="sidebar">
-  
-    <div class="widget-box">
-  <div class="avatar-box">
-    <img class="avatar" src="https://i.loli.net/2019/07/23/5d366a3da4aeb25677.jpg" title="幻化成羽"></img>
-    <h3 class="avatar-name">
-      
-        日啖荔枝三百颗
-      
-    </h3>
-    <p class="avatar-slogan">
-      
-    </p>
-  </div>
 </div>
 
 
-  
-    
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
 
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/canvas/">canvas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github个人主页搭建/">github个人主页搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/">promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slot/">slot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/公开课/">公开课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/初级/">初级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字体/">字体</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端/">移动端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端组件/">移动端组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/组件库/">组件库</a></li></ul>
+        </div>
     </div>
-  </div>
+</div>
 
-
-  
+        <div class="index-about-mobile">
+            <i> 我的记录板 </i>
+        </div>
+    </div>
     
-  <div class="widget-box">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/canvas/" style="font-size: 15px;">canvas</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/公开课/" style="font-size: 10px;">公开课</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/移动端/" style="font-size: 10px;">移动端</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 15px;">笔记</a> <a href="/tags/组件库/" style="font-size: 10px;">组件库</a>
-    </div>
-  </div>
+    <div class="index-middle">
+        <!-- Main Content -->
+        
 
-  
+
+<div class="post-container">
+    <div class="post-title">
+        移动端组件——better-scroll
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-08-21 16:37:35</span></span>
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>移动端 触摸滚动插件</p>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h2 id="1-html结构："><a href="#1-html结构：" class="headerlink" title="1.html结构："></a>1.html结构：</h2><p>必须有包裹，即<code>div.wrapper</code> 包裹 <code>div.content</code> 标签和类名不做需求。并且，内部<code>content</code> 高度/宽度 必须大于外部的盒子，才能拖动。</p>
+<h2 id="2-JS部分："><a href="#2-JS部分：" class="headerlink" title="2.JS部分："></a>2.JS部分：</h2><p>实例化 better-scroll 对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> bscroll = <span class="keyword">new</span> BScroll(<span class="string">'.wrapper'</span>,&#123;&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-额外功能：滑动实时显示滑动的距离"><a href="#3-额外功能：滑动实时显示滑动的距离" class="headerlink" title="3.额外功能：滑动实时显示滑动的距离"></a>3.额外功能：滑动实时显示滑动的距离</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 属性probeType设置，一共有4个值，0，1,2,3 ,0和1是不进行实时侦测位置，2是在手指滚动的过程中侦测，手指离开之后就不进行侦测，3是只要是滚动就侦测，手指离开之后有个惯性滚动，即在这个过程中也会侦测</span></span><br><span class="line"><span class="keyword">const</span> bscroll = <span class="keyword">new</span> BScroll(<span class="string">'.wrapper'</span>,&#123;</span><br><span class="line">    probeType：<span class="number">3</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">bscroll.on(<span class="string">'scroll'</span>,position =&gt;&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(position)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-内部点击事件。"><a href="#4-内部点击事件。" class="headerlink" title="4.内部点击事件。"></a>4.内部点击事件。</h2><p>如果在wrapper内部有按钮或者需要点击事件的，点击会无法执行。需要额外增加click属性。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> bscroll = <span class="keyword">new</span> BScroll(<span class="string">'.wrapper'</span>,&#123;</span><br><span class="line">    click:<span class="literal">true</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-上拉刷新：thresold"><a href="#5-上拉刷新：thresold" class="headerlink" title="5.上拉刷新：thresold"></a>5.上拉刷新：thresold</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> bscroll = <span class="keyword">new</span> BScroll(<span class="string">'.wrapper'</span>,&#123;</span><br><span class="line">   pullUpLoad:<span class="literal">true</span></span><br><span class="line">&#125;);</span><br><span class="line">bscroll.on(<span class="string">'pullingUp'</span>,()=&gt;&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'上拉显示更多'</span>)；</span><br><span class="line">    <span class="comment">//发送网络请求，请求更多资源</span></span><br><span class="line">    <span class="comment">//等请求完成，并且将新数据展示出来之后，必须执行  停止上拉加载更多 </span></span><br><span class="line">    bscroll.finishPullUp()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-封装-滚动组件，减少耦合"><a href="#6-封装-滚动组件，减少耦合" class="headerlink" title="6.封装 滚动组件，减少耦合"></a>6.封装 滚动组件，减少耦合</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"wrapper"</span> ref=<span class="string">"wrapper"</span>&gt;</span><br><span class="line">    	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"content"</span>&gt;</span><br><span class="line">        	&lt;slot&gt;<span class="xml"><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span></span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;    </span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp"> import BScroll from 'better-scroll'</span></span><br><span class="line"><span class="regexp"> export default&#123;</span></span><br><span class="line"><span class="regexp">	data()&#123;</span></span><br><span class="line"><span class="regexp">        return &#123;</span></span><br><span class="line"><span class="regexp">            scroll:null</span></span><br><span class="line"><span class="regexp">        &#125;</span></span><br><span class="line"><span class="regexp">    &#125;,</span></span><br><span class="line"><span class="regexp">     mounted()&#123;</span></span><br><span class="line"><span class="regexp">         this.scroll = new BScroll(this.$refs.wrapper,&#123;</span></span><br><span class="line"><span class="regexp">             </span></span><br><span class="line"><span class="regexp">         &#125;)</span></span><br><span class="line"><span class="regexp">     &#125;</span></span><br><span class="line"><span class="regexp">	&#125;         </span></span><br><span class="line"><span class="regexp">            </span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>引用该组件的时候，手动给最外层的盒子，添加高度或宽度</p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
     
-  <div class="widget-box">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/12/29/测试初级/">测试初级</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/05/bcrypt初识/">bcrypt初识</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/03/mongodb初识/">mongodb初识</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/02/node资金系统/">node资金系统</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/01/mySQL初识/">mySQL初识</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-      <div class="widget-box">
-    <h3 class="widget-title">友链</h3>
-    <div class="widget">
-      
-        <a style="display: block;" href="https://blog.csdn.net/qq_41880978" title target='_blank'
-        >CSDN</a>
-      
-        <a style="display: block;" href="https://github.com/zyw1988" title target='_blank'
-        >Github</a>
-      
-    </div>
-  </div>
-
-  
-</aside>
-      </div>
-      <footer id="footer">
-  <div class="foot-box global-width">
-    &copy; 2020 zyw1988 &nbsp;&nbsp;
-    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
-    <br>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
-  </div>
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
 </footer>
-      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
-<script>
-if (!window.jQuery) {
-var script = document.createElement('script');
-script.src = "/js/jquery-2.0.3.min.js";
-document.body.write(script);
-}
-</script>
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
 
 
 
-    </div>
-    <nav id="mobile-nav" class="mobile-nav-box">
-  <div class="mobile-nav-img mobile-nav-top"></div>
-  
-    <a href="/" class="mobile-nav-link">首页</a>
-  
-    <a href="/archives" class="mobile-nav-link">归档</a>
-  
-  <div class="mobile-nav-img  mobile-nav-bottom"></div>
-</nav>    
-  </div>
+
 </body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
 </html>

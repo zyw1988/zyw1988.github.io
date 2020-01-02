@@ -1,116 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="utf-8">
-  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
 
-  
-  <title>node资金系统 | ❤冰糖葫芦五加皮</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-  
-  <meta name="description" content="实现的功能 和接口注册/api/users/register 方法： POST 根据注册使用的邮箱查找数据，若无则成功注册。若有，返回”该邮箱已被注册”提示。注册成功之后保存到mongodb数据库中。  引入body-parser中间件获取POST传输数据  123451.引入const bodyParser = require(&quot;body-parser&quot;);2.配置（为啥要这样写）app.use">
-<meta property="og:type" content="article">
-<meta property="og:title" content="node资金系统">
-<meta property="og:url" content="http://zyw1988.github.io/2019/12/02/node资金系统/index.html">
-<meta property="og:site_name" content="❤冰糖葫芦五加皮">
-<meta property="og:description" content="实现的功能 和接口注册/api/users/register 方法： POST 根据注册使用的邮箱查找数据，若无则成功注册。若有，返回”该邮箱已被注册”提示。注册成功之后保存到mongodb数据库中。  引入body-parser中间件获取POST传输数据  123451.引入const bodyParser = require(&quot;body-parser&quot;);2.配置（为啥要这样写）app.use">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-12-16T16:26:43.560Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="node资金系统">
-<meta name="twitter:description" content="实现的功能 和接口注册/api/users/register 方法： POST 根据注册使用的邮箱查找数据，若无则成功注册。若有，返回”该邮箱已被注册”提示。注册成功之后保存到mongodb数据库中。  引入body-parser中间件获取POST传输数据  123451.引入const bodyParser = require(&quot;body-parser&quot;);2.配置（为啥要这样写）app.use">
-  
-    <link rel="alternate" href="/atom.xml" title="❤冰糖葫芦五加皮" type="application/atom+xml">
-  
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/highlight.css">
-  <script>
-  let antiquityStorage = window.sessionStorage.getItem('antiquitySessionStorage');
-  if (antiquityStorage == '' || antiquityStorage == null) {
-    var antiquityLoader = '<div id="loaderbox"><div class="loader"><div class="load-roll"><div class="load-top"></div><div class="load-right"></div><div class="load-bottom"></div></div></div></div>';
-    document.write(antiquityLoader);
-    document.body.style.overflow = 'hidden'
-  }
-  </script>
+    <title>
+        
+        node资金系统 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
 </head>
-</html>
+
 <body>
-  <div id="fullpage" class="mobile-nav-right">
-    
-      <div id="wrapper" title="图片来自网络">
-    
-    
-      <header id="header">
-  <div id="nav-toggle" class="nav-toggle"></div>
-  <div class="head-box global-width">
-    <nav class="nav-box nav-right">
-      
-        <a class="nav-item" href="/" title
-        
-        >首页</a>
-      
-        <a class="nav-item" href="/archives" title
-        
-        >归档</a>
-      
-    </nav>
-  </div>
-</header>
-      <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><article id="post-node资金系统" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 class="article-title" itemprop="name">
-      node资金系统
-    </h1>
-  
 
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/12/02/node资金系统/" class="article-date">
-  <time datetime="2019-12-02T08:59:19.000Z" itemprop="datePublished">2019-12-02</time>
-</a>
-    
-    
-  </div>
-  
-    <span id="busuanzi_container_page_pv">
-      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-    </span>
-  
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
 
-  <div class="article-inner">
+<div class="index-about">
+    <i> 我的记录板 </i>
+</div>
+
+<div class="index-container">
     
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/" />
+        </div>
+        <div class="name">
+            <i>zyw1988</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#实现的功能-和接口"><span class="toc-text">实现的功能 和接口</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#注册"><span class="toc-text">注册</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#登录"><span class="toc-text">登录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用passport-jwt验证token"><span class="toc-text">使用passport-jwt验证token</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装"><span class="toc-text">1.安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-导入"><span class="toc-text">2.导入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-配置"><span class="toc-text">3.配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-解析"><span class="toc-text">4.解析</span></a></li></ol></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> 我的记录板 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        node资金系统
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-12-02 16:59:19</span></span>
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
         <h1 id="实现的功能-和接口"><a href="#实现的功能-和接口" class="headerlink" title="实现的功能 和接口"></a>实现的功能 和接口</h1><h2 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h2><p><code>/api/users/register</code></p>
 <p>方法： POST</p>
 <p>根据注册使用的邮箱查找数据，若无则成功注册。若有，返回”该邮箱已被注册”提示。注册成功之后保存到mongodb数据库中。</p>
 <ul>
 <li>引入body-parser中间件获取POST传输数据</li>
 </ul>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>引入</span><br><span class="line"><span class="keyword">const</span> bodyParser = <span class="built_in">require</span>(<span class="string">"body-parser"</span>);</span><br><span class="line"><span class="number">2.</span>配置（为啥要这样写）</span><br><span class="line">app.use(bodyParser.urlencoded(&#123;<span class="attr">extended</span>:<span class="literal">false</span>&#125;));</span><br><span class="line">app.use(bodyParser.json());</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>引入</span><br><span class="line"><span class="keyword">const</span> bodyParser = <span class="built_in">require</span>(<span class="string">"body-parser"</span>);</span><br><span class="line"><span class="number">2.</span>配置（为啥要这样写）</span><br><span class="line">app.use(bodyParser.urlencoded(&#123;<span class="attr">extended</span>:<span class="literal">false</span>&#125;));</span><br><span class="line">app.use(bodyParser.json());</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><p>密码加密保存：</p>
 <p>使用 <code>bcrypt</code> 函数 <code>genSalt()</code> 。</p>
 <p>语法：</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">bcrypt.genSalt(num,<span class="function"><span class="keyword">function</span>(<span class="params">err,salt</span>)</span>&#123;</span><br><span class="line">    bcrypt.hash(password,salt,<span class="function"><span class="keyword">function</span>(<span class="params">err,hash</span>)</span>&#123;</span><br><span class="line">        <span class="comment">// 这里的hash 就是经过加密的密码，直接赋值给password即可。</span></span><br><span class="line">        </span><br><span class="line">    &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">bcrypt.genSalt(num,<span class="function"><span class="keyword">function</span>(<span class="params">err,salt</span>)</span>&#123;</span><br><span class="line">    bcrypt.hash(password,salt,<span class="function"><span class="keyword">function</span>(<span class="params">err,hash</span>)</span>&#123;</span><br><span class="line">        <span class="comment">// 这里的hash 就是经过加密的密码，直接赋值给password即可。</span></span><br><span class="line">        </span><br><span class="line">    &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>mongodb 数据操作API</p>
 <ul>
 <li><code>findOne</code> 只返回一个文档。相比较于<code>find</code> 是返回全部符合条件的文档</li>
 </ul>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">collection.findOne(&#123;查询条件&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">user</span>)</span>&#123;...&#125;);</span><br><span class="line">                                  </span><br><span class="line">collection.findOne(&#123;查询条件&#125;).then(<span class="function"><span class="params">user</span>=&gt;</span>&#123;&#125;);</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">collection.findOne(&#123;查询条件&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">user</span>)</span>&#123;...&#125;);</span><br><span class="line">                                  </span><br><span class="line">collection.findOne(&#123;查询条件&#125;).then(<span class="function"><span class="params">user</span>=&gt;</span>&#123;&#125;);</span><br></pre></td></tr></table></figure>
 
 
 
@@ -118,7 +158,7 @@
 </ul>
 <ul>
 <li><p>保存一条数据</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.save()</span><br><span class="line">    .then(<span class="function"><span class="params">()</span>=&gt;</span>&#123;<span class="string">"成功的回调"</span>&#125;)</span><br><span class="line">    .catch(<span class="function"><span class="params">err</span>=&gt;</span>&#123;<span class="string">"保存失败"</span>&#125;);</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.save()</span><br><span class="line">    .then(<span class="function"><span class="params">()</span>=&gt;</span>&#123;<span class="string">"成功的回调"</span>&#125;)</span><br><span class="line">    .catch(<span class="function"><span class="params">err</span>=&gt;</span>&#123;<span class="string">"保存失败"</span>&#125;);</span><br></pre></td></tr></table></figure>
 
 
 
@@ -141,7 +181,7 @@
 <ul>
 <li>为字段添加token</li>
 </ul>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>引入 jsonwebtoken</span><br><span class="line"><span class="keyword">const</span> jwt = <span class="built_in">require</span>(<span class="string">"jsonwebtoken"</span>);</span><br><span class="line"><span class="number">2.</span> 定义rule</span><br><span class="line"><span class="keyword">const</span> rule = &#123;<span class="attr">id</span>:user.id,<span class="attr">name</span>:user.name&#125;;</span><br><span class="line"><span class="number">3.</span>调用 jwt.sign()</span><br><span class="line">jwt.sign(rule,keys.secretOrkey,&#123;<span class="attr">expiresIn</span>:<span class="number">3600</span>&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">err,token</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 这里的token就是获取到的令牌</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>引入 jsonwebtoken</span><br><span class="line"><span class="keyword">const</span> jwt = <span class="built_in">require</span>(<span class="string">"jsonwebtoken"</span>);</span><br><span class="line"><span class="number">2.</span> 定义rule</span><br><span class="line"><span class="keyword">const</span> rule = &#123;<span class="attr">id</span>:user.id,<span class="attr">name</span>:user.name&#125;;</span><br><span class="line"><span class="number">3.</span>调用 jwt.sign()</span><br><span class="line">jwt.sign(rule,keys.secretOrkey,&#123;<span class="attr">expiresIn</span>:<span class="number">3600</span>&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">err,token</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 这里的token就是获取到的令牌</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 <p>passport： 验证token</p>
 <h2 id="使用passport-jwt验证token"><a href="#使用passport-jwt验证token" class="headerlink" title="使用passport-jwt验证token"></a>使用passport-jwt验证token</h2><p>passport-jwt是一个针对jsonwebtoken的插件，passport是express框架的一个针对密码的中间件</p>
@@ -151,195 +191,66 @@
 <p>入口文件中初始化：<br><code>app.use(passport.initialize());</code></p>
 <h3 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h3><p><code>config</code>文件夹下新建 passport.js文件。并在入口文件中导入</p>
 <p><code>require(&quot;./config/passport&quot;)(passport);</code></p>
-<h3 id="4-解析"><a href="#4-解析" class="headerlink" title="4.解析"></a>4.解析</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> JwtStrategy = <span class="built_in">require</span>(<span class="string">'passport-jwt'</span>).Strategy,</span><br><span class="line">  	ExtractJwt = <span class="built_in">require</span>(<span class="string">'passport-jwt'</span>).ExtractJwt; <span class="comment">// 导入包</span></span><br><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">"mongoose"</span>);</span><br><span class="line"><span class="keyword">const</span> User = mongoose.model(<span class="string">"users"</span>);</span><br><span class="line"><span class="keyword">const</span> keys = <span class="built_in">require</span>(<span class="string">'../config/keys'</span>);</span><br><span class="line"><span class="keyword">const</span> opts = &#123;&#125;;</span><br><span class="line">opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();<span class="comment">//通过配置信息生成jwt的请求，以此来验证 token</span></span><br><span class="line">opts.secretOrKey = keys.secretOrkey;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="params">passport</span> =&gt;</span> &#123;</span><br><span class="line">  passport.use(<span class="keyword">new</span> JwtStrategy(opts, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> (<span class="params">jwt_payload, done</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// console.log(jwt_payload);</span></span><br><span class="line">    <span class="keyword">const</span> user = <span class="keyword">await</span> User.findById(jwt_payload.id);</span><br><span class="line">    <span class="keyword">if</span> (user) &#123;</span><br><span class="line">      <span class="keyword">return</span> done(<span class="literal">null</span>, user);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> done(<span class="literal">null</span>, <span class="literal">false</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;));</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
+<h3 id="4-解析"><a href="#4-解析" class="headerlink" title="4.解析"></a>4.解析</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> JwtStrategy = <span class="built_in">require</span>(<span class="string">'passport-jwt'</span>).Strategy,</span><br><span class="line">  	ExtractJwt = <span class="built_in">require</span>(<span class="string">'passport-jwt'</span>).ExtractJwt; <span class="comment">// 导入包</span></span><br><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">"mongoose"</span>);</span><br><span class="line"><span class="keyword">const</span> User = mongoose.model(<span class="string">"users"</span>);</span><br><span class="line"><span class="keyword">const</span> keys = <span class="built_in">require</span>(<span class="string">'../config/keys'</span>);</span><br><span class="line"><span class="keyword">const</span> opts = &#123;&#125;;</span><br><span class="line">opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();<span class="comment">//通过配置信息生成jwt的请求，以此来验证 token</span></span><br><span class="line">opts.secretOrKey = keys.secretOrkey;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="params">passport</span> =&gt;</span> &#123;</span><br><span class="line">  passport.use(<span class="keyword">new</span> JwtStrategy(opts, <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> (<span class="params">jwt_payload, done</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// console.log(jwt_payload);</span></span><br><span class="line">    <span class="keyword">const</span> user = <span class="keyword">await</span> User.findById(jwt_payload.id);</span><br><span class="line">    <span class="keyword">if</span> (user) &#123;</span><br><span class="line">      <span class="keyword">return</span> done(<span class="literal">null</span>, user);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> done(<span class="literal">null</span>, <span class="literal">false</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;));</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
-      
-    </div>
-    
-      <footer class="article-footer">
-        完
-      </footer>
-    
-  </div>
-  
-    
-<nav id="article-nav">
-  <div class="article-nav-block">
-    
-      <a href="/2019/12/03/mongodb初识/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
-          
-            mongodb初识
-          
+        
+        <br />
+        <div id="comment-container">
         </div>
-      </a>
-    
-  </div>
-  <div class="article-nav-block">
-    
-      <a href="/2019/12/01/mySQL初识/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">mySQL初识</div>
-        <strong class="article-nav-caption"></strong>
-      </a>
-    
-  </div>
-</nav>
+        <div id="disqus_thread"></div>
 
-    
-<div id="gitmentContainer"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  owner: '',
-  repo: '',
-  oauth: {
-    client_id: '',
-    client_secret: '',
-  },
-})
-gitment.render('gitmentContainer')
-</script>
+        <div id="lv-container">
+        </div>
 
-  
-  
-</article>
-</section>
-        <aside id="sidebar">
-  
-    <div class="widget-box">
-  <div class="avatar-box">
-    <img class="avatar" src="https://i.loli.net/2019/07/23/5d366a3da4aeb25677.jpg" title="幻化成羽"></img>
-    <h3 class="avatar-name">
-      
-        日啖荔枝三百颗
-      
-    </h3>
-    <p class="avatar-slogan">
-      
-    </p>
-  </div>
+    </div>
+</div>
+
+    </div>
 </div>
 
 
-  
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
     
-
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/canvas/">canvas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github个人主页搭建/">github个人主页搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/">promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slot/">slot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/公开课/">公开课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/初级/">初级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字体/">字体</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端/">移动端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端组件/">移动端组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/组件库/">组件库</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/canvas/" style="font-size: 15px;">canvas</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/公开课/" style="font-size: 10px;">公开课</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/移动端/" style="font-size: 10px;">移动端</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 15px;">笔记</a> <a href="/tags/组件库/" style="font-size: 10px;">组件库</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/12/29/测试初级/">测试初级</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/05/bcrypt初识/">bcrypt初识</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/03/mongodb初识/">mongodb初识</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/02/node资金系统/">node资金系统</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/01/mySQL初识/">mySQL初识</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-      <div class="widget-box">
-    <h3 class="widget-title">友链</h3>
-    <div class="widget">
-      
-        <a style="display: block;" href="https://blog.csdn.net/qq_41880978" title target='_blank'
-        >CSDN</a>
-      
-        <a style="display: block;" href="https://github.com/zyw1988" title target='_blank'
-        >Github</a>
-      
-    </div>
-  </div>
-
-  
-</aside>
-      </div>
-      <footer id="footer">
-  <div class="foot-box global-width">
-    &copy; 2020 zyw1988 &nbsp;&nbsp;
-    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
-    <br>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
-  </div>
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
 </footer>
-      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
-<script>
-if (!window.jQuery) {
-var script = document.createElement('script');
-script.src = "/js/jquery-2.0.3.min.js";
-document.body.write(script);
-}
-</script>
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
 
 
 
-    </div>
-    <nav id="mobile-nav" class="mobile-nav-box">
-  <div class="mobile-nav-img mobile-nav-top"></div>
-  
-    <a href="/" class="mobile-nav-link">首页</a>
-  
-    <a href="/archives" class="mobile-nav-link">归档</a>
-  
-  <div class="mobile-nav-img  mobile-nav-bottom"></div>
-</nav>    
-  </div>
+
 </body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
 </html>

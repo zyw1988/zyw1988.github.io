@@ -1,97 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="utf-8">
-  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
 
-  
-  <title>jQuery 补充知识 | ❤冰糖葫芦五加皮</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-  
-  <meta name="description" content="一、隐式迭代 即 如果选出一组jq对象，设置样式的话，不同 for循环可以统一设置(相同的操作)。（不完全理解仅做插眼知识点） 适用场景： 排他 例子：只有当前选中有特殊样式，切换的时候样式回复默认">
-<meta property="og:type" content="article">
-<meta property="og:title" content="jQuery 补充知识">
-<meta property="og:url" content="http://zyw1988.github.io/2019/10/12/jQuery-补充知识/index.html">
-<meta property="og:site_name" content="❤冰糖葫芦五加皮">
-<meta property="og:description" content="一、隐式迭代 即 如果选出一组jq对象，设置样式的话，不同 for循环可以统一设置(相同的操作)。（不完全理解仅做插眼知识点） 适用场景： 排他 例子：只有当前选中有特殊样式，切换的时候样式回复默认">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-16T01:46:18.495Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jQuery 补充知识">
-<meta name="twitter:description" content="一、隐式迭代 即 如果选出一组jq对象，设置样式的话，不同 for循环可以统一设置(相同的操作)。（不完全理解仅做插眼知识点） 适用场景： 排他 例子：只有当前选中有特殊样式，切换的时候样式回复默认">
-  
-    <link rel="alternate" href="/atom.xml" title="❤冰糖葫芦五加皮" type="application/atom+xml">
-  
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/highlight.css">
-  <script>
-  let antiquityStorage = window.sessionStorage.getItem('antiquitySessionStorage');
-  if (antiquityStorage == '' || antiquityStorage == null) {
-    var antiquityLoader = '<div id="loaderbox"><div class="loader"><div class="load-roll"><div class="load-top"></div><div class="load-right"></div><div class="load-bottom"></div></div></div></div>';
-    document.write(antiquityLoader);
-    document.body.style.overflow = 'hidden'
-  }
-  </script>
+    <title>
+        
+        jQuery 补充知识 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
 </head>
-</html>
+
 <body>
-  <div id="fullpage" class="mobile-nav-right">
-    
-      <div id="wrapper" title="图片来自网络">
-    
-    
-      <header id="header">
-  <div id="nav-toggle" class="nav-toggle"></div>
-  <div class="head-box global-width">
-    <nav class="nav-box nav-right">
-      
-        <a class="nav-item" href="/" title
-        
-        >首页</a>
-      
-        <a class="nav-item" href="/archives" title
-        
-        >归档</a>
-      
-    </nav>
-  </div>
-</header>
-      <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><article id="post-jQuery-补充知识" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 class="article-title" itemprop="name">
-      jQuery 补充知识
-    </h1>
-  
 
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/10/12/jQuery-补充知识/" class="article-date">
-  <time datetime="2019-10-12T09:40:55.000Z" itemprop="datePublished">2019-10-12</time>
-</a>
-    
-    
-  </div>
-  
-    <span id="busuanzi_container_page_pv">
-      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-    </span>
-  
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
 
-  <div class="article-inner">
+<div class="index-about">
+    <i> 我的记录板 </i>
+</div>
+
+<div class="index-container">
     
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/" />
+        </div>
+        <div class="name">
+            <i>zyw1988</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> 我的记录板 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        jQuery 补充知识
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-10-12 17:40:55</span></span>
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
         <p>一、隐式迭代</p>
 <p>即 如果选出一组jq对象，设置样式的话，不同 for循环可以统一设置(相同的操作)。（不完全理解仅做插眼知识点）</p>
 <p>适用场景： 排他</p>
@@ -103,10 +143,10 @@
 <p>整合了mouseover 和mouseout，鼠标经过和鼠标离开两个事件 。</p>
 <p>并且：如果hover中只写了一个函数，那么鼠标经过和鼠标离开都会执行这个函数。</p>
 <p>例子：</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'.nav&gt;li'</span>).hover(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="keyword">this</span>).children(<span class="string">"ul"</span>).slideToggle();</span><br><span class="line">    <span class="comment">// 即鼠标经过和离开 都会进行 滑动的切换。</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'.nav&gt;li'</span>).hover(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="keyword">this</span>).children(<span class="string">"ul"</span>).slideToggle();</span><br><span class="line">    <span class="comment">// 即鼠标经过和离开 都会进行 滑动的切换。</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <p>优化：</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'.nav&gt;li'</span>).hover(function()&#123;</span><br><span class="line">    $(<span class="keyword">this</span>).children(<span class="string">"ul"</span>).stop().slideToggle();</span><br><span class="line">    <span class="comment">// 默认实惠执行动画队列里的所有动画，会有一种抽风的感觉。</span></span><br><span class="line">    <span class="comment">//加上 .stop() 即执行最近一次的动画，</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'.nav&gt;li'</span>).hover(function()&#123;</span><br><span class="line">    $(<span class="keyword">this</span>).children(<span class="string">"ul"</span>).stop().slideToggle();</span><br><span class="line">    <span class="comment">// 默认实惠执行动画队列里的所有动画，会有一种抽风的感觉。</span></span><br><span class="line">    <span class="comment">//加上 .stop() 即执行最近一次的动画，</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <p>获取属性：</p>
 <p>prop() 固有属性 a 的href title</p>
@@ -124,7 +164,7 @@
 <ol>
 <li><p><code>offset()</code> 设置或返回被选元素相对于<strong>文档</strong>的偏移坐标，跟 父级没有关系。 该方法有两个属性：left、top, <code>offset().top</code> 用于获取距离文档顶部的距离，<code>offset().left</code> 用于获取居里文档左侧的距离。</p>
 <p>使用对象来一起设置 顶部和左侧的偏移</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'div'</span>).offset(&#123;</span><br><span class="line">    top:<span class="number">10</span>,</span><br><span class="line">    left:<span class="number">10</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'div'</span>).offset(&#123;</span><br><span class="line">    top:<span class="number">10</span>,</span><br><span class="line">    left:<span class="number">10</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 
 
@@ -137,7 +177,7 @@
 <p>页面滚动事件：<code>$(window).scroll(function(){...})</code> </p>
 <p>设置/ 获取 页面滚动距离<code>$(document).scrollTop()</code> </p>
 <p>带有动画的返回顶部，需要操作<code>body,html</code> (只有元素才能动画，不能操作 document)</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'body,html'</span>).animate(&#123;</span><br><span class="line">    <span class="string">'scrollTop'</span>:<span class="number">0</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'body,html'</span>).animate(&#123;</span><br><span class="line">    <span class="string">'scrollTop'</span>:<span class="number">0</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 <p>实现 对象拷贝</p>
 <p><code>$.extend([deep],target,object,[objectN])</code> </p>
@@ -147,192 +187,63 @@
 <li>待拷贝到第一个对象的对象 </li>
 </ol>
 
-      
-    </div>
-    
-      <footer class="article-footer">
-        完
-      </footer>
-    
-  </div>
-  
-    
-<nav id="article-nav">
-  <div class="article-nav-block">
-    
-      <a href="/2019/10/15/CSS选择器之表单样式中的妙用/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
-          
-            CSS选择器之表单样式中的妙用
-          
+        
+        <br />
+        <div id="comment-container">
         </div>
-      </a>
-    
-  </div>
-  <div class="article-nav-block">
-    
-      <a href="/2019/09/16/max-height/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">max-height</div>
-        <strong class="article-nav-caption"></strong>
-      </a>
-    
-  </div>
-</nav>
+        <div id="disqus_thread"></div>
 
-    
-<div id="gitmentContainer"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  owner: '',
-  repo: '',
-  oauth: {
-    client_id: '',
-    client_secret: '',
-  },
-})
-gitment.render('gitmentContainer')
-</script>
+        <div id="lv-container">
+        </div>
 
-  
-  
-</article>
-</section>
-        <aside id="sidebar">
-  
-    <div class="widget-box">
-  <div class="avatar-box">
-    <img class="avatar" src="https://i.loli.net/2019/07/23/5d366a3da4aeb25677.jpg" title="幻化成羽"></img>
-    <h3 class="avatar-name">
-      
-        日啖荔枝三百颗
-      
-    </h3>
-    <p class="avatar-slogan">
-      
-    </p>
-  </div>
+    </div>
+</div>
+
+    </div>
 </div>
 
 
-  
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
     
-
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/canvas/">canvas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github个人主页搭建/">github个人主页搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/">promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slot/">slot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/公开课/">公开课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/初级/">初级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字体/">字体</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端/">移动端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端组件/">移动端组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/组件库/">组件库</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/VUE/" style="font-size: 10px;">VUE</a> <a href="/tags/canvas/" style="font-size: 15px;">canvas</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github个人主页搭建/" style="font-size: 10px;">github个人主页搭建</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/promise/" style="font-size: 10px;">promise</a> <a href="/tags/slot/" style="font-size: 10px;">slot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/公开课/" style="font-size: 10px;">公开课</a> <a href="/tags/初级/" style="font-size: 10px;">初级</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/移动端/" style="font-size: 10px;">移动端</a> <a href="/tags/移动端组件/" style="font-size: 10px;">移动端组件</a> <a href="/tags/笔记/" style="font-size: 15px;">笔记</a> <a href="/tags/组件库/" style="font-size: 10px;">组件库</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/12/29/测试初级/">测试初级</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/05/bcrypt初识/">bcrypt初识</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/03/mongodb初识/">mongodb初识</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/02/node资金系统/">node资金系统</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/01/mySQL初识/">mySQL初识</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-      <div class="widget-box">
-    <h3 class="widget-title">友链</h3>
-    <div class="widget">
-      
-        <a style="display: block;" href="https://blog.csdn.net/qq_41880978" title target='_blank'
-        >CSDN</a>
-      
-        <a style="display: block;" href="https://github.com/zyw1988" title target='_blank'
-        >Github</a>
-      
-    </div>
-  </div>
-
-  
-</aside>
-      </div>
-      <footer id="footer">
-  <div class="foot-box global-width">
-    &copy; 2020 zyw1988 &nbsp;&nbsp;
-    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
-    <br>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
-  </div>
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
 </footer>
-      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
-<script>
-if (!window.jQuery) {
-var script = document.createElement('script');
-script.src = "/js/jquery-2.0.3.min.js";
-document.body.write(script);
-}
-</script>
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
 
 
 
-    </div>
-    <nav id="mobile-nav" class="mobile-nav-box">
-  <div class="mobile-nav-img mobile-nav-top"></div>
-  
-    <a href="/" class="mobile-nav-link">首页</a>
-  
-    <a href="/archives" class="mobile-nav-link">归档</a>
-  
-  <div class="mobile-nav-img  mobile-nav-bottom"></div>
-</nav>    
-  </div>
+
 </body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
 </html>
