@@ -61,6 +61,289 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-max-height" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/16/max-height/">max-height</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/09/16/max-height/" class="article-date">
+  <time datetime="2019-09-16T13:45:49.000Z" itemprop="datePublished">2019-09-16</time>
+</a>
+    
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
+
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="引论"><a href="#引论" class="headerlink" title="引论"></a>引论</h1><p> 今天在看的公开课，功能是实现 一个带鼠标悬停会出现旋转的二级菜单的 CSS导航栏。</p>
+<p>出现的一个问题，是 鼠标滑过 一级菜单时 二级菜单会旋转着出现。鼠标离开二级菜单会旋转着消失（<code>transform:rotateY(0deg)</code> ) 当鼠标再次滑过二级菜单的位置时（二级已经消失），二级菜单仍然会再次出现。这不符合预期。只有滑过一级菜单，对应的二级菜单才应该出现。</p>
+<p>解决方法：<code>max-height</code> 设为0 。</p>
+<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p>重新学习些 <code>max-height</code></p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-canvas笔记" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/14/canvas笔记/">canvas笔记</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/09/14/canvas笔记/" class="article-date">
+  <time datetime="2019-09-14T06:10:57.000Z" itemprop="datePublished">2019-09-14</time>
+</a>
+    
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas/">canvas</a></li></ul>
+
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="1-基础的api"><a href="#1-基础的api" class="headerlink" title="1.基础的api"></a>1.基础的api</h1><p><code>ctx.beginPath();</code> // 开始路径绘制 ，如果没有设置，接下来所有画的线条都会秉持一个样式，相当于画别的东西的时候重新拿个笔。</p>
+<p>如果 需要绘制多条属性颜色不一样的线条，需要重新开启新路径。不然属性颜色会被覆盖。</p>
+<p><code>ctx.moveTo(20, 20);</code> // 设置路径起点，坐标为(20,20) ，<strong>相当于落笔的坐标</strong></p>
+<p><code>ctx.lineTo(200, 20);</code> // 绘制一条到(200,20)的轨迹，<strong>到这时线条都是看不见的。</strong></p>
+<p><code>ctx.lineWidth = 1.0;</code> // 设置线宽 </p>
+<p><code>ctx.strokeStyle = &#39;#CC0000&#39;;</code> // 设置线的颜色 </p>
+        
+          <p class="article-more-link">
+            <a href="/2019/09/14/canvas笔记/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-移动端开发" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/06/移动端开发/">移动端开发</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/09/06/移动端开发/" class="article-date">
+  <time datetime="2019-09-06T14:28:03.000Z" itemprop="datePublished">2019-09-06</time>
+</a>
+    
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/移动端/">移动端</a></li></ul>
+
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-CSS中引用的外部字体文件以及如何压缩" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/06/CSS中引用的外部字体文件以及如何压缩/">CSS中引用的外部字体文件以及如何压缩</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/09/06/CSS中引用的外部字体文件以及如何压缩/" class="article-date">
+  <time datetime="2019-09-06T13:16:00.000Z" itemprop="datePublished">2019-09-06</time>
+</a>
+    
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字体/">字体</a></li></ul>
+
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="字体的几种格式"><a href="#字体的几种格式" class="headerlink" title="字体的几种格式"></a>字体的几种格式</h1><ul>
+<li><code>.EOT</code>  微软创造的字体格式，只在IE6-IE8里使用，支持的浏览器：<code>internet Explorer 4.0+</code> </li>
+<li><code>.TTF</code>或<code>.OTF</code>，支持的浏览器：<code>IE9+,Firefox3.5+,Chrome4+,Safari3+,Opera10+,iOS Mobile Safari4.2+</code></li>
+<li><code>.SVG/SVGZ</code>，使用矢量图改进的字体格式，体积更小，适合在手机设备上使用，支持的浏览器：<code>Chrome4+/Safari3.1+/Opera10.0+/IOS MObile Safari3.2+</code> </li>
+<li><code>.WOFF</code>  加载较快，支持的浏览器：<code>IE9.0+/FireFox3.5+/Chrome6+/Safari 3.6+/Opera11.1+</code> </li>
+</ul>
+<p><a href="https://www.fontke.com/tool/convfont/" target="_blank" rel="noopener">在线转换字体格式</a> </p>
+<h1 id="引用的方式"><a href="#引用的方式" class="headerlink" title="引用的方式"></a>引用的方式</h1><ul>
+<li><p>使用 <code>@font-face</code> 定义字体属性，包括<code>font-family</code> 定义字体名字，<code>src</code> 文字引用地址，多个地址之间使用 逗号 隔开。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@font-face &#123;</span><br><span class="line">      font-family: <span class="xml"><span class="tag">&lt;<span class="name">YourWebFontName</span>&gt;</span>;</span></span><br><span class="line">      src: &lt;source&gt; [&lt;format&gt;][,&lt;source&gt; [&lt;format&gt;]]*;</span><br><span class="line">      [font-weight: &lt;weight&gt;];</span><br><span class="line">      [font-style: &lt;style&gt;];</span><br><span class="line">&#125;</span><br><span class="line">//  []包裹的是非必要属性</span><br></pre></td></tr></table></figure></div>
+
+
+
+</li>
+</ul>
+<ul>
+<li>有时候使用 两个url 导入字体文件是因为：绝大多数情况下，第一个 src 是可以去掉的，除非需要支持 IE9 下的兼容模式。在 IE9 中可以使用 IE7 和 IE8 的模式渲染页面，微软修改了在兼容模式下的 CSS 解析器，导致使用 ? 的方案失效。由于 CSS 解释器是从下往上解析的，所以在上面添加一个不带问号的 src 属性便可以解决此问题。</li>
+</ul>
+<h1 id="使用-字蛛压缩字体文件"><a href="#使用-字蛛压缩字体文件" class="headerlink" title="使用 字蛛压缩字体文件"></a>使用 字蛛压缩字体文件</h1><ul>
+<li><p>安装 <code>npm install font-spider -g</code></p>
+</li>
+<li><p>在引用 字体文件的根目录下执行 <code>font-spider ./xx/index*.html</code> *号是针对所有html结尾的文件都进行压缩。</p>
+<p>这样字体会被压缩，原件也会被保留。    </p>
+<p>注意：</p>
+<ul>
+<li>如果文字有修改，需要再 重新压缩。（字蛛压缩原理是 挑出你用到的所有的字，没有用到的被踢出。）</li>
+<li>.ttf 文件必须存在 才能被压缩。</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-css之疑惑" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/03/css之疑惑/">css之工作笔记</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/09/03/css之疑惑/" class="article-date">
+  <time datetime="2019-09-03T14:13:17.000Z" itemprop="datePublished">2019-09-03</time>
+</a>
+    
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>怕什么真理无穷，进一寸有一寸的欢喜。——可爱的博客er</p>
+<ol>
+<li><p>布局页面的时候发现 上层盒子设置阴影会被下层盒子覆盖。搜索说 可以通过设置 <code>z-index</code> 更改层级，我这里更改无效。只能<code>position:relative</code>  相对于原来位置定位，原来的占位还是存在的。但为啥就让阴影显示出来了呢。</p>
+</li>
+<li><p>纯文本渲染输出 需要空格隔开：<code>letter-spacing:xxpx</code> 可跟normal、inherit、具体数值（允许负值）。不用傻乎乎的用 &nbps; 去一个个插入了吧。</p>
+<p>Tips: <code>letter-spacing</code> 妙用</p>
+<p>设置负值可以使得文本倒序。</p>
+</li>
+</ol>
+        
+          <p class="article-more-link">
+            <a href="/2019/09/03/css之疑惑/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-软件扩——adobe-xd" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/03/软件扩——adobe-xd/">软件扩——adobe xd</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/09/03/软件扩——adobe-xd/" class="article-date">
+  <time datetime="2019-09-03T01:36:08.000Z" itemprop="datePublished">2019-09-03</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>工作需要 接触 Adobe XD</p>
+<p>可以直接下载Adobe Creative CLoud 窗口化进行 Adobe 系列产品的安装。</p>
+        
+          <p class="article-more-link">
+            <a href="/2019/09/03/软件扩——adobe-xd/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-响应式相关" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -237,299 +520,11 @@
 </article>
 
   
-    <article id="post-CSS记账簿" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/21/CSS记账簿/">CSS记账簿</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/08/21/CSS记账簿/" class="article-date">
-  <time datetime="2019-08-21T08:39:40.000Z" itemprop="datePublished">2019-08-21</time>
-</a>
-    
-    
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
-
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="CSS特性"><a href="#CSS特性" class="headerlink" title="CSS特性"></a>CSS特性</h1><ul>
-<li>层叠性：处理冲突的时候，后面的会覆盖前面的</li>
-<li>继承性：子标签继承父标签的属性，譬如字体颜色，大小，</li>
-<li>优先级：选择器的权重计算</li>
-</ul>
-<h1 id="CSS-属性选择器"><a href="#CSS-属性选择器" class="headerlink" title="CSS 属性选择器"></a>CSS 属性选择器</h1><ul>
-<li><p><code>~</code>  相同父元素下 所有目标元素</p>
-<p>例子：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">为所有相同的父元素中位于 <span class="selector-tag">p</span> 元素之后的所有 <span class="selector-tag">ul</span> 元素设置背景：</span><br><span class="line"><span class="selector-tag">p</span>~<span class="selector-tag">ul</span>&#123;</span><br><span class="line"></span><br><span class="line">　　<span class="attribute">background</span>:<span class="number">#ff0000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>+</code> 紧跟的同类元素</p>
-</li>
-</ul>
-<h1 id="css样式选择器"><a href="#css样式选择器" class="headerlink" title="css样式选择器"></a>css样式选择器</h1>
-        
-          <p class="article-more-link">
-            <a href="/2019/08/21/CSS记账簿/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-移动端组件——better-scroll" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/21/移动端组件——better-scroll/">移动端组件——better-scroll</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/08/21/移动端组件——better-scroll/" class="article-date">
-  <time datetime="2019-08-21T08:37:35.000Z" itemprop="datePublished">2019-08-21</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>移动端 触摸滚动插件</p>
-<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h2 id="1-html结构："><a href="#1-html结构：" class="headerlink" title="1.html结构："></a>1.html结构：</h2><p>必须有包裹，即<code>div.wrapper</code> 包裹 <code>div.content</code> 标签和类名不做需求。并且，内部<code>content</code> 高度/宽度 必须大于外部的盒子，才能拖动。</p>
-<h2 id="2-JS部分："><a href="#2-JS部分：" class="headerlink" title="2.JS部分："></a>2.JS部分：</h2><p>实例化 better-scroll 对象</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> bscroll = <span class="keyword">new</span> BScroll(<span class="string">'.wrapper'</span>,&#123;&#125;);</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="3-额外功能：滑动实时显示滑动的距离"><a href="#3-额外功能：滑动实时显示滑动的距离" class="headerlink" title="3.额外功能：滑动实时显示滑动的距离"></a>3.额外功能：滑动实时显示滑动的距离</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 属性probeType设置，一共有4个值，0，1,2,3 ,0和1是不进行实时侦测位置，2是在手指滚动的过程中侦测，手指离开之后就不进行侦测，3是只要是滚动就侦测，手指离开之后有个惯性滚动，即在这个过程中也会侦测</span></span><br><span class="line"><span class="keyword">const</span> bscroll = <span class="keyword">new</span> BScroll(<span class="string">'.wrapper'</span>,&#123;</span><br><span class="line">    probeType：<span class="number">3</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">bscroll.on(<span class="string">'scroll'</span>,position =&gt;&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(position)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="4-内部点击事件。"><a href="#4-内部点击事件。" class="headerlink" title="4.内部点击事件。"></a>4.内部点击事件。</h2><p>如果在wrapper内部有按钮或者需要点击事件的，点击会无法执行。需要额外增加click属性。</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> bscroll = <span class="keyword">new</span> BScroll(<span class="string">'.wrapper'</span>,&#123;</span><br><span class="line">    click:<span class="literal">true</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="5-上拉刷新：thresold"><a href="#5-上拉刷新：thresold" class="headerlink" title="5.上拉刷新：thresold"></a>5.上拉刷新：thresold</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> bscroll = <span class="keyword">new</span> BScroll(<span class="string">'.wrapper'</span>,&#123;</span><br><span class="line">   pullUpLoad:<span class="literal">true</span></span><br><span class="line">&#125;);</span><br><span class="line">bscroll.on(<span class="string">'pullingUp'</span>,()=&gt;&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'上拉显示更多'</span>)；</span><br><span class="line">    <span class="comment">//发送网络请求，请求更多资源</span></span><br><span class="line">    <span class="comment">//等请求完成，并且将新数据展示出来之后，必须执行  停止上拉加载更多 </span></span><br><span class="line">    bscroll.finishPullUp()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="6-封装-滚动组件，减少耦合"><a href="#6-封装-滚动组件，减少耦合" class="headerlink" title="6.封装 滚动组件，减少耦合"></a>6.封装 滚动组件，减少耦合</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"wrapper"</span> ref=<span class="string">"wrapper"</span>&gt;</span><br><span class="line">    	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"content"</span>&gt;</span><br><span class="line">        	&lt;slot&gt;<span class="xml"><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span></span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;    </span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp"> import BScroll from 'better-scroll'</span></span><br><span class="line"><span class="regexp"> export default&#123;</span></span><br><span class="line"><span class="regexp">	data()&#123;</span></span><br><span class="line"><span class="regexp">        return &#123;</span></span><br><span class="line"><span class="regexp">            scroll:null</span></span><br><span class="line"><span class="regexp">        &#125;</span></span><br><span class="line"><span class="regexp">    &#125;,</span></span><br><span class="line"><span class="regexp">     mounted()&#123;</span></span><br><span class="line"><span class="regexp">         this.scroll = new BScroll(this.$refs.wrapper,&#123;</span></span><br><span class="line"><span class="regexp">             </span></span><br><span class="line"><span class="regexp">         &#125;)</span></span><br><span class="line"><span class="regexp">     &#125;</span></span><br><span class="line"><span class="regexp">	&#125;         </span></span><br><span class="line"><span class="regexp">            </span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure></div>
-
-<p>引用该组件的时候，手动给最外层的盒子，添加高度或宽度</p>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-promise处理异步请求" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/21/promise处理异步请求/">promise处理异步请求</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/08/21/promise处理异步请求/" class="article-date">
-  <time datetime="2019-08-21T01:43:15.000Z" itemprop="datePublished">2019-08-21</time>
-</a>
-    
-    
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/promise/">promise</a></li></ul>
-
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="定义以及使用"><a href="#定义以及使用" class="headerlink" title="定义以及使用"></a>定义以及使用</h1><h2 id="前景知识："><a href="#前景知识：" class="headerlink" title="前景知识："></a>前景知识：</h2><h3 id="1-区分同步任务和-异步任务："><a href="#1-区分同步任务和-异步任务：" class="headerlink" title="1.区分同步任务和 异步任务："></a>1.区分同步任务和 异步任务：</h3><p>程序里面所有的任务，可以分成两类：同步任务（synchronous）和异步任务（asynchronous）。</p>
-<p>1.同步任务是那些没有被引擎挂起、在主线程上排队执行的任务。只有前一个任务执行完毕，才能执行后一个任务。</p>
-<p>2.异步任务是那些被引擎放在一边，不进入主线程、而进入任务队列的任务。只有引擎认为某个异步任务可以执行了（比如 Ajax 操作从服务器得到了结果），该任务（采用回调函数的形式）才会进入主线程执行。排在异步任务后面的代码，不用等待异步任务结束会马上运行，也就是说，异步任务不具有“堵塞”效应。</p>
-<p>3.如何检测 异步操作结束，之前可以通过 回调函数、监听事件完成等，但存在 不利于阅读，各个部分高度耦合，程序结构混乱以及流程难以追踪。</p>
-        
-          <p class="article-more-link">
-            <a href="/2019/08/21/promise处理异步请求/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-CSS之居中" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/20/CSS之居中/">CSS之居中</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/08/20/CSS之居中/" class="article-date">
-  <time datetime="2019-08-20T02:26:16.000Z" itemprop="datePublished">2019-08-20</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="前景知识"><a href="#前景知识" class="headerlink" title="前景知识"></a>前景知识</h1><ul>
-<li><p>明确区分块级元素、行级元素和行级块元素。</p>
-</li>
-<li><p>熟悉块级元素和行级元素在布局上的不同和优势，以及如何手动更改。</p>
-</li>
-<li><p>熟悉盒模型，以及如何手动更改 IE盒模型和怪异盒模型</p>
-</li>
-</ul>
-<h1 id="单一元素在浏览器中居中"><a href="#单一元素在浏览器中居中" class="headerlink" title="单一元素在浏览器中居中"></a>单一元素在浏览器中居中</h1>
-        
-          <p class="article-more-link">
-            <a href="/2019/08/20/CSS之居中/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-rotate和rotate3d" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/19/rotate和rotate3d/">rotate和rotate3d</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/08/19/rotate和rotate3d/" class="article-date">
-  <time datetime="2019-08-19T07:39:12.000Z" itemprop="datePublished">2019-08-19</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="rotate"><a href="#rotate" class="headerlink" title="rotate"></a>rotate</h1><p>平面的。</p>
-<p><img src="https://mdn.mozillademos.org/files/3548/transform-functions-rotate_19.5.png" alt></p>
-<p>旋转角度为正，则顺时针运动，反之逆时针。</p>
-<h1 id="rotate3d"><a href="#rotate3d" class="headerlink" title="rotate3d"></a>rotate3d</h1><p>立体的。</p>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-CSS中常用的几个单位" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/18/CSS中常用的几个单位/">px、em和rem</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/08/18/CSS中常用的几个单位/" class="article-date">
-  <time datetime="2019-08-18T01:43:15.000Z" itemprop="datePublished">2019-08-18</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="px"><a href="#px" class="headerlink" title="px"></a>px</h1><p>px（像素）单位，作为具体的数值，设置长宽高和字体大小的时候比较精确和固定。</p>
-<p>问题：1、固定长宽高在不同设备上打开会出现页面布局错误。2.固定的字体大小在改变浏览器大小的时候也会导致原有的页面布局被打破。</p>
-<h1 id="em"><a href="#em" class="headerlink" title="em"></a>em</h1><p>em作为一个相对值，是<strong>基于父元素的字体大小</strong> 设置的，而且作为 一个相对值也是一个比例，计算公式</p>
-<p>实际的字体像素值：<code>em *(父元素的fontSize值)</code> </p>
-<p>一个简单的栗子：</p>
-<p>三级嵌套的div，内设文字，问题的字体大小都为 <code>font-size:1.5em;</code> 可以看到 文字的大小 是逐级增大的，每次的字体大小值都是基于上一个（即父元素）的fontSize</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    div&#123;</span><br><span class="line">        border: 1px solid #000;</span><br><span class="line">    &#125;</span><br><span class="line">    body,html&#123;</span><br><span class="line">        font-size: <span class="number">10</span>px;</span><br><span class="line">    &#125;</span><br><span class="line">    div .top&#123;</span><br><span class="line">        <span class="comment">// 每一层文字 大小 都是 父级的 1.5倍</span></span><br><span class="line">        font-size:<span class="number">1.5</span>em;</span><br><span class="line">    &#125;</span><br><span class="line">    div .middle&#123;</span><br><span class="line">        font-size:<span class="number">1.5</span>em;</span><br><span class="line">    &#125;</span><br><span class="line">    div .bottom&#123;</span><br><span class="line">        font-size:<span class="number">1.5</span>em;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 嵌套的三级div</span></span><br><span class="line"><span class="regexp">&lt;div class="top"&gt;</span></span><br><span class="line"><span class="regexp">        top</span></span><br><span class="line"><span class="regexp">        &lt;div class="middle"&gt;</span></span><br><span class="line"><span class="regexp">            middle</span></span><br><span class="line"><span class="regexp">            &lt;div class="bottom"&gt;</span></span><br><span class="line"><span class="regexp">                bottom</span></span><br><span class="line"><span class="regexp">            &lt;/</span>div&gt;</span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br></pre></td></tr></table></figure></div>
-
-<p>效果演示：</p>
-<p><img src="https://i.loli.net/2019/09/04/gzewnPXYW6lS8Is.png" alt></p>
-<h1 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h1><p>rem也是一个相对值，但与<code>em</code>不同的是，<code>rem</code>是基于<strong>页面根元素html</strong>的。当给html设置一个统一的fontSize 之后，之后的元素设置一个相对值，后续更改也会简单。</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 给html 设置 62.5%的fontSize，即62.5% * 16px = 10px</span></span><br><span class="line">html &#123; font-size:<span class="number">62.5</span>%&#125;</span><br><span class="line">body &#123;font-size: <span class="number">1.4</span>rem;&#125;  <span class="comment">/*1.4 × 10px = 14px */</span></span><br><span class="line">h1 &#123; font-size: <span class="number">2.4</span>rem;&#125;  <span class="comment">/*2.4 × 10px = 24px*/</span></span><br></pre></td></tr></table></figure></div>
-
-<h1 id="viewport-width-amp-viewport-height"><a href="#viewport-width-amp-viewport-height" class="headerlink" title="viewport width &amp; viewport height"></a>viewport width &amp; viewport height</h1><p>基于浏览器 可视区大小（浏览器去掉任务栏，滚动轴的那个空白界面）</p>
-<p>值基于 1~100之间，50vw 即使画面宽度的一半</p>
-<h1 id="vmin-amp-vmax"><a href="#vmin-amp-vmax" class="headerlink" title="vmin  &amp; vmax"></a>vmin  &amp; vmax</h1><p>vmin 代表屏幕较短的一边，vmax 代表屏幕较长的一边</p>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
   </nav>
 
 
@@ -578,7 +573,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
     </div>
   </div>
 
@@ -590,23 +585,23 @@
       <ul>
         
           <li>
-            <a href="/2019/10/18/CCSS之大坑/">CCSS之大坑</a>
+            <a href="/2019/12/29/测试初级/">测试初级</a>
           </li>
         
           <li>
-            <a href="/2019/10/16/canvas做画板/">canvas做画板</a>
+            <a href="/2019/12/05/bcrypt初识/">bcrypt初识</a>
           </li>
         
           <li>
-            <a href="/2019/10/15/CSS选择器之表单样式中的妙用/">CSS选择器之表单样式中的妙用</a>
+            <a href="/2019/12/03/mongodb初识/">mongodb初识</a>
           </li>
         
           <li>
-            <a href="/2019/10/12/jQuery-补充知识/">jQuery 补充知识</a>
+            <a href="/2019/12/02/node资金系统/">node资金系统</a>
           </li>
         
           <li>
-            <a href="/2019/09/16/max-height/">max-height</a>
+            <a href="/2019/12/01/mySQL初识/">mySQL初识</a>
           </li>
         
       </ul>
@@ -632,7 +627,7 @@
       </div>
       <footer id="footer">
   <div class="foot-box global-width">
-    &copy; 2019 zyw1988 &nbsp;&nbsp;
+    &copy; 2020 zyw1988 &nbsp;&nbsp;
     Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
     <br>

@@ -20,7 +20,10 @@
 <meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1565675474226.png">
 <meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1565681200385.png">
 <meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1573919738305.png">
-<meta property="og:updated_time" content="2019-11-28T05:05:55.226Z">
+<meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1575623320186.png">
+<meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1575623437446.png">
+<meta property="og:image" content="c:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1575623543776.png">
+<meta property="og:updated_time" content="2019-12-06T09:40:08.546Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="node初识">
 <meta name="twitter:description" content="node1.安装 2.执行 1.读、写文件使用 fs模块123fs.writeFile(&apos;./newfile.txt&apos;,&apos;大家好这是fs写的新文件&apos;,function(error)&amp;#123;    console.log(error)&amp;#125;);  2.开启一个简单的服务器1.使用模块http2.创建 server实例server.on 接收请求，作出不同响应默认：server.on(&amp;qu">
@@ -297,6 +300,41 @@
 <td></td>
 </tr>
 </tbody></table>
+<h1 id="链接到mongodb"><a href="#链接到mongodb" class="headerlink" title="链接到mongodb"></a>链接到mongodb</h1><p>使用mongoose第三方进行mongodb数据，包括链接，数据操作以及其他</p>
+<p>1.导入</p>
+<p><code>const mongoose = require(&quot;mongoose&quot;)</code></p>
+<p>2.链接到mongodb数据库</p>
+<p><code>mongoose.connect(&quot;mongodb://localhost/自定义数据库名字&quot;)</code> </p>
+<p>  2.1 如果需要连接到多个数据库。</p>
+<p>​    <code>createConnection([uri],[options])</code></p>
+<ol start="3">
+<li>断开连接</li>
+</ol>
+<p><code>mongoose.disconnect()</code></p>
+<h2 id="mongodb数据库安装"><a href="#mongodb数据库安装" class="headerlink" title="mongodb数据库安装"></a>mongodb数据库安装</h2><p>1.安装。完成之后 会有这些执行文件</p>
+<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1575623320186.png" alt="1575623320186"></p>
+<p>2.配置环境变量，这样可以在任意路径下执行。</p>
+<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1575623437446.png" alt="1575623437446"></p>
+<p>把路径添加到 path变量中。</p>
+<p>3.可选择安装的 mongodb可视化工具。mongodb Compass Community</p>
+<p><img src="C:%5CUsers%5CASUS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1575623543776.png" alt="1575623543776"></p>
+<h2 id="操作数据库的api‘"><a href="#操作数据库的api‘" class="headerlink" title="操作数据库的api‘"></a>操作数据库的api‘</h2><h2 id="创建一条数据并保存到自己的数据库中"><a href="#创建一条数据并保存到自己的数据库中" class="headerlink" title="创建一条数据并保存到自己的数据库中"></a>创建一条数据并保存到自己的数据库中</h2><p>1.创建数据模板。</p>
+<p>实际上这里定义的是collections中的document的结构，名为Schema。只需要指定字段名和类型及一些规则即可。</p>
+<p><code>const Schema = mongoose.Schema()</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> UserSchema = <span class="keyword">new</span> Schema(&#123;</span><br><span class="line">    title:&#123;</span><br><span class="line">        type:<span class="built_in">String</span>,</span><br><span class="line">        unique:<span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    author:&#123;</span><br><span class="line">        type:<span class="built_in">String</span></span><br><span class="line">    &#125;,</span><br><span class="line">    price:&#123;</span><br><span class="line">        type:<span class="built_in">Number</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
+
+<p>如果需要在<code>Schema</code>定义后添加其他字段，可以使用<code>add()</code>方法</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User.add(&#123; <span class="attr">name</span>: <span class="string">'string'</span>, <span class="attr">color</span>: <span class="string">'string'</span>, <span class="attr">age</span>: <span class="string">'number'</span> &#125;);</span><br></pre></td></tr></table></figure></div>
+
+<p>2.发布模板</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> MyModel = mongoose.model(单数大写字母, 创建的schema实例);</span><br><span class="line"><span class="comment">// 以上为例。</span></span><br><span class="line"><span class="keyword">var</span> User = mongoose.model(<span class="string">"User"</span>,UserSchema);</span><br></pre></td></tr></table></figure></div>
+
+<p>3.以发布的模板为基础生成一条数据</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> user1  = <span class="keyword">new</span> User(&#123;</span><br><span class="line">    title:<span class="string">"玫瑰红葡萄干"</span>,</span><br><span class="line">    author:<span class="string">"维利康食品有限公司"</span>,</span><br><span class="line">    price:<span class="string">"23"</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+
+<p>4.保存该数据</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user1.save();</span><br></pre></td></tr></table></figure></div>
+
 
       
     </div>
@@ -395,7 +433,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
     </div>
   </div>
 
@@ -407,23 +445,23 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
-            <a href="/2019/10/18/CCSS之大坑/">CCSS之大坑</a>
+            <a href="/2019/12/29/测试初级/">测试初级</a>
           </li>
         
           <li>
-            <a href="/2019/10/16/canvas做画板/">canvas做画板</a>
+            <a href="/2019/12/05/bcrypt初识/">bcrypt初识</a>
           </li>
         
           <li>
-            <a href="/2019/10/15/CSS选择器之表单样式中的妙用/">CSS选择器之表单样式中的妙用</a>
+            <a href="/2019/12/03/mongodb初识/">mongodb初识</a>
           </li>
         
           <li>
-            <a href="/2019/10/12/jQuery-补充知识/">jQuery 补充知识</a>
+            <a href="/2019/12/02/node资金系统/">node资金系统</a>
           </li>
         
           <li>
-            <a href="/2019/09/16/max-height/">max-height</a>
+            <a href="/2019/12/01/mySQL初识/">mySQL初识</a>
           </li>
         
       </ul>
@@ -449,7 +487,7 @@ gitment.render('gitmentContainer')
       </div>
       <footer id="footer">
   <div class="foot-box global-width">
-    &copy; 2019 zyw1988 &nbsp;&nbsp;
+    &copy; 2020 zyw1988 &nbsp;&nbsp;
     Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
     <br>
